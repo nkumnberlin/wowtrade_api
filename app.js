@@ -77,7 +77,7 @@ app.get('/',
         next();
     },
     (req, res, next) => {
-        res.render('pages/index');
+        // res.render('pages/index');
     });
 
 app.get('/login', (req, res) => {
@@ -108,7 +108,7 @@ app.get('/redirect',
 app.use('/authenticated', authenticatedGuard);
 
 app.get('/authenticated', async (req, res, next) => {
-    res.render('pages/authenticated/index');
+    // res.render('pages/authenticated/index');
 });
 
 app.get('/authenticated/characters', async (req, res, next) => {
@@ -132,7 +132,7 @@ app.use(function (req, res, next) {
         'text/html': function () {
             res
                 .status(404)
-                .render('pages/errors/404');
+                // .render('pages/errors/404');
         },
         'application/json': function () {
             res.status(404).json({
@@ -152,9 +152,9 @@ app.use((err, req, res, next) => {
         'text/html': function () {
             res
                 .status(500)
-                .render('pages/errors/500', {
-                    err
-                });
+                // .render('pages/errors/500', {
+                //     err
+                // }
         },
         'application/json': function () {
             if (process.env.NODE_ENV === 'development') {
