@@ -115,8 +115,9 @@ app.get('/authenticated/characters', async (req, res, next) => {
     try {
         console.log('debugg_____2 ', req.user)
         const characters = await characterService.getUsersCharactersList(req.user.token);
-        res.status(200).send({
-            characters: JSON.stringify(characters)
+        res.status(200).json({
+            ok: true,
+            data: JSON.stringify(characters)
         })
     } catch (e) {
         next(e);
