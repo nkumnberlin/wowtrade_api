@@ -1,0 +1,8 @@
+extends /partials/layout
+
+block body
+    .mt-4
+        h1
+            | Welcome back #{currentUser.battletag}!
+        p.lead
+            a.btn.btn-primary.btn-lg(href='/authenticated/characters' role='button') View my Characters

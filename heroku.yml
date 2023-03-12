@@ -1,0 +1,10 @@
+setup:
+  addons:
+  - plan: heroku-redis
+    as: REDIS
+
+build:
+  docker:
+    web: Dockerfile
+  config:
+    NODE_ENV: production
