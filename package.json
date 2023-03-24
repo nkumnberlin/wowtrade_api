@@ -29,6 +29,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "startdev": "docker-compose -f docker-compose.yml up",
     "dev": "nodemon -L server.js | pino-pretty"
   },
   "devDependencies": {
