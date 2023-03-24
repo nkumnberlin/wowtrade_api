@@ -8,4 +8,4 @@ ADD . .
 
 RUN npm install --quiet
 
-CMD ["node", "server.js"]
+CMD ["node-ts", "app.ts"]
