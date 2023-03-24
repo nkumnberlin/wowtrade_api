@@ -10,7 +10,7 @@ const passportOptions = {
 
 const passportCallback = (accessToken, refreshToken, profile, done) => {
     process.nextTick(() => {
-        console.log('xxxxx ', accessToken, refreshToken, profile, done)
+        console.log('felix fuer unsere augen, pipikaka ', accessToken, refreshToken, profile, done)
         return done(null, profile);
     });
 };

@@ -45,7 +45,7 @@ class CharacterService {
     }
 
     async getUsersCharactersList(usersAccessToken) {
-        console.log('________debugg3', usersAccessToken)
+        console.log('RETCH', usersAccessToken)
         const response = await rp.get({
             uri: `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu`,
             json: true,
@@ -54,14 +54,29 @@ class CharacterService {
             }
         });
         const { wow_accounts } = response;
-        const characters = wow_accounts
+        return wow_accounts
             .map((account) => this._mapWowAccount(account))
             .flat()
-            .sort((characterA, characterB) => {
-                return (characterA.level < characterB.level) ? 1 : -1;
-            });
-        // console.log('characterlist1 ', characters)
-        return characters;
+            .filter((character)=> character.level > 60)
+    }
+    async getUserProfessionsToCharacter(usersAccessToken, characterName, realmSlug){
+        const response = await rp.get({
+            uri: `https://eu.api.blizzard.com/profile/wow/character/${realmSlug}/${characterName}/professions`,
+            json: true,
+            headers: {
+                Authorization: `Bearer ${usersAccessToken}`
+            }
+        });
+        console.log(response)
+        return {message: 'nix'}
+        // const { wow_accounts } = response;
+        // // console.log('characterlist1 ', characters)
+        // return wow_accounts
+        //     .map((account) => this._mapWowAccount(account))
+        //     .flat()
+        //     .sort((characterA, characterB) => {
+        //         return (characterA.level < characterB.level) ? 1 : -1;
+        //     });
     }
 
     _mapWowAccount(account) {

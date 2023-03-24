@@ -14,6 +14,7 @@ const createLogger = require('pino');
 
 const url = require('url');
 const logger = createLogger();
+const cors = require('cors')
 
 let redisClient;
 if (process.env.REDIS_URL) {
@@ -25,6 +26,7 @@ if (process.env.REDIS_URL) {
     });
 }
 
+
 const redisSessionStore = new RedisStore({
     client: redisClient
 });
@@ -34,17 +36,14 @@ const characterService = new CharacterService(oauthClient);
 
 const app = express();
 
-app.set('view engine', 'pug');
-app.set('views', path.resolve('./resources/templates'));
-app.locals.basedir = app.get('views');
-
 app.use((req, res, next) => {
     res.locals = {
         ...res.locals,
-        projectName: process.env.PROJECT_NAME || 'Node WoW OAuth Example'
+        projectName: process.env.PROJECT_NAME || 'WoW Trade API'
     };
     next();
 });
+
 
 app.use(cookieParser());
 
@@ -58,27 +57,23 @@ app.use(session({
     store: redisSessionStore,
 }));
 
-app.use(passport.initialize());
+app.use(passport.initialize({}));
 
-app.use(passport.session());
+app.use(passport.session({}));
+
+app.use(cors())
 
 app.use((req, res, next) => {
     if (req.isAuthenticated()) {
+        console.log('is authenticated', req.user)
         res.locals.currentUser = req.user;
+        return next();
     }
+    console.log('next step, nicht eingeloggt', req)
     next();
 });
 
-app.get('/',
-    (req, res, next) => {
-        if (req.isAuthenticated()) {
-            return res.redirect('/authenticated');
-        }
-        next();
-    },
-    (req, res, next) => {
-        // res.render('pages/index');
-    });
+app.use('/authenticated', authenticatedGuard);
 
 app.get('/login', (req, res) => {
     res.redirect('/login/oauth/battlenet');
@@ -91,86 +86,68 @@ app.get('/logout', (req, res) => {
 
 app.get('/login/oauth/battlenet',    passport.authenticate('bnet'));
 
-
-4
 app.get('/redirect',
     passport.authenticate('bnet', {failureRedirect: '/'}),
     function (req, res) {
-    console.log('___req ', req.session)
         const redirectURL = new URL('http://localhost:3005/callback');
         redirectURL.search = new URLSearchParams({
             code: req.query.code
-
         })
     res.status(301).redirect(redirectURL)
     })
+app.get('/authenticated/test', (req, res, next) => {
+    // Create a response object with the desired data
+    const responseBody = {
+        message: 'Hello, world!',
+        data: {
+            h: 'h'
+        },
+    };
 
-app.use('/authenticated', authenticatedGuard);
-
-app.get('/authenticated', async (req, res, next) => {
-    // res.render('pages/authenticated/index');
+    // Return the response as JSON
+    console.log('ich geh hier rein', responseBody)
+    res.status(200).json(responseBody);
+    next();
 });
+
+app.post('/testpost', (req, res)=> {
+    return res.status(200).json({
+        bing: 'bong'
+    })
+})
 
 app.get('/authenticated/characters', async (req, res, next) => {
     try {
-        console.log('debugg_____2 ', req.user)
         const characters = await characterService.getUsersCharactersList(req.user.token);
-        res.status(200).json({
-            ok: true,
-            data: JSON.stringify(characters)
-        })
+        res.json(characters);
+        next();
     } catch (e) {
-        next(e);
+       res.status(500).json({message: 'Failed while fetching Characters'})
     }
-}, (err, req, res, next) => {
-    logger.error(err);
-    res.status(500).send('went wrong xx')
 });
 
-// 404 not found error handler
-app.use(function (req, res, next) {
-    res.format({
-        'text/html': function () {
-            res
-                .status(404)
-                // .render('pages/errors/404');
-        },
-        'application/json': function () {
-            res.status(404).json({
-                data: null,
-                error: {
-                    message: 'Resource not found'
-                }
-            });
-        }
-    });
+app.get('/authenticated/character/professions', async (req, res, next) => {
+    try {
+        console.log('body', req.body)
+        const characters = await characterService.getUserProfessionsToCharacter(req.user.token, 'Recoíl', 'thrall');
+        res.json(characters);
+        next();
+    } catch (e) {
+       res.status(500).json({message: 'Failed while fetching Characters'})
+    }
 });
 
-// Server errors error handler
-app.use((err, req, res, next) => {
-    logger.error(err);
-    res.format({
-        'text/html': function () {
-            res
-                .status(500)
-                // .render('pages/errors/500', {
-                //     err
-                // }
-        },
-        'application/json': function () {
-            if (process.env.NODE_ENV === 'development') {
-                res.status(500).json({
-                    data: null,
-                    error: err
-                });
-            } else {
-                res.status(500).json({
-                    data: null
-                });
-            }
+
+app.get('/',
+    (req, res, next) => {
+    console.log('nice cookies!', req.cookies)
+        if (req.isAuthenticated()) {
+            return res.redirect('/authenticated');
         }
-    });
-});
+        console.log('is in landing ')
+        res.send({data: 'redirected to `/`'})
+    },
+);
 
 module.exports = async () => {
     await oauthClient.getToken();
