@@ -19,9 +19,6 @@ const cors = require("cors");
 
 interface SessionRequest extends Request {
   isAuthenticated: () => boolean;
-  session: {
-    destroy: () => void;
-  };
   user: any;
   query: {
     code: string;
@@ -84,7 +81,7 @@ app.use((req: SessionRequest, res: Response, next: () => NextFunction) => {
     res.locals.currentUser = req.user;
     return next();
   }
-  console.log("next step, nicht eingeloggt", req);
+  console.log("next step, nicht eingeloggt");
   next();
 });
 
@@ -95,8 +92,10 @@ app.get("/login", (req: Request, res: Response) => {
 });
 
 app.get("/logout", (req: SessionRequest, res: Response) => {
-  req.session.destroy();
-  res.redirect("/");
+  console.log("landet in session logout", req.session, req.user);
+  req.session.destroy((e) => console.log("error while destroying session ", e));
+  res.status(301).redirect("http://localhost:3005/logout");
+  return;
 });
 
 app.get("/login/oauth/battlenet", passport.authenticate("bnet"));
@@ -158,15 +157,14 @@ app.get(
   "/authenticated/character/professions",
   async (req: SessionRequest, res: Response, next: () => NextFunction) => {
     try {
-      console.log();
-      console.log("body");
+      console.log("is in professions");
       const { name, slug, region } = req.query;
-      const characters = await characterService.getUserProfessionsToCharacter(
+      const professions = await characterService.getUserProfessionsToCharacter(
         req.user.token,
         name,
         slug
       );
-      res.json(characters);
+      res.json(professions);
       next();
     } catch (e) {
       res.status(500).json({ message: "Failed while fetching Characters" });
@@ -179,8 +177,13 @@ app.get("/", (req: SessionRequest, res: Response) => {
   if (req.isAuthenticated()) {
     return res.redirect("/authenticated");
   }
-  console.log("ist nicht authentifizifert > redirect to /");
-  res.json({ data: "redirected to `/`" });
+  // if (!req.isAuthenticated() && req.cookies["wow-trade-session"]) {
+  //   console.log("redirectikus! ");
+  //   return res.redirect("/logout");
+  // }
+  console.log("ist nicht authentifizifert > redirect to /login-");
+  const redirectURL: URL = new URL("http://localhost:3005/ungracefully-logout");
+  res.status(301).redirect(redirectURL.href);
 });
 const port = process.env.PORT || 3000;
 

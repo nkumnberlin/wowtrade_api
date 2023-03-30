@@ -13,6 +13,7 @@
     "dotenv": "^8.6.0",
     "express": "^4.16.4",
     "express-session": "^1.17.1",
+    "mongodb": "^5.1.0",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-bnet": "^2.0.0",
@@ -30,11 +31,13 @@
   },
   "scripts": {
     "start": "ts-node app.ts",
-    "startdev": "docker-compose -f docker-compose.yml up",
+    "docker": "docker-compose -f docker-compose.yml up",
     "dev": "nodemon -L app.ts | pino-pretty"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "@types/express-session": "^1.17.7",
+    "@types/mongodb": "^4.0.7",
     "@types/node": "^18.15.7",
     "@types/passport-bnet": "^2.0.2",
     "@types/simple-oauth2": "^5.0.3",

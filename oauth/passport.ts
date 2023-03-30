@@ -22,8 +22,7 @@ const passportCallback = (
       "felix fuer unsere augen, pipikaka ",
       accessToken,
       refreshToken,
-      profile,
-      done
+      profile
     );
     return done(null, profile);
   });

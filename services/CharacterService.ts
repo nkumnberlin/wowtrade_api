@@ -1,3 +1,5 @@
+import { DragonFlightProfessions, IProfession, REGIONS } from "./types";
+
 const rp = require("request-promise");
 
 class CharacterService {
@@ -23,18 +25,47 @@ class CharacterService {
     characterName: string,
     realmSlug: string
   ) {
-    const encodedCharacterName = encodeURIComponent(characterName);
-    const response = await rp.get({
-      uri: `https://eu.api.blizzard.com/profile/wow/character/${realmSlug}/${encodedCharacterName}/professions`,
-      json: true,
-      headers: {
-        Authorization: `Bearer ${usersAccessToken}`,
-      },
-    });
-    console.log("USER PROFESSIONS", response);
-    const { primaries, character } = response;
+    const decodedCharacterName = decodeURIComponent(characterName);
+    const region: REGIONS = "eu";
+    try {
+      //https://eu.api.blizzard.com/profile/wow/character/tichondrius/charactername/professions?namespace=profile-us&locale=en_US&access_token=EUUOWPuWDHb7toaa0972sLtvjzxwvwfMCT
+      // if there are primaries, there are also secondaries. need to keep that in mind
+      const { primaries } = await rp.get({
+        uri: `https://eu.api.blizzard.com/profile/wow/character/${realmSlug}/${decodedCharacterName}/professions?namespace=profile-${region}&locale=en_US`,
+        json: true,
+        headers: {
+          Authorization: `Bearer ${usersAccessToken}`,
+        },
+      });
+      const dragonFlightProfessions: DragonFlightProfessions = primaries.reduce(
+        (prev: DragonFlightProfessions[], curr: IProfession) => {
+          const dfProfession = curr.tiers.find(({ tier }) =>
+            tier.name.toLowerCase().includes("dragon")
+          );
+          if (!dfProfession) return prev;
+          if (!Object.keys(prev).length) {
+            return [
+              {
+                profession: curr.profession,
+                tiers: dfProfession,
+              },
+            ];
+          }
+          return [
+            {
+              profession: curr.profession,
+              tiers: dfProfession,
+            },
+            ...((prev && prev) || {}),
+          ];
+        },
+        {} as DragonFlightProfessions[]
+      );
 
-    return { primaries, character };
+      return dragonFlightProfessions;
+    } catch (e) {
+      console.log("while profession", e);
+    }
   }
   // todo
   _mapWowAccount(account: any) {
