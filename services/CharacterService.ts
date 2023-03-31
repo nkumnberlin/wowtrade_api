@@ -39,29 +39,37 @@ class CharacterService {
       });
       const dragonFlightProfessions: DragonFlightProfessions = primaries.reduce(
         (prev: DragonFlightProfessions[], curr: IProfession) => {
-          const dfProfession = curr.tiers.find(({ tier }) =>
+          const tiers = curr.tiers.find(({ tier }) =>
             tier.name.toLowerCase().includes("dragon")
           );
-          if (!dfProfession) return prev;
+          if (!tiers) return prev;
+          tiers.known_recipes = tiers.known_recipes.map((recipe) => ({
+            ...recipe,
+            name: recipe.name.toLowerCase().replaceAll(" ", "-"),
+          }));
+          // todo: felix nico mal wieder zu dumm dumm
           if (!Object.keys(prev).length) {
             return [
               {
                 profession: curr.profession,
-                tiers: dfProfession,
+                tiers: tiers,
               },
             ];
           }
           return [
             {
               profession: curr.profession,
-              tiers: dfProfession,
+              tiers: tiers,
             },
             ...((prev && prev) || {}),
           ];
         },
         {} as DragonFlightProfessions[]
       );
-
+      // hier will ich mongo db results alle? und dann mappen auf die professions vom nutzer.
+      // query: mongodb.item.name === dragonFlightProfessions.tiers.known_recipes[].name
+      // result:
+      // interface kommt
       return dragonFlightProfessions;
     } catch (e) {
       console.log("while profession", e);

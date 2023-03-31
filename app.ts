@@ -151,7 +151,6 @@ app.get(
     }
   }
 );
-
 ///authenticated/character/professions?name=Cdb&slug=Thrall&region=eu
 app.get(
   "/authenticated/character/professions",
