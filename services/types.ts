@@ -30,7 +30,7 @@ export interface Tiers {
   skill_points: number;
   max_skill_points: number;
   tier: Tier;
-  known_recipes: KnownRecipe[];
+  known_recipes: KnownRecipe[] | KnownRecipeWithItemId[];
 }
 
 export interface Tier {
@@ -42,4 +42,8 @@ export interface KnownRecipe {
   key: Key;
   name: string;
   id: number;
+}
+
+export interface KnownRecipeWithItemId extends KnownRecipe {
+  itemId: number;
 }

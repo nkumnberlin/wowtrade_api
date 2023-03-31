@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 require("dotenv").config();
+import {initializeDatabase} from "./services/database";
 const BlueBirdPromise = require("bluebird");
 const express = require("express");
 const cookieParser = require("cookie-parser");
@@ -186,4 +187,4 @@ app.get("/", (req: SessionRequest, res: Response) => {
 });
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Worker  listening on port ${port}`));
+initializeDatabase().then(() => app.listen(port, () => console.log(`Worker  listening on port ${port}`)));

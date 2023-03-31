@@ -1,4 +1,6 @@
-import { DragonFlightProfessions, IProfession, REGIONS } from "./types";
+import {DragonFlightProfessions, IProfession, KnownRecipe, KnownRecipeWithItemId, REGIONS} from "./types";
+import {fetchProfessionsForRecipes, ICraftingData} from "./database";
+import {transformRecipeNameLower} from "./RecipeService";
 
 const rp = require("request-promise");
 
@@ -20,6 +22,24 @@ class CharacterService {
       .flat()
       .filter((character: { level: number }) => character.level > 60);
   }
+
+  mapKnownRecipesWithItemId(craftingData: ICraftingData[], knownRecipes: KnownRecipe[]){
+    const keyedCraftingData = craftingData.reduce((acc, current) => ({
+      ...acc,
+      [current.item_name]: current,
+    }), {} as {[name: string]: ICraftingData})
+    console.log("keyed", keyedCraftingData)
+    return knownRecipes.map<KnownRecipeWithItemId | null>((knownRecipe) => {
+      console.log("find", transformRecipeNameLower(knownRecipe))
+      if(!keyedCraftingData[transformRecipeNameLower(knownRecipe)]){
+        return null;
+      }
+      return ({
+        ...knownRecipe,
+        itemId: keyedCraftingData[transformRecipeNameLower(knownRecipe)].id_crafted_item
+      })
+    }).filter((recipe) => recipe) as KnownRecipeWithItemId[];
+  }
   async getUserProfessionsToCharacter(
     usersAccessToken: string,
     characterName: string,
@@ -37,16 +57,12 @@ class CharacterService {
           Authorization: `Bearer ${usersAccessToken}`,
         },
       });
-      const dragonFlightProfessions: DragonFlightProfessions = primaries.reduce(
+      const dragonFlightProfessions: DragonFlightProfessions[] = primaries.reduce(
         (prev: DragonFlightProfessions[], curr: IProfession) => {
           const tiers = curr.tiers.find(({ tier }) =>
             tier.name.toLowerCase().includes("dragon")
           );
           if (!tiers) return prev;
-          tiers.known_recipes = tiers.known_recipes.map((recipe) => ({
-            ...recipe,
-            name: recipe.name.toLowerCase().replaceAll(" ", "-"),
-          }));
           // todo: felix nico mal wieder zu dumm dumm
           if (!Object.keys(prev).length) {
             return [
@@ -70,7 +86,16 @@ class CharacterService {
       // query: mongodb.item.name === dragonFlightProfessions.tiers.known_recipes[].name
       // result:
       // interface kommt
-      return dragonFlightProfessions;
+      const professionsForRecipes = await fetchProfessionsForRecipes(dragonFlightProfessions.map((dragonflightProfession) => dragonflightProfession.tiers.known_recipes as KnownRecipe[]).reduce((acc, current) => [...acc, ...current]));
+      const mappedDragonflightProfessions = dragonFlightProfessions.map((dragonFlightProfession) => ({
+        ...dragonFlightProfession,
+        tiers: {
+          ...dragonFlightProfession.tiers,
+          known_recipes: this.mapKnownRecipesWithItemId(professionsForRecipes, dragonFlightProfession.tiers.known_recipes),
+        }
+      }))
+      console.log(mappedDragonflightProfessions)
+      return mappedDragonflightProfessions;
     } catch (e) {
       console.log("while profession", e);
     }
