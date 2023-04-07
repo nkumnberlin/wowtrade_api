@@ -77,7 +77,7 @@ export interface ListingData {
   listingDuration: ListingDuration;
   expiredAt?: Date;
   createdAt?: Date;
-  item: Omit<ICraftingData, 'id_crafted_item'>;
+  item: Omit<ICraftingData, 'id'>;
   qualityProcChance: number;
   multicraftPercentage: number;
 }
