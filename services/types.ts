@@ -8,7 +8,7 @@ export type REGIONS = "eu" | "us";
 
 export interface DragonFlightProfessions {
   profession: Profession;
-  tiers: Tiers[];
+  tiers: Tiers;
 }
 
 export interface IProfession {
