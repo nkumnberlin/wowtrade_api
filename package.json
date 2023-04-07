@@ -43,6 +43,7 @@
     "@types/simple-oauth2": "^5.0.3",
     "concurrently": "^7.6.0",
     "nodemon": "^2.0.22",
+    "@types/request-promise": "4.1.48",
     "typescript": "^5.0.2"
   }
 }

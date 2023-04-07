@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 require("dotenv").config();
 import {initializeDatabase} from "./services/database";
+import {ListingData} from "./services/types";
+import {saveListing, findLastFiveCreatedListings, findbyCreatorAccountId, findbyItemName} from "./services/ListingService";
 const BlueBirdPromise = require("bluebird");
 const express = require("express");
 const cookieParser = require("cookie-parser");
@@ -18,15 +20,28 @@ const url = require("url");
 const logger = createLogger();
 const cors = require("cors");
 
-interface SessionRequest extends Request {
-  isAuthenticated: () => boolean;
-  user: any;
+interface AuthenticatedRequest extends Request {
+    isAuthenticated: () => boolean;
+    user: any;
+}
+interface SessionRequest extends AuthenticatedRequest {
   query: {
     code: string;
     name: string;
     slug: string;
     region: string;
   };
+}
+
+interface OrderCreateRequest extends AuthenticatedRequest {
+    body: ListingData;
+}
+
+interface OrderFetchRequest extends AuthenticatedRequest {
+    query: {
+        itemName?: string;
+        accountId?: string;
+    };
 }
 
 let redisClient;
@@ -72,7 +87,7 @@ app.use(
 
 app.use(passport.initialize({}));
 
-app.use(passport.session({}));
+app.use(passport.session());
 
 app.use(cors());
 
@@ -170,6 +185,46 @@ app.get(
       res.status(500).json({ message: "Failed while fetching Characters" });
     }
   }
+);
+
+app.post(
+    "/authenticated/order",
+    async (req: OrderCreateRequest, res: Response, next: () => NextFunction) => {
+        try {
+            console.log("is in professions");
+            const listingData = req.body;
+            listingData.creatorAccountId = req.user.id;
+            const createdOrder = await saveListing(listingData);
+            res.json(createdOrder).status(201);
+            next();
+        } catch (e) {
+            res.status(500).json({ message: "Failed while fetching Characters" });
+        }
+    }
+);
+
+app.get(
+    "/authenticated/order",
+    async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
+        try {
+            const { itemName, accountId } = req.query;
+            if(itemName){
+                const ordersByItemName = await findbyItemName(itemName)
+                res.json(ordersByItemName).status(200);
+                return next();
+            }
+            if(accountId){
+                const ordersByAccountCreatorId = await findbyCreatorAccountId(parseInt(accountId));
+                res.json(ordersByAccountCreatorId).status(200);
+                return next();
+            }
+            const lastFiveOrders = await findLastFiveCreatedListings()
+            res.json(lastFiveOrders).status(200);
+            return next();
+        } catch (e) {
+            res.status(500).json({ message: "Failed while fetching Characters" });
+        }
+    }
 );
 
 app.get("/", (req: SessionRequest, res: Response) => {

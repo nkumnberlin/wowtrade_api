@@ -31,3 +31,6 @@ class OAuthClient {
 }
 
 module.exports = OAuthClient;
+export {
+  OAuthClient
+}

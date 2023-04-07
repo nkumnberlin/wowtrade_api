@@ -1,6 +1,5 @@
-import {DragonFlightProfessions, IProfession, KnownRecipe, KnownRecipeWithItemId, REGIONS} from "./types";
-import {fetchProfessionsForRecipes, ICraftingData} from "./database";
-import {transformRecipeNameLower} from "./RecipeService";
+import {DragonFlightProfessions, IProfession, KnownRecipe, KnownRecipeWithItemId, REGIONS, ICraftingData} from "./types";
+import {fetchProfessionsForRecipes, transformRecipeNameLower} from "./RecipeService";
 
 const rp = require("request-promise");
 

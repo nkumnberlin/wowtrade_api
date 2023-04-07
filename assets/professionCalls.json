@@ -1,41 +1,54 @@
 [
   {
-    "engineering": "/data/wow/profession/202/skill-tier/2827"
-  },
+      "professionId": 202,
+      "skillTierId": 2827
+    },
   {
-    "skinning": "/data/wow/profession/393/skill-tier/2834"
-  },
+      "professionId": 393,
+      "skillTierId": 2834
+    },
   {
-    "blacksmithing": "/data/wow/profession/164/skill-tier/2822"
-  },
+      "professionId": 164,
+      "skillTierId": 2822
+    },
   {
-    "enchanting": "/data/wow/profession/333/skill-tier/2825"
-  },
+      "professionId": 333,
+      "skillTierId": 2825
+    },
   {
-    "herbalism": "/data/wow/profession/182/skill-tier/2832"
-  },
+      "professionId": 182,
+      "skillTierId": 2832
+    },
   {
-    "mining": "/data/wow/profession/186/skill-tier/2833"
-  },
+      "professionId": 186,
+      "skillTierId": 2833
+    },
   {
-    "tailoring": "/data/wow/profession/197/skill-tier/2831"
-  },
+      "professionId": 197,
+      "skillTierId": 2831
+    },
   {
-    "inscription": "/data/wow/profession/773/skill-tier/2828"
-  },
+      "professionId": 773,
+      "skillTierId": 2828
+    },
   {
-    "cooking": "/data/wow/profession/185/skill-tier/2824"
-  },
+      "professionId": 185,
+      "skillTierId": 2824
+    },
   {
-    "fishing": "/data/wow/profession/356/skill-tier/2826"
-  },
+      "professionId": 356,
+      "skillTierId": 2826
+    },
   {
-    "leatherworking": "/data/wow/profession/165/skill-tier/2830"
-  },
+      "professionId": 165,
+      "skillTierId": 2830
+    },
   {
-    "alchemy": "/data/wow/profession/171/skill-tier/2823"
-  },
+      "professionId": 171,
+      "skillTierId": 2823
+    },
   {
-    "jewelcrafting": "/data/wow/profession/755/skill-tier/2829"
-  }
+      "professionId": 755,
+      "skillTierId": 2829
+    }
 ]

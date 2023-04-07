@@ -1,4 +1,5 @@
 import exp from "constants";
+import {ObjectId} from "mongodb";
 
 export interface IGetCharacter {
   characterName: string;
@@ -47,3 +48,60 @@ export interface KnownRecipe {
 export interface KnownRecipeWithItemId extends KnownRecipe {
   itemId: number;
 }
+
+export interface ICraftingData {
+  id: number,
+  id_crafted_item: number,
+  item_name: string
+}
+
+const DAY_IN_SECONDS = 86_400;
+export enum ListingDuration {
+  SIX_HOURS = DAY_IN_SECONDS / 4,
+  TWELVE_HOURS = DAY_IN_SECONDS / 2,
+  ONE_DAY = DAY_IN_SECONDS,
+  THREE_DAYS = DAY_IN_SECONDS * 3,
+  SEVEN_DAYS = DAY_IN_SECONDS * 7,
+}
+export interface ListingData {
+  _id?: ObjectId;
+  difficulty: number;
+  quality: number;
+  qualifiedCharacterName: string;
+  creatorAccountId?: number;
+  profession: string;
+  commission : {
+    silver: string;
+    gold: string;
+  }
+  listingDuration: ListingDuration;
+  expiredAt?: Date;
+  createdAt?: Date;
+  item: Omit<ICraftingData, 'id_crafted_item'>;
+  qualityProcChance: number;
+  multicraftPercentage: number;
+}
+
+export interface ProfessionSkillTree {
+  _links:              Links;
+  id:                  number;
+  name:                string;
+  minimum_skill_level: number;
+  maximum_skill_level: number;
+  categories:          Category[];
+}
+
+export interface Links {
+  self: Link;
+}
+
+export interface Link {
+  href: string;
+}
+
+export interface Category {
+  name:    string;
+  recipes: KnownRecipe[];
+}
+
+export interface FrontendListingData extends Omit<ListingData, 'creatorAccountId'> {}
