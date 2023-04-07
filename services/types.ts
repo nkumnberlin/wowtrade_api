@@ -43,6 +43,7 @@ export interface KnownRecipe {
   key: Key;
   name: string;
   id: number;
+  id_crafted_item?: number;
 }
 
 export interface KnownRecipeWithItemId extends KnownRecipe {
@@ -50,9 +51,10 @@ export interface KnownRecipeWithItemId extends KnownRecipe {
 }
 
 export interface ICraftingData {
-  id: number,
-  id_crafted_item: number,
-  item_name: string
+  id: number;
+  id_crafted_item: number;
+  item_name: string;
+  id_recipe: number;
 }
 
 const DAY_IN_SECONDS = 86_400;

@@ -1,7 +1,10 @@
 import rp from 'request-promise';
-import {ProfessionSkillTree} from "./types";
-import {OAuthClient} from "../oauth/client";
+import {Category, ICraftingData, KnownRecipe, ProfessionSkillTree} from "./types";
 import {getProfessionsCollection} from "./database";
+import {getAllCraftedItems} from "./CraftedItemsService";
+import {transformRecipeNameLower} from "./RecipeService";
+
+const OAuthClient = require("../oauth/client");
 
 const oauthClient = new OAuthClient();
 
@@ -9,23 +12,57 @@ const BASE_URL = "https://eu.api.blizzard.com";
 
 const professionMap: {professionId: number, skillTierId: number}[] = require('../assets/professionCalls.json');
 
-const PROFESSION_SKILL_TIER_URL = (professionId: number, skillTierId: number) => `${BASE_URL}/data/wow/profession/${professionId}/skill-tier/${skillTierId}?namespace=static-de&locale=de_DE`
+const PROFESSION_SKILL_TIER_URL = (professionId: number, skillTierId: number) => `${BASE_URL}/data/wow/profession/${professionId}/skill-tier/${skillTierId}?namespace=static-eu&locale=en_US&region=eu`
 
 const getProfessionSkillTree = async (professionId: number, skillTierId: number) => {
     const authToken = await oauthClient.getToken();
-    console.log("authhhh", authToken);
     return (rp.get({
         uri: PROFESSION_SKILL_TIER_URL(professionId, skillTierId),
         json: true,
         headers: {
-            Authorization: `Bearer ${authToken}`,
+            Authorization: `Bearer ${authToken.token.access_token}`,
         },
     }) as rp.RequestPromise<ProfessionSkillTree>);
 }
 
+
 const saveAllProfessions = async () => {
     const allProfessions = await Promise.all(professionMap.map(({professionId, skillTierId}) => getProfessionSkillTree(professionId, skillTierId)));
-    const professionCollection = await getProfessionsCollection();
-    return professionCollection.insertMany(allProfessions);
+    const allCraftedItems = await getAllCraftedItems();
+    const allCraftedItemsMap = allCraftedItems.reduce((acc, curr) => ({
+        ...acc,
+        [curr.item_name]: curr,
+    }), {} as {[key: string]: ICraftingData});
+    const allProfessionsWithMappedRecipes = allProfessions.map((professionSkillTree) => {
+        const mappedProfessionSkillTreeCategories = professionSkillTree.categories.map((category) => {
+            const mappedRecipes = category.recipes.map((recipe) => ({
+                ...recipe,
+                id_crafted_item: allCraftedItemsMap[transformRecipeNameLower(recipe)]?.id_crafted_item,
+            })).filter((recipe) => recipe.id_crafted_item);
+            return {
+                ...category,
+                recipes: mappedRecipes,
+            } as Category;
+        });
+
+        return {
+            ...professionSkillTree,
+            categories: mappedProfessionSkillTreeCategories.filter((category) => category.recipes.length)
+        } as ProfessionSkillTree;
+    })
+    const professionCollection = getProfessionsCollection();
+    return professionCollection.insertMany(allProfessionsWithMappedRecipes);
 }
 
+export const saveAllProfessionsIfNotExist = async () => {
+    const professionCollection = getProfessionsCollection();
+    const professions = await professionCollection.find().toArray();
+    if(!professions.length){
+        return saveAllProfessions();
+    }
+}
+
+
+export const getAllProfessionSkillTrees = async () => {
+    return getProfessionsCollection().find().toArray();
+}

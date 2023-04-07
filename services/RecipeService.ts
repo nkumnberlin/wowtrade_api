@@ -3,6 +3,10 @@ import {fetchProfessionsByRecipeNames} from "./CraftedItemsService";
 
 
 export const transformRecipeNameLower = (knownRecipe: KnownRecipe) => knownRecipe.name.toLowerCase().replaceAll(" ", "-")
+    .replaceAll("'", "")
+    .replaceAll("\"", "")
+    .replaceAll(":", "-")
+    .replaceAll(".", "-");
 export const transformRecipesNameLower = (knownRecipes: KnownRecipe[]) => knownRecipes.map(transformRecipeNameLower)
 
 export const fetchProfessionsForRecipes = async (knownRecipes: KnownRecipe[]) => {
