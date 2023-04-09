@@ -54,10 +54,7 @@ export interface ICraftingData {
   id: number;
   id_crafted_item: number;
   item_name: string;
-<<<<<<< HEAD
   id_recipe: number;
-=======
->>>>>>> e1d7f62 (update types)
 }
 
 const DAY_IN_SECONDS = 86_400;
@@ -83,7 +80,7 @@ export interface ListingData {
   listingDuration: ListingDuration;
   expiredAt?: Date;
   createdAt?: Date;
-  item: Omit<ICraftingData, "id">;
+  item: { id_crafted_item: number; item_name: string };
   qualityProcChance: number;
   multicraftPercentage: number;
 }
