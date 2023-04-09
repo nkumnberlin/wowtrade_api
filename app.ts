@@ -1,8 +1,15 @@
 import { NextFunction, Request, Response } from "express";
 require("dotenv").config();
-import {initializeDatabase} from "./services/database";
-import {ListingData} from "./services/types";
-import {saveListing, findLastFiveCreatedListings, findbyCreatorAccountId, findbyItemName} from "./services/ListingService";
+import { initializeDatabase } from "./services/database";
+import { ExpectingListingData, ListingData } from "./services/types";
+import {
+  findLastFiveCreatedListings,
+  findbyCreatorAccountId,
+  findbyItemName,
+  saveListing,
+} from "./services/ListingService";
+import bodyParser from "body-parser";
+import { createOrderMapper } from "./helper/order/createOrderMapper";
 const BlueBirdPromise = require("bluebird");
 const express = require("express");
 const cookieParser = require("cookie-parser");
@@ -21,8 +28,8 @@ const logger = createLogger();
 const cors = require("cors");
 
 interface AuthenticatedRequest extends Request {
-    isAuthenticated: () => boolean;
-    user: any;
+  isAuthenticated: () => boolean;
+  user: any;
 }
 interface SessionRequest extends AuthenticatedRequest {
   query: {
@@ -34,14 +41,14 @@ interface SessionRequest extends AuthenticatedRequest {
 }
 
 interface OrderCreateRequest extends AuthenticatedRequest {
-    body: ListingData;
+  body: ExpectingListingData;
 }
 
 interface OrderFetchRequest extends AuthenticatedRequest {
-    query: {
-        itemName?: string;
-        accountId?: string;
-    };
+  query: {
+    itemName?: string;
+    accountId?: string;
+  };
 }
 
 let redisClient;
@@ -60,6 +67,7 @@ const redisSessionStore = new RedisStore({
 
 const oauthClient = new OauthClient();
 const characterService = new CharacterService(oauthClient);
+const jsonParser = bodyParser.json();
 
 const app = express();
 
@@ -121,37 +129,9 @@ app.get(
   passport.authenticate("bnet", { failureRedirect: "/" }),
   function (req: SessionRequest, res: Response) {
     const redirectURL: URL = new URL("http://localhost:3005/callback");
-    // redirectURL.search;
-    // const params = new URLSearchParams({
-    //   code: req.query.code,
-    // });
-    // redirectURL.search = params.toString();
     res.status(301).redirect(redirectURL.href);
   }
 );
-app.get(
-  "/authenticated/test",
-  (req: Request, res: Response, next: () => NextFunction) => {
-    // Create a response object with the desired data
-    const responseBody = {
-      message: "Hello, world!",
-      data: {
-        h: "h",
-      },
-    };
-
-    // Return the response as JSON
-    console.log("ich geh hier rein", responseBody);
-    res.status(200).json(responseBody);
-    next();
-  }
-);
-
-app.post("/testpost", (req: Request, res: Response) => {
-  return res.status(200).json({
-    bing: "bong",
-  });
-});
 
 app.get(
   "/authenticated/characters",
@@ -188,43 +168,50 @@ app.get(
 );
 
 app.post(
-    "/authenticated/order",
-    async (req: OrderCreateRequest, res: Response, next: () => NextFunction) => {
-        try {
-            console.log("is in professions");
-            const listingData = req.body;
-            listingData.creatorAccountId = req.user.id;
-            const createdOrder = await saveListing(listingData);
-            res.json(createdOrder).status(201);
-            next();
-        } catch (e) {
-            res.status(500).json({ message: "Failed while fetching Characters" });
-        }
+  "/authenticated/order",
+  jsonParser,
+  async (req: OrderCreateRequest, res: Response, next: () => NextFunction) => {
+    try {
+      const listingData = req.body;
+      listingData.creatorAccountId = req.user.id;
+      const orderDTO = createOrderMapper(listingData);
+      const createdOrder = await saveListing(orderDTO);
+      res.json(createdOrder).status(201);
+      next();
+    } catch (e) {
+      console.log("error while created");
+      res.status(500).json({
+        status: 500,
+        message: "Failed while creating order. Already exists",
+      });
     }
+  }
 );
 
 app.get(
-    "/authenticated/order",
-    async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
-        try {
-            const { itemName, accountId } = req.query;
-            if(itemName){
-                const ordersByItemName = await findbyItemName(itemName)
-                res.json(ordersByItemName).status(200);
-                return next();
-            }
-            if(accountId){
-                const ordersByAccountCreatorId = await findbyCreatorAccountId(parseInt(accountId));
-                res.json(ordersByAccountCreatorId).status(200);
-                return next();
-            }
-            const lastFiveOrders = await findLastFiveCreatedListings()
-            res.json(lastFiveOrders).status(200);
-            return next();
-        } catch (e) {
-            res.status(500).json({ message: "Failed while fetching Characters" });
-        }
+  "/authenticated/order",
+  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
+    try {
+      const { itemName, accountId } = req.query;
+      if (itemName) {
+        const ordersByItemName = await findbyItemName(itemName);
+        res.json(ordersByItemName).status(200);
+        return next();
+      }
+      if (accountId) {
+        const ordersByAccountCreatorId = await findbyCreatorAccountId(
+          parseInt(accountId)
+        );
+        res.json(ordersByAccountCreatorId).status(200);
+        return next();
+      }
+      const lastFiveOrders = await findLastFiveCreatedListings();
+      res.json(lastFiveOrders).status(200);
+      return next();
+    } catch (e) {
+      res.status(500).json({ message: "Failed while fetching Characters" });
     }
+  }
 );
 
 app.get("/", (req: SessionRequest, res: Response) => {
@@ -242,4 +229,6 @@ app.get("/", (req: SessionRequest, res: Response) => {
 });
 const port = process.env.PORT || 3000;
 
-initializeDatabase().then(() => app.listen(port, () => console.log(`Worker  listening on port ${port}`)));
+initializeDatabase().then(() =>
+  app.listen(port, () => console.log(`Worker  listening on port ${port}`))
+);

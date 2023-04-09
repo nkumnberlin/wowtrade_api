@@ -1,5 +1,5 @@
 import exp from "constants";
-import {ObjectId} from "mongodb";
+import { ObjectId } from "mongodb";
 
 export interface IGetCharacter {
   characterName: string;
@@ -54,7 +54,10 @@ export interface ICraftingData {
   id: number;
   id_crafted_item: number;
   item_name: string;
+<<<<<<< HEAD
   id_recipe: number;
+=======
+>>>>>>> e1d7f62 (update types)
 }
 
 const DAY_IN_SECONDS = 86_400;
@@ -68,29 +71,46 @@ export enum ListingDuration {
 export interface ListingData {
   _id?: ObjectId;
   difficulty: number;
-  quality: number;
+  quality: string;
   qualifiedCharacterName: string;
   creatorAccountId?: number;
   profession: string;
-  commission : {
-    silver: string;
-    gold: string;
-  }
+  currentSkill: number;
+  commission: {
+    silver: number;
+    gold: number;
+  };
   listingDuration: ListingDuration;
   expiredAt?: Date;
   createdAt?: Date;
-  item: Omit<ICraftingData, 'id'>;
+  item: Omit<ICraftingData, "id">;
   qualityProcChance: number;
   multicraftPercentage: number;
 }
+export interface ExpectingListingData {
+  difficulty: string;
+  quality: string;
+  creatorAccountId?: number;
+  qualifiedCharacterName: string;
+  profession: string;
+  currentSkill: string;
+  commission: {
+    silver: string;
+    gold: string;
+  };
+  listingDuration: string;
+  item: { id_crafted_item: string; item_name: string };
+  qualityProcChance: string;
+  multicraftPercentage: string;
+}
 
 export interface ProfessionSkillTree {
-  _links:              Links;
-  id:                  number;
-  name:                string;
+  _links: Links;
+  id: number;
+  name: string;
   minimum_skill_level: number;
   maximum_skill_level: number;
-  categories:          Category[];
+  categories: Category[];
 }
 
 export interface Links {
@@ -102,8 +122,9 @@ export interface Link {
 }
 
 export interface Category {
-  name:    string;
+  name: string;
   recipes: KnownRecipe[];
 }
 
-export interface FrontendListingData extends Omit<ListingData, 'creatorAccountId'> {}
+export interface FrontendListingData
+  extends Omit<ListingData, "creatorAccountId"> {}
