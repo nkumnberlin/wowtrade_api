@@ -8,6 +8,7 @@ import {
   findByItemName,
   saveListing,
   deleteListingOfUser,
+  findByItemID,
 } from "./services/ListingService";
 import bodyParser from "body-parser";
 import { createOrderMapper } from "./helper/order/createOrderMapper";
@@ -22,10 +23,8 @@ const authenticatedGuard = require("./middleware/authenticated-guard");
 const passport = require("./oauth/passport");
 const OauthClient = require("./oauth/client");
 const CharacterService = require("./services/CharacterService");
-const createLogger = require("pino");
+const { getAllProfessionSkillTrees } = require("./services/ProfessionService");
 
-const url = require("url");
-const logger = createLogger();
 const cors = require("cors");
 
 interface AuthenticatedRequest extends Request {
@@ -118,10 +117,13 @@ app.get("/login", (req: Request, res: Response) => {
 });
 
 app.get("/logout", (req: SessionRequest, res: Response) => {
-  console.log("landet in session logout", req.session, req.user);
-  req.session.destroy((e) => console.log("error while destroying session ", e));
-  res.status(301).redirect("http://localhost:3005/logout");
-  return;
+  console.log("session id ", req.sessionID);
+  // @ts-ignore
+  req.session.destroy();
+  return res.send({
+    status: 201,
+    message: "Logged out",
+  });
 });
 
 app.get("/login/oauth/battlenet", passport.authenticate("bnet"));
@@ -134,6 +136,22 @@ app.get(
     res.status(301).redirect(redirectURL.href);
   }
 );
+
+app.get("/professions", async (req: SessionRequest, res: Response) => {
+  try {
+    const allProfessions = await getAllProfessionSkillTrees();
+    return res.status(200).json({
+      status: 200,
+      data: allProfessions,
+    });
+  } catch (e) {
+    console.log("error while in professions", e);
+    return res.status(500).json({
+      status: 500,
+      message: "Error while fetching Professions",
+    });
+  }
+});
 
 app.get(
   "/authenticated/characters",
@@ -218,12 +236,29 @@ app.delete(
   }
 );
 app.get(
-  "/order",
+  "/viewLast5",
   async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
     console.log("ist in order");
     const lastFiveOrders = await findLastFiveCreatedListings();
     res.json(lastFiveOrders).status(200);
     next();
+  }
+);
+app.get(
+  "/order",
+  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
+    const { id_crafted_item } = req.query;
+    if (!id_crafted_item) return res.json(500).json({ status: 500 });
+    console.log("id: ", id_crafted_item);
+    const int_crafted_item = parseInt(id_crafted_item, 10);
+    const allItems = await findByItemID(int_crafted_item);
+    console.log("aall items", allItems);
+    return res
+      .json({
+        data: allItems,
+        status: 200,
+      })
+      .status(200);
   }
 );
 

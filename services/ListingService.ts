@@ -49,7 +49,22 @@ export const findByItemName = async (itemName: string) => {
       },
       {
         projection: {
-          creatorAccountId: 0,
+          item_name: "",
+        },
+      }
+    )
+    .toArray();
+};
+export const findByItemID = async (itemID: number) => {
+  const collection = await getListingsCollection();
+  return collection
+    .find(
+      {
+        "item.id_crafted_item": itemID,
+      },
+      {
+        projection: {
+          "item.id_crafted_item": 0,
         },
       }
     )
