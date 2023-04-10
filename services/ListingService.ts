@@ -17,8 +17,9 @@ export const saveListing = async (listing: ListingData) => {
   const hasMoreThanFiveListings = await findByCreatorAccountId(
     listing.creatorAccountId
   );
-  if (hasMoreThanFiveListings.length >= 5) {
-    throw new Error("has too many listings, limit is 5");
+  // should be 5
+  if (hasMoreThanFiveListings.length >= 20) {
+    throw new Error("has too many listings, limit is 20");
   }
   const expiredAtDate = new Date();
   expiredAtDate.setTime(

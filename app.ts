@@ -160,8 +160,7 @@ app.get(
       const characters = await characterService.getUsersCharactersList(
         req.user.token
       );
-      res.json(characters);
-      next();
+      return res.json(characters);
     } catch (e) {
       res.status(500).json({ message: "Failed while fetching Characters" });
     }
@@ -179,8 +178,7 @@ app.get(
         name,
         slug
       );
-      res.json(professions);
-      next();
+      return res.json(professions);
     } catch (e) {
       res.status(500).json({ message: "Failed while fetching Characters" });
     }
@@ -240,8 +238,7 @@ app.get(
   async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
     console.log("ist in order");
     const lastFiveOrders = await findLastFiveCreatedListings();
-    res.json(lastFiveOrders).status(200);
-    next();
+    return res.json(lastFiveOrders).status(200);
   }
 );
 app.get(
@@ -268,20 +265,12 @@ app.get(
     try {
       const accountId = req.user.id;
       console.log("req user", req.user);
-
-      // if (itemName) {
-      //   const ordersByItemName = await findByItemName(itemName);
-      //   res.json(ordersByItemName).status(200);
-      //   return next();
-      // }
       if (accountId) {
         const ordersByAccountCreatorId = await findByCreatorAccountId(
           parseInt(accountId)
         );
-        res.json(ordersByAccountCreatorId).status(200);
-        return next();
+        return res.json(ordersByAccountCreatorId).status(200);
       }
-      return next();
     } catch (e) {
       res.status(500).json({ message: "Failed while fetching Characters" });
     }
