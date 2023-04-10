@@ -3,15 +3,23 @@ import { ListingData } from "./types";
 
 const MILLISECONDS_MULTiPLIER = 1000;
 export const saveListing = async (listing: ListingData) => {
+  if (
+    !listing.item.id_crafted_item ||
+    !listing.qualifiedCharacterName ||
+    !listing.creatorAccountId
+  ) {
+    throw new Error("item / user not found");
+  }
+  if (!listing.difficulty || !listing.quality) {
+    throw new Error("Difficulty / Quality not determined");
+  }
   const collection = await getListingsCollection();
-  const hasEntries = await collection
-    .find({
-      creatorAccountId: listing.creatorAccountId,
-      "item.id_crafted_item": listing.item.id_crafted_item,
-    })
-    .toArray();
-  if (hasEntries.length)
-    throw new Error("item to this user exist and cannot be inserted");
+  const hasMoreThanFiveListings = await findByCreatorAccountId(
+    listing.creatorAccountId
+  );
+  if (hasMoreThanFiveListings.length >= 5) {
+    throw new Error("has too many listings, limit is 5");
+  }
   const expiredAtDate = new Date();
   expiredAtDate.setTime(
     expiredAtDate.getTime() +
@@ -19,10 +27,18 @@ export const saveListing = async (listing: ListingData) => {
   );
   listing.expiredAt = expiredAtDate;
   listing.createdAt = new Date();
-
+  console.log("debugg ", listing);
+  const hasEntries = await checkIfUserHasIdenticalListing(
+    listing.item.id_crafted_item,
+    listing.creatorAccountId
+  );
+  if (hasEntries.length) {
+    throw new Error("item to this user exist and cannot be inserted");
+  }
+  console.log("render insert 1");
   return await collection.insertOne(listing);
 };
-export const findbyItemName = async (itemName: string) => {
+export const findByItemName = async (itemName: string) => {
   const collection = await getListingsCollection();
   return collection
     .find(
@@ -40,16 +56,18 @@ export const findbyItemName = async (itemName: string) => {
     .toArray();
 };
 
-export const findbyCreatorAccountId = async (accountId: number) => {
+export const findByCreatorAccountId = async (accountId: number) => {
   const collection = await getListingsCollection();
-  return collection.find(
-    { creatorAccountId: accountId },
-    {
-      projection: {
-        creatorAccountId: 0,
-      },
-    }
-  );
+  return collection
+    .find(
+      { creatorAccountId: accountId },
+      {
+        projection: {
+          creatorAccountId: 0,
+        },
+      }
+    )
+    .toArray();
 };
 
 export const findLastFiveCreatedListings = async () => {
@@ -67,3 +85,36 @@ export const findLastFiveCreatedListings = async () => {
     .limit(5)
     .toArray();
 };
+
+async function checkIfUserHasIdenticalListing(
+  id_crafted_item: number,
+  creatorAccountId: number
+) {
+  const collection = await getListingsCollection();
+  return collection
+    .find(
+      {
+        creatorAccountId: creatorAccountId,
+        "item.id_crafted_item": id_crafted_item,
+      },
+      {
+        projection: {
+          creatorAccountId: 0,
+          "item.id_crafted_item": 0,
+        },
+      }
+    )
+    .toArray();
+}
+
+export async function deleteListingOfUser(
+  id_crafted_item: number,
+  creatorAccountId: number
+) {
+  const deleteListing = {
+    creatorAccountId: creatorAccountId,
+    "item.id_crafted_item": id_crafted_item,
+  };
+  const collection = await getListingsCollection();
+  return collection.deleteOne(deleteListing);
+}

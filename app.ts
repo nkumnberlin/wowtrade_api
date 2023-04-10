@@ -4,9 +4,10 @@ import { initializeDatabase } from "./services/database";
 import { ExpectingListingData, ListingData } from "./services/types";
 import {
   findLastFiveCreatedListings,
-  findbyCreatorAccountId,
-  findbyItemName,
+  findByCreatorAccountId,
+  findByItemName,
   saveListing,
+  deleteListingOfUser,
 } from "./services/ListingService";
 import bodyParser from "body-parser";
 import { createOrderMapper } from "./helper/order/createOrderMapper";
@@ -47,6 +48,7 @@ interface OrderCreateRequest extends AuthenticatedRequest {
 interface OrderFetchRequest extends AuthenticatedRequest {
   query: {
     itemName?: string;
+    id_crafted_item?: string;
     accountId?: string;
   };
 }
@@ -175,16 +177,53 @@ app.post(
       const listingData = req.body;
       listingData.creatorAccountId = req.user.id;
       const orderDTO = createOrderMapper(listingData);
+      console.log("0der", orderDTO);
       const createdOrder = await saveListing(orderDTO);
-      res.json(createdOrder).status(201);
-      next();
+      return res.json(createdOrder).status(201);
     } catch (e) {
-      console.log("error while created");
-      res.status(500).json({
+      console.log("error while created", e);
+      return res.status(500).json({
         status: 500,
-        message: "Failed while creating order. Already exists",
+        message: `Failed while creating order. ${e}`,
       });
     }
+  }
+);
+
+app.delete(
+  "/authenticated/order",
+  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
+    const { id_crafted_item } = req.query;
+    const creatorAccountId = req.user.id;
+    if (!id_crafted_item) {
+      return res.status(500).json({
+        status: 500,
+        message: "id does not exist",
+      });
+    }
+    const itemId = parseInt(id_crafted_item, 10);
+    console.log("in delete, ", id_crafted_item);
+    try {
+      const deleteOrder = await deleteListingOfUser(itemId, creatorAccountId);
+      res.status(201).json({
+        status: 201,
+        message: "successfully deleted",
+      });
+    } catch (e) {
+      res.status(500).json({
+        status: 500,
+        message: `Failed while deleting order. ${e}`,
+      });
+    }
+  }
+);
+app.get(
+  "/order",
+  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
+    console.log("ist in order");
+    const lastFiveOrders = await findLastFiveCreatedListings();
+    res.json(lastFiveOrders).status(200);
+    next();
   }
 );
 
@@ -192,21 +231,21 @@ app.get(
   "/authenticated/order",
   async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
     try {
-      const { itemName, accountId } = req.query;
-      if (itemName) {
-        const ordersByItemName = await findbyItemName(itemName);
-        res.json(ordersByItemName).status(200);
-        return next();
-      }
+      const accountId = req.user.id;
+      console.log("req user", req.user);
+
+      // if (itemName) {
+      //   const ordersByItemName = await findByItemName(itemName);
+      //   res.json(ordersByItemName).status(200);
+      //   return next();
+      // }
       if (accountId) {
-        const ordersByAccountCreatorId = await findbyCreatorAccountId(
+        const ordersByAccountCreatorId = await findByCreatorAccountId(
           parseInt(accountId)
         );
         res.json(ordersByAccountCreatorId).status(200);
         return next();
       }
-      const lastFiveOrders = await findLastFiveCreatedListings();
-      res.json(lastFiveOrders).status(200);
       return next();
     } catch (e) {
       res.status(500).json({ message: "Failed while fetching Characters" });
