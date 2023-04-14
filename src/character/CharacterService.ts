@@ -1,11 +1,11 @@
-import { REGIONS } from "./types";
+import { REGIONS } from './types';
 import { fetchProfessionsForRecipes, transformRecipeNameLower } from '../profession/RecipeService';
 import {
   DragonFlightProfessions,
   IProfession,
   KnownRecipe,
   KnownRecipeWithItemId,
-  ICraftingData
+  ICraftingData,
 } from '../profession/types';
 
 const rp = require('request-promise');
@@ -49,6 +49,7 @@ class CharacterService {
       })
       .filter((recipe) => recipe) as KnownRecipeWithItemId[];
   }
+
   async getUserProfessionsToCharacter(
     usersAccessToken: string,
     characterName: string,
@@ -57,7 +58,7 @@ class CharacterService {
     const decodedCharacterName = decodeURIComponent(characterName);
     const region: REGIONS = 'eu';
     try {
-      //https://eu.api.blizzard.com/profile/wow/character/tichondrius/charactername/professions?namespace=profile-us&locale=en_US&access_token=EUUOWPuWDHb7toaa0972sLtvjzxwvwfMCT
+      // https://eu.api.blizzard.com/profile/wow/character/tichondrius/charactername/professions?namespace=profile-us&locale=en_US&access_token=EUUOWPuWDHb7toaa0972sLtvjzxwvwfMCT
       // if there are primaries, there are also secondaries. need to keep that in mind
       const { primaries } = await rp.get({
         uri: `https://eu.api.blizzard.com/profile/wow/character/${realmSlug}/${decodedCharacterName}/professions?namespace=profile-${region}&locale=en_US`,
@@ -75,16 +76,16 @@ class CharacterService {
             return [
               {
                 profession: curr.profession,
-                tiers: tiers,
+                tiers,
               },
             ];
           }
           return [
             {
               profession: curr.profession,
-              tiers: tiers,
+              tiers,
             },
-            ...((prev && prev) || {}),
+            ...(prev || {}),
           ];
         },
         {} as DragonFlightProfessions[]
@@ -118,6 +119,7 @@ class CharacterService {
       console.log('while profession', e);
     }
   }
+
   // todo
   _mapWowAccount(account: any) {
     const { characters } = account;

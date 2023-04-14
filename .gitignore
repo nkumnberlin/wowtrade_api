@@ -1,7 +1,6 @@
 node_modules
 .idea
 yarn-error.log
-yarn.lock
-/.env
+.env
 dist
 **/*.js

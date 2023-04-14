@@ -1,205 +1,185 @@
-import { NextFunction, Request, Response } from "express";
-require("dotenv").config();
-import { initializeDatabase } from "./services/database";
+import fastify, { FastifyReply, FastifyRequest } from 'fastify';
+
+import fastifyCookie from '@fastify/cookie';
+import session from '@fastify/session';
+import MongoStore from 'connect-mongo';
+import fastifyCors from '@fastify/cors';
+import { ExpectingListingData } from './order/types';
+import { createOrderMapper } from './helper/order/createOrderMapper';
 import {
   findLastFiveCreatedListings,
   findByCreatorAccountId,
-  findByItemName,
   saveListing,
   deleteListingOfUser,
   findByItemID,
-} from "./order/ListingService";
-import bodyParser from "body-parser";
-import { createOrderMapper } from "./helper/order/createOrderMapper";
+} from './order/ListingService';
+import { authenticator, BnetUser } from './oauth/bnetPassport';
 
-import {ExpectingListingData, ListingData} from "./order/types";
-const BlueBirdPromise = require("bluebird");
-const express = require("express");
-const cookieParser = require("cookie-parser");
-const session = require("express-session");
-const RedisStore = require("connect-redis")(session);
-const redis = require("redis");
-const morgan = require("morgan");
-const authenticatedGuard = require("./middleware/authenticated-guard");
-const passport = require("./oauth/passport");
-const OauthClient = require("./oauth/client");
-const CharacterService = require("./character/CharacterService");
-const { getAllProfessionSkillTrees } = require("./profession/ProfessionService");
+import { initializeDatabase, url } from './services/database';
+import SessionStore = session.SessionStore;
+import { env } from './utils/env';
 
-const cors = require("cors");
+require('dotenv').config();
+const { getAllProfessionSkillTrees } = require('./profession/ProfessionService');
+const CharacterService = require('./character/CharacterService');
+const OauthClient = require('./oauth/client');
 
-interface AuthenticatedRequest extends Request {
-  isAuthenticated: () => boolean;
-  user: any;
+declare module 'fastify' {
+  export interface FastifyRequest {
+    isAuthenticated: () => boolean;
+  }
+
+  export interface FastifyReply {
+    user?: PassportUser;
+  }
+
+  interface PassportUser extends BnetUser {}
 }
-interface SessionRequest extends AuthenticatedRequest {
-  query: {
+
+type CharacterQueryRequest = FastifyRequest<{
+  Querystring: {
     code: string;
     name: string;
     slug: string;
     region: string;
   };
-}
-
-interface OrderCreateRequest extends AuthenticatedRequest {
-  body: ExpectingListingData;
-}
-
-interface OrderFetchRequest extends AuthenticatedRequest {
-  query: {
+}>;
+type OrderFetchRequest = FastifyRequest<{
+  Querystring: {
     itemName?: string;
     id_crafted_item?: string;
     accountId?: string;
   };
-}
-
-let redisClient;
-if (process.env.REDIS_URL) {
-  redisClient = redis.createClient(process.env.REDIS_URL);
-} else {
-  redisClient = redis.createClient({
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
-  });
-}
-
-const redisSessionStore = new RedisStore({
-  client: redisClient,
-});
+}>;
 
 const oauthClient = new OauthClient();
 const characterService = new CharacterService(oauthClient);
-const jsonParser = bodyParser.json();
 
-const app = express();
-
-app.use((req: Request, res: Response, next: () => NextFunction) => {
-  res.locals = {
-    ...res.locals,
-    projectName: process.env.PROJECT_NAME || "WoW Trade API",
-  };
-  next();
+const app = fastify();
+const store = MongoStore.create({
+  mongoUrl: url,
 });
 
-app.use(cookieParser());
+app.register(fastifyCookie, {
+  secret: 'qrtezfzuhvg frhwhbs8fg8zuvwbcwuzfveuigf87wigfuiwb78wgiubciksdbkvbsdk',
+});
 
-app.use(morgan("combined"));
+app.register(session, {
+  cookieName: 'wow-trade-session',
+  secret: 'wow-trade-secret',
+  saveUninitialized: true,
+  store: store as unknown as SessionStore,
+});
 
-app.use(
-  session({
-    name: "wow-trade-session",
-    secret: "wow-trade-secret",
-    saveUninitialized: true,
-    resave: true,
-    store: redisSessionStore,
-  })
-);
+app.register(authenticator.initialize());
 
-app.use(passport.initialize({}));
+app.register(authenticator.secureSession());
 
-app.use(passport.session());
+app.register(fastifyCors);
 
-app.use(cors());
-
-app.use((req: SessionRequest, res: Response, next: () => NextFunction) => {
-  if (req.isAuthenticated()) {
-    console.log("is authenticated", req.user);
-    res.locals.currentUser = req.user;
+app.addHook('onRequest', (req: FastifyRequest, res, next) => {
+  if (!req.url.includes('authenticated')) {
     return next();
   }
-  console.log("next step, nicht eingeloggt");
-  next();
+  if (req.isAuthenticated()) {
+    console.log('is authenticated', req.user);
+    res.user = req.user;
+    return next();
+  }
+  console.log('next step, nicht eingeloggt');
+  res.redirect('/');
+  return next();
 });
 
-app.use("/authenticated", authenticatedGuard);
-
-app.get("/login", (req: Request, res: Response) => {
-  res.redirect("/login/oauth/battlenet");
+app.get('/login', (req, res) => {
+  res.redirect('/login/oauth/battlenet');
 });
 
-app.get("/logout", (req: SessionRequest, res: Response) => {
-  console.log("session id ", req.sessionID);
+app.get('/logout', (req, res) => {
+  console.log('session id ', req.session.sessionId);
   // @ts-ignore
   req.session.destroy();
   return res.send({
     status: 201,
-    message: "Logged out",
+    message: 'Logged out',
   });
 });
 
-app.get("/login/oauth/battlenet", passport.authenticate("bnet"));
+app.get('/login/oauth/battlenet', authenticator.authenticate('bnet'));
 
 app.get(
-  "/redirect",
-  passport.authenticate("bnet", { failureRedirect: "/" }),
-  function (req: SessionRequest, res: Response) {
-    const redirectURL: URL = new URL("/callback");
+  '/redirect',
+  { preValidation: authenticator.authenticate('bnet', { failureRedirect: '/' }) },
+  (req, res) => {
+    const redirectURL: URL = new URL(`${req.headers.referer}/callback`);
     res.status(301).redirect(redirectURL.href);
   }
 );
 
-app.get("/professions", async (req: SessionRequest, res: Response) => {
+app.get('/professions', async (req: FastifyRequest, res) => {
   try {
     const allProfessions = await getAllProfessionSkillTrees();
-    return res.status(200).json({
+    return await res.status(200).send({
       status: 200,
       data: allProfessions,
     });
   } catch (e) {
-    console.log("error while in professions", e);
-    return res.status(500).json({
+    console.log('error while in professions', e);
+    return res.status(500).send({
       status: 500,
-      message: "Error while fetching Professions",
+      message: 'Error while fetching Professions',
     });
   }
 });
 
-app.get(
-  "/authenticated/characters",
-  async (req: SessionRequest, res: Response, next: () => NextFunction) => {
-    try {
-      const characters = await characterService.getUsersCharactersList(
-        req.user.token
-      );
-      return res.json(characters);
-    } catch (e) {
-      res.status(500).json({ message: "Failed while fetching Characters" });
-    }
+app.get('/authenticated/characters', async (req: FastifyRequest, res) => {
+  try {
+    const characters = await characterService.getUsersCharactersList(req?.user?.token);
+    return await res.status(200).send(characters);
+  } catch (e) {
+    return res.status(500).send({ message: 'Failed while fetching Characters' });
   }
-);
-///authenticated/character/professions?name=Cdb&slug=Thrall&region=eu
-app.get(
-  "/authenticated/character/professions",
-  async (req: SessionRequest, res: Response, next: () => NextFunction) => {
-    try {
-      console.log("is in professions");
-      const { name, slug, region } = req.query;
-      const professions = await characterService.getUserProfessionsToCharacter(
-        req.user.token,
-        name,
-        slug
-      );
-      return res.json(professions);
-    } catch (e) {
-      res.status(500).json({ message: "Failed while fetching Characters" });
-    }
+});
+/// authenticated/character/professions?name=Cdb&slug=Thrall&region=eu
+app.get('/authenticated/character/professions', async (req: CharacterQueryRequest, res) => {
+  try {
+    console.log('is in professions');
+    const { name, slug } = req.query;
+    const professions = await characterService.getUserProfessionsToCharacter(
+      req?.user?.token,
+      name,
+      slug
+    );
+    return await res.send(professions);
+  } catch (e) {
+    return res.status(500).send({ message: 'Failed while fetching Characters' });
   }
-);
+});
 
 app.post(
-  "/authenticated/order",
-  jsonParser,
-  async (req: OrderCreateRequest, res: Response, next: () => NextFunction) => {
+  '/authenticated/order',
+  async (
+    req: FastifyRequest<{
+      Body: ExpectingListingData;
+    }>,
+    res
+  ) => {
+    if (!req?.user?.id) {
+      return res.status(500).send({
+        status: 500,
+        message: `UserId doesn't exist.`,
+      });
+    }
     try {
       const listingData = req.body;
-      listingData.creatorAccountId = req.user.id;
+      listingData.creatorAccountId = parseInt(req?.user?.id, 10);
       const orderDTO = createOrderMapper(listingData);
-      console.log("0der", orderDTO);
+      console.log('0der', orderDTO);
       const createdOrder = await saveListing(orderDTO);
-      return res.json(createdOrder).status(201);
+      return await res.send(createdOrder).status(201);
     } catch (e) {
-      console.log("error while created", e);
-      return res.status(500).json({
+      console.log('error while created', e);
+      return res.status(500).send({
         status: 500,
         message: `Failed while creating order. ${e}`,
       });
@@ -207,92 +187,81 @@ app.post(
   }
 );
 
-app.delete(
-  "/authenticated/order",
-  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
-    const { id_crafted_item } = req.query;
-    const creatorAccountId = req.user.id;
-    if (!id_crafted_item) {
-      return res.status(500).json({
-        status: 500,
-        message: "id does not exist",
-      });
-    }
-    const itemId = parseInt(id_crafted_item, 10);
-    console.log("in delete, ", id_crafted_item);
-    try {
-      const deleteOrder = await deleteListingOfUser(itemId, creatorAccountId);
-      res.status(201).json({
-        status: 201,
-        message: "successfully deleted",
-      });
-    } catch (e) {
-      res.status(500).json({
-        status: 500,
-        message: `Failed while deleting order. ${e}`,
-      });
-    }
+app.delete('/authenticated/order', async (req: OrderFetchRequest, res) => {
+  const { id_crafted_item: IdCraftedItem } = req.query;
+  const creatorAccountId = req?.user?.id;
+  if (!IdCraftedItem) {
+    return res.status(500).send({
+      status: 500,
+      message: 'id does not exist',
+    });
   }
-);
-app.get(
-  "/viewLast5",
-  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
-    console.log("ist in order");
-    const lastFiveOrders = await findLastFiveCreatedListings();
-    return res.json(lastFiveOrders).status(200);
+  if (!creatorAccountId) {
+    return res.status(500).send({
+      status: 500,
+      message: `UserId doesn't exist.`,
+    });
   }
-);
-app.get(
-  "/order",
-  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
-    const { id_crafted_item } = req.query;
-    if (!id_crafted_item) return res.json(500).json({ status: 500 });
-    console.log("id: ", id_crafted_item);
-    const int_crafted_item = parseInt(id_crafted_item, 10);
-    const allItems = await findByItemID(int_crafted_item);
-    console.log("aall items", allItems);
-    return res
-      .json({
-        data: allItems,
-        status: 200,
-      })
-      .status(200);
+  const itemId = parseInt(IdCraftedItem, 10);
+  console.log('in delete, ', IdCraftedItem);
+  try {
+    await deleteListingOfUser(itemId, parseInt(creatorAccountId, 10));
+    return await res.status(201).send({
+      status: 201,
+      message: 'successfully deleted',
+    });
+  } catch (e) {
+    return res.status(500).send({
+      status: 500,
+      message: `Failed while deleting order. ${e}`,
+    });
   }
-);
-
-app.get(
-  "/authenticated/order",
-  async (req: OrderFetchRequest, res: Response, next: () => NextFunction) => {
-    try {
-      const accountId = req.user.id;
-      console.log("req user", req.user);
-      if (accountId) {
-        const ordersByAccountCreatorId = await findByCreatorAccountId(
-          parseInt(accountId)
-        );
-        return res.json(ordersByAccountCreatorId).status(200);
-      }
-    } catch (e) {
-      res.status(500).json({ message: "Failed while fetching Characters" });
-    }
-  }
-);
-
-app.get("/", (req: SessionRequest, res: Response) => {
-  console.log("nice cookies!", req.cookies);
-  if (req.isAuthenticated()) {
-    return res.redirect("/authenticated");
-  }
-  // if (!req.isAuthenticated() && req.cookies["wow-trade-session"]) {
-  //   console.log("redirectikus! ");
-  //   return res.redirect("/logout");
-  // }
-  console.log("ist nicht authentifizifert > redirect to /login-");
-  const redirectURL: URL = new URL("/ungracefully-logout");
-  res.status(301).redirect(redirectURL.href);
 });
-const port = process.env.PORT || 3000;
+app.get('/viewLast5', async (req: FastifyRequest, res) => {
+  console.log('ist in order');
+  const lastFiveOrders = await findLastFiveCreatedListings();
+  return res.send(lastFiveOrders).status(200);
+});
+app.get('/order', async (req: OrderFetchRequest, res) => {
+  const { id_crafted_item: IdCraftedItem } = req.query;
+  if (!IdCraftedItem) return res.send(500).send({ status: 500 });
+  console.log('id: ', IdCraftedItem);
+  const craftedItemId = parseInt(IdCraftedItem, 10);
+  const allItems = await findByItemID(craftedItemId);
+  console.log('aall items', allItems);
+  return res
+    .send({
+      data: allItems,
+      status: 200,
+    })
+    .status(200);
+});
+
+app.get('/authenticated/order', async (req: OrderFetchRequest, res) => {
+  try {
+    const accountId = req?.user?.id;
+    console.log('req user', req.user);
+    if (accountId) {
+      const ordersByAccountCreatorId = await findByCreatorAccountId(parseInt(accountId, 10));
+      return await res.send(ordersByAccountCreatorId).status(200);
+    }
+    return await res.status(500).send({ message: 'Failed while fetching Characters' });
+  } catch (e) {
+    return res.status(500).send({ message: 'Failed while fetching Characters' });
+  }
+});
+
+app.get('/', (req: FastifyRequest, res: FastifyReply) => {
+  console.log('nice cookies!', req.cookies);
+  if (req.isAuthenticated()) {
+    return res.redirect('/authenticated');
+  }
+  console.log('ist nicht authentifizifert > redirect to /login-');
+  const redirectURL: URL = new URL('/ungracefully-logout');
+  return res.status(301).redirect(redirectURL.href);
+});
+const port = env.PORT;
 
 initializeDatabase().then(() =>
-  app.listen(port, () => console.log(`Worker  listening on port ${port}`))
+  app.listen({ port, host: '::' }, () => console.log(`Worker  listening on port ${port}`))
 );

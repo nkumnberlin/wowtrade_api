@@ -4,8 +4,9 @@ WORKDIR /usr/src/app
 
 ARG NODE_ENV=production
 
-ADD ./src/* .
+COPY src/ .
+COPY package.json .
 
 RUN npm install --quiet
 
-CMD ["node-ts", "app.ts"]
+CMD ["npm", "run", "dev"]
