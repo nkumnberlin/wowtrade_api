@@ -25,9 +25,15 @@ export interface BnetUser {
 }
 
 const authenticator = new Authenticator();
-authenticator.registerUserSerializer(async (user: BnetUser, request) => user);
+authenticator.registerUserSerializer(async (user: BnetUser, request) => {
+  console.log("SESERIALIZE", request)
+  return user;
+});
 
-authenticator.registerUserDeserializer(async (user: BnetUser, request) => user);
+authenticator.registerUserDeserializer(async (user: BnetUser, request) => {
+  console.log("DESERIALIZE", request)
+  return user;
+});
 
 authenticator.use(new BnetStrategy(passportOptions, passportCallback));
 

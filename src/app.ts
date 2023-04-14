@@ -2,17 +2,15 @@ import fastify, { FastifyRequest } from 'fastify';
 
 import fastifyCookie from '@fastify/cookie';
 import session from '@fastify/session';
-import MongoStore from 'connect-mongo';
 import fastifyCors from '@fastify/cors';
 import { authenticator, BnetUser } from './oauth/bnetPassport';
-
 import { initializeDatabase, url } from './services/database';
-import SessionStore = session.SessionStore;
 import { env } from './utils/env';
 import { authenticationController } from './authentication/controller/authenticationController';
 import {characterController} from "./character/controller/characterController";
 import {professionController} from "./profession/controller/professionController";
 import {orderController} from "./order/controller/orderController";
+import {MongoSessionStore} from './authentication/session/mongoSessionStore';
 
 declare module 'fastify' {
   export interface FastifyRequest {
@@ -27,21 +25,14 @@ declare module 'fastify' {
 }
 
 const app = fastify();
-const store = MongoStore.create({
-  mongoUrl: url,
-  collectionName: "sessions"
-});
+const store = new MongoSessionStore();
 
-app.register(fastifyCookie, {
-  secret: 'qrtezfzuhvg frhwhbs8fg8zuvwbcwuzfveuigf87wigfuiwb78wgiubciksdbkvbsdk',
-
-});
+app.register(fastifyCookie);
 
 app.register(session, {
   cookieName: 'wow-trade-session',
   secret: 'wow-trade-secret-wow-trade-secret-wow-trade-secret-wow-trade-secret-wow-trade-secret-',
-  saveUninitialized: true,
-  store: store as unknown as SessionStore,
+  store: store,
 });
 
 app.register(authenticator.initialize());
