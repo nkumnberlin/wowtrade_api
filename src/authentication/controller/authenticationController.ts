@@ -22,7 +22,8 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
     '/redirect',
     { preValidation: authenticator.authenticate('bnet', { failureRedirect: '/' }) },
     (req, res) => {
-      const redirectURL: URL = new URL(`${req.headers.referer}/callback`);
+      const redirectURL: URL = new URL(`${req.headers.referer}callback`);
+      console.log("USA", res.user, req.user)
       res.status(301).redirect(redirectURL.href);
     }
   );

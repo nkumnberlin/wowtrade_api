@@ -5,3 +5,4 @@ test.setup.tsx
 *.feature
 hooks.tsx
 node_modules/**
+/src/authentication/controller/authenticationController.ts

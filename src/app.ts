@@ -1,18 +1,9 @@
-import fastify, { FastifyReply, FastifyRequest } from 'fastify';
+import fastify, { FastifyRequest } from 'fastify';
 
 import fastifyCookie from '@fastify/cookie';
 import session from '@fastify/session';
 import MongoStore from 'connect-mongo';
 import fastifyCors from '@fastify/cors';
-import { ExpectingListingData } from './order/types';
-import { createOrderMapper } from './helper/order/createOrderMapper';
-import {
-  findLastFiveCreatedListings,
-  findByCreatorAccountId,
-  saveListing,
-  deleteListingOfUser,
-  findByItemID,
-} from './order/ListingService';
 import { authenticator, BnetUser } from './oauth/bnetPassport';
 
 import { initializeDatabase, url } from './services/database';
@@ -22,11 +13,6 @@ import { authenticationController } from './authentication/controller/authentica
 import {characterController} from "./character/controller/characterController";
 import {professionController} from "./profession/controller/professionController";
 import {orderController} from "./order/controller/orderController";
-
-require('dotenv').config();
-const { getAllProfessionSkillTrees } = require('./profession/ProfessionService');
-const CharacterService = require('./character/CharacterService');
-const OauthClient = require('./oauth/client');
 
 declare module 'fastify' {
   export interface FastifyRequest {
@@ -43,10 +29,12 @@ declare module 'fastify' {
 const app = fastify();
 const store = MongoStore.create({
   mongoUrl: url,
+  collectionName: "sessions"
 });
 
 app.register(fastifyCookie, {
   secret: 'qrtezfzuhvg frhwhbs8fg8zuvwbcwuzfveuigf87wigfuiwb78wgiubciksdbkvbsdk',
+
 });
 
 app.register(session, {
@@ -71,7 +59,7 @@ app.addHook('onRequest', (req: FastifyRequest, res, next) => {
     res.user = req.user;
     return next();
   }
-  console.log('next step, nicht eingeloggt');
+  console.log('next step, nicht eingeloggt', req.user);
   res.redirect('/');
   return next();
 });

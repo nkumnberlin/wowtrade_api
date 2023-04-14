@@ -26,7 +26,7 @@ export const orderController: FastifyPluginCallback = (app, opts, done) => {
         }
         try {
           const listingData = req.body;
-          listingData.creatorAccountId = parseInt(req?.user?.id, 10);
+          listingData.creatorAccountId = req?.user?.id;
           const orderDTO = createOrderMapper(listingData);
           console.log('0der', orderDTO);
           const createdOrder = await saveListing(orderDTO);
@@ -59,7 +59,7 @@ export const orderController: FastifyPluginCallback = (app, opts, done) => {
     const itemId = parseInt(IdCraftedItem, 10);
     console.log('in delete, ', IdCraftedItem);
     try {
-      await deleteListingOfUser(itemId, parseInt(creatorAccountId, 10));
+      await deleteListingOfUser(itemId, creatorAccountId);
       return await res.status(201).send({
         status: 201,
         message: 'successfully deleted',
@@ -96,7 +96,7 @@ export const orderController: FastifyPluginCallback = (app, opts, done) => {
       const accountId = req?.user?.id;
       console.log('req user', req.user);
       if (accountId) {
-        const ordersByAccountCreatorId = await findByCreatorAccountId(parseInt(accountId, 10));
+        const ordersByAccountCreatorId = await findByCreatorAccountId(accountId);
         return await res.send(ordersByAccountCreatorId).status(200);
       }
       return await res.status(500).send({ message: 'Failed while fetching Characters' });

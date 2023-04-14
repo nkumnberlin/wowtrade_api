@@ -5,6 +5,7 @@ const characterService = new CharacterService();
 
 export const characterController: FastifyPluginCallback = (app, opts, done) => {
   app.get('/authenticated/characters', async (req: FastifyRequest, res) => {
+    console.log("USER", req.user)
     if(!req?.user?.token){
       return res.status(500).send({ message: 'Failed while fetching Characters' });
     }

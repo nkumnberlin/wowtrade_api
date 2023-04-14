@@ -5,10 +5,8 @@ import { env } from '../utils/env';
 const BnetStrategy = strategies.Strategy;
 
 const passportCallback = (accessToken: string, refreshToken: string, profile: any, done: any) => {
-  process.nextTick(() => {
-    console.log('felix fuer unsere augen, pipikaka ', accessToken, refreshToken, profile);
-    return done(null, profile);
-  });
+  console.log('felix fuer unsere augen, pipikaka ', accessToken, refreshToken, profile);
+  return done(null, profile);
 };
 
 const passportOptions: StrategyOptions = {
@@ -19,7 +17,10 @@ const passportOptions: StrategyOptions = {
 };
 
 export interface BnetUser {
-  id: string;
+  sub: string,
+  id: number;
+  battletag: string;
+  provider: string;
   token: string;
 }
 
