@@ -2,7 +2,7 @@ export const resources = [
   {
     Id: 190508,
     ListOfReagents: null,
-    Name: "Primal Molten Warglaive",
+    Name: 'Primal Molten Warglaive',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -15,7 +15,7 @@ export const resources = [
     Id: 193019,
     ListOfReagents: null,
     // eslint-disable-next-line sonarjs/no-duplicate-string
-    Name: "Djaradin\u0027s \u0022Pinata\u0022",
+    Name: 'Djaradin\u0027s \u0022Pinata\u0022',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -27,7 +27,7 @@ export const resources = [
   {
     Id: 193020,
     ListOfReagents: null,
-    Name: "Djaradin\u0027s \u0022Pinata\u0022",
+    Name: 'Djaradin\u0027s \u0022Pinata\u0022',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -39,7 +39,7 @@ export const resources = [
   {
     Id: 193021,
     ListOfReagents: null,
-    Name: "Djaradin\u0027s \u0022Pinata\u0022",
+    Name: 'Djaradin\u0027s \u0022Pinata\u0022',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -51,7 +51,7 @@ export const resources = [
   {
     Id: 190505,
     ListOfReagents: null,
-    Name: "Primal Molten Shortblade",
+    Name: 'Primal Molten Shortblade',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -63,7 +63,7 @@ export const resources = [
   {
     Id: 190506,
     ListOfReagents: null,
-    Name: "Primal Molten Spellblade",
+    Name: 'Primal Molten Spellblade',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -75,7 +75,7 @@ export const resources = [
   {
     Id: 193371,
     ListOfReagents: null,
-    Name: "\u0022Rhinestone\u0022 Sunglasses",
+    Name: '\u0022Rhinestone\u0022 Sunglasses',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -87,7 +87,7 @@ export const resources = [
   {
     Id: 190510,
     ListOfReagents: null,
-    Name: "Primal Molten Greataxe",
+    Name: 'Primal Molten Greataxe',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -99,7 +99,7 @@ export const resources = [
   {
     Id: 190487,
     ListOfReagents: null,
-    Name: "Draconium Axe",
+    Name: 'Draconium Axe',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -111,7 +111,7 @@ export const resources = [
   {
     Id: 190484,
     ListOfReagents: null,
-    Name: "Draconium Sword",
+    Name: 'Draconium Sword',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -123,7 +123,7 @@ export const resources = [
   {
     Id: 190486,
     ListOfReagents: null,
-    Name: "Draconium Great Mace",
+    Name: 'Draconium Great Mace',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -135,7 +135,7 @@ export const resources = [
   {
     Id: 190482,
     ListOfReagents: null,
-    Name: "Draconium Stiletto",
+    Name: 'Draconium Stiletto',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -147,7 +147,7 @@ export const resources = [
   {
     Id: 190483,
     ListOfReagents: null,
-    Name: "Draconium Dirk",
+    Name: 'Draconium Dirk',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -159,7 +159,7 @@ export const resources = [
   {
     Id: 190485,
     ListOfReagents: null,
-    Name: "Draconium Knuckles",
+    Name: 'Draconium Knuckles',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -171,7 +171,7 @@ export const resources = [
   {
     Id: 190512,
     ListOfReagents: null,
-    Name: "Obsidian Seared Runeaxe",
+    Name: 'Obsidian Seared Runeaxe',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -183,7 +183,7 @@ export const resources = [
   {
     Id: 190518,
     ListOfReagents: null,
-    Name: "Obsidian Seared Slicer",
+    Name: 'Obsidian Seared Slicer',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -195,7 +195,7 @@ export const resources = [
   {
     Id: 190517,
     ListOfReagents: null,
-    Name: "Obsidian Seared Invoker",
+    Name: 'Obsidian Seared Invoker',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -207,7 +207,7 @@ export const resources = [
   {
     Id: 190516,
     ListOfReagents: null,
-    Name: "Obsidian Seared Crusher",
+    Name: 'Obsidian Seared Crusher',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -219,7 +219,7 @@ export const resources = [
   {
     Id: 190514,
     ListOfReagents: null,
-    Name: "Obsidian Seared Claymore",
+    Name: 'Obsidian Seared Claymore',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -231,7 +231,7 @@ export const resources = [
   {
     Id: 190513,
     ListOfReagents: null,
-    Name: "Obsidian Seared Facesmasher",
+    Name: 'Obsidian Seared Facesmasher',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -243,7 +243,7 @@ export const resources = [
   {
     Id: 190515,
     ListOfReagents: null,
-    Name: "Obsidian Seared Halberd",
+    Name: 'Obsidian Seared Halberd',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -255,7 +255,7 @@ export const resources = [
   {
     Id: 190511,
     ListOfReagents: null,
-    Name: "Obsidian Seared Hexsword",
+    Name: 'Obsidian Seared Hexsword',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -267,7 +267,7 @@ export const resources = [
   {
     Id: 190509,
     ListOfReagents: null,
-    Name: "Primal Molten Mace",
+    Name: 'Primal Molten Mace',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -279,7 +279,7 @@ export const resources = [
   {
     Id: 190507,
     ListOfReagents: null,
-    Name: "Primal Molten Longsword",
+    Name: 'Primal Molten Longsword',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -291,7 +291,7 @@ export const resources = [
   {
     Id: 201324,
     ListOfReagents: null,
-    Name: "Draconium Great Axe",
+    Name: 'Draconium Great Axe',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -303,7 +303,7 @@ export const resources = [
   {
     Id: 189541,
     ListOfReagents: null,
-    Name: "Primal Molten Alloy",
+    Name: 'Primal Molten Alloy',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -315,7 +315,7 @@ export const resources = [
   {
     Id: 190530,
     ListOfReagents: null,
-    Name: "Frostfire Alloy",
+    Name: 'Frostfire Alloy',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -327,7 +327,7 @@ export const resources = [
   {
     Id: 190533,
     ListOfReagents: null,
-    Name: "Obsidian Seared Alloy",
+    Name: 'Obsidian Seared Alloy',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -339,7 +339,7 @@ export const resources = [
   {
     Id: 190536,
     ListOfReagents: null,
-    Name: "Infurious Alloy",
+    Name: 'Infurious Alloy',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -351,7 +351,7 @@ export const resources = [
   {
     Id: 192081,
     ListOfReagents: null,
-    Name: "Shield of the Hearth",
+    Name: 'Shield of the Hearth',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -363,7 +363,7 @@ export const resources = [
   {
     Id: 190503,
     ListOfReagents: null,
-    Name: "Primal Molten Defender",
+    Name: 'Primal Molten Defender',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -375,7 +375,7 @@ export const resources = [
   {
     Id: 201322,
     ListOfReagents: null,
-    Name: "Draconium Defender",
+    Name: 'Draconium Defender',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -387,7 +387,7 @@ export const resources = [
   {
     Id: 190523,
     ListOfReagents: null,
-    Name: "Frostfire Legguards of Preparation",
+    Name: 'Frostfire Legguards of Preparation',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -399,7 +399,7 @@ export const resources = [
   {
     Id: 191623,
     ListOfReagents: null,
-    Name: "Unstable Frostfire Belt",
+    Name: 'Unstable Frostfire Belt',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -411,7 +411,7 @@ export const resources = [
   {
     Id: 190522,
     ListOfReagents: null,
-    Name: "Infurious Helm of Vengeance",
+    Name: 'Infurious Helm of Vengeance',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -423,7 +423,7 @@ export const resources = [
   {
     Id: 191985,
     ListOfReagents: null,
-    Name: "Infurious Warboots of Impunity",
+    Name: 'Infurious Warboots of Impunity',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -435,7 +435,7 @@ export const resources = [
   {
     Id: 190519,
     ListOfReagents: null,
-    Name: "Allied Chestplate of Generosity",
+    Name: 'Allied Chestplate of Generosity',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -447,7 +447,7 @@ export const resources = [
   {
     Id: 190526,
     ListOfReagents: null,
-    Name: "Allied Wristguard of Companionship",
+    Name: 'Allied Wristguard of Companionship',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -459,7 +459,7 @@ export const resources = [
   {
     Id: 189538,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Plate Chestguard",
+    Name: 'Explorer\u0027s Plate Chestguard',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -471,7 +471,7 @@ export const resources = [
   {
     Id: 189537,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Plate Boots",
+    Name: 'Explorer\u0027s Plate Boots',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -483,7 +483,7 @@ export const resources = [
   {
     Id: 189539,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Plate Bracers",
+    Name: 'Explorer\u0027s Plate Bracers',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -495,7 +495,7 @@ export const resources = [
   {
     Id: 190495,
     ListOfReagents: null,
-    Name: "Primal Molten Breastplate",
+    Name: 'Primal Molten Breastplate',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -507,7 +507,7 @@ export const resources = [
   {
     Id: 190496,
     ListOfReagents: null,
-    Name: "Primal Molten Sabatons",
+    Name: 'Primal Molten Sabatons',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -519,7 +519,7 @@ export const resources = [
   {
     Id: 190497,
     ListOfReagents: null,
-    Name: "Primal Molten Gauntlets",
+    Name: 'Primal Molten Gauntlets',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -531,7 +531,7 @@ export const resources = [
   {
     Id: 190498,
     ListOfReagents: null,
-    Name: "Primal Molten Helm",
+    Name: 'Primal Molten Helm',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -543,7 +543,7 @@ export const resources = [
   {
     Id: 190499,
     ListOfReagents: null,
-    Name: "Primal Molten Legplates",
+    Name: 'Primal Molten Legplates',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -555,7 +555,7 @@ export const resources = [
   {
     Id: 190500,
     ListOfReagents: null,
-    Name: "Primal Molten Pauldrons",
+    Name: 'Primal Molten Pauldrons',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -567,7 +567,7 @@ export const resources = [
   {
     Id: 190501,
     ListOfReagents: null,
-    Name: "Primal Molten Greatbelt",
+    Name: 'Primal Molten Greatbelt',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -579,7 +579,7 @@ export const resources = [
   {
     Id: 190502,
     ListOfReagents: null,
-    Name: "Primal Molten Vambraces",
+    Name: 'Primal Molten Vambraces',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -591,7 +591,7 @@ export const resources = [
   {
     Id: 193602,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Breastplate",
+    Name: 'Crimson Combatant\u0027s Draconium Breastplate',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -603,7 +603,7 @@ export const resources = [
   {
     Id: 193603,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Sabatons",
+    Name: 'Crimson Combatant\u0027s Draconium Sabatons',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -615,7 +615,7 @@ export const resources = [
   {
     Id: 193604,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Gauntlets",
+    Name: 'Crimson Combatant\u0027s Draconium Gauntlets',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -627,7 +627,7 @@ export const resources = [
   {
     Id: 193605,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Helm",
+    Name: 'Crimson Combatant\u0027s Draconium Helm',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -639,7 +639,7 @@ export const resources = [
   {
     Id: 193606,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Greaves",
+    Name: 'Crimson Combatant\u0027s Draconium Greaves',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -651,7 +651,7 @@ export const resources = [
   {
     Id: 193607,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Pauldrons",
+    Name: 'Crimson Combatant\u0027s Draconium Pauldrons',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -663,7 +663,7 @@ export const resources = [
   {
     Id: 193608,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Waistguard",
+    Name: 'Crimson Combatant\u0027s Draconium Waistguard',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -675,7 +675,7 @@ export const resources = [
   {
     Id: 193609,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Draconium Armguards",
+    Name: 'Crimson Combatant\u0027s Draconium Armguards',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -687,7 +687,7 @@ export const resources = [
   {
     Id: 201955,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Expert Clasp",
+    Name: 'Explorer\u0027s Expert Clasp',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -699,7 +699,7 @@ export const resources = [
   {
     Id: 201953,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Expert Gauntlets",
+    Name: 'Explorer\u0027s Expert Gauntlets',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -711,7 +711,7 @@ export const resources = [
   {
     Id: 201954,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Expert Greaves",
+    Name: 'Explorer\u0027s Expert Greaves',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -723,7 +723,7 @@ export const resources = [
   {
     Id: 201951,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Expert Helm",
+    Name: 'Explorer\u0027s Expert Helm',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -735,7 +735,7 @@ export const resources = [
   {
     Id: 201952,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Expert Spaulders",
+    Name: 'Explorer\u0027s Expert Spaulders',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -747,7 +747,7 @@ export const resources = [
   {
     Id: 191260,
     ListOfReagents: null,
-    Name: "Serevite Repair Hammer",
+    Name: 'Serevite Repair Hammer',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -759,7 +759,7 @@ export const resources = [
   {
     Id: 191256,
     ListOfReagents: null,
-    Name: "Serevite Skeleton Key",
+    Name: 'Serevite Skeleton Key',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -771,7 +771,7 @@ export const resources = [
   {
     Id: 191304,
     ListOfReagents: null,
-    Name: "Sturdy Expedition Shovel",
+    Name: 'Sturdy Expedition Shovel',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -783,7 +783,7 @@ export const resources = [
   {
     Id: 201366,
     ListOfReagents: null,
-    Name: "Master\u0027s Hammer",
+    Name: 'Master\u0027s Hammer',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -795,7 +795,7 @@ export const resources = [
   {
     Id: 191250,
     ListOfReagents: null,
-    Name: "Armor Spikes",
+    Name: 'Armor Spikes',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -807,7 +807,7 @@ export const resources = [
   {
     Id: 191228,
     ListOfReagents: null,
-    Name: "Black Dragon Touched Hammer",
+    Name: 'Black Dragon Touched Hammer',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -819,7 +819,7 @@ export const resources = [
   {
     Id: 191237,
     ListOfReagents: null,
-    Name: "Draconium Blacksmith\u0027s Hammer",
+    Name: 'Draconium Blacksmith\u0027s Hammer',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -831,7 +831,7 @@ export const resources = [
   {
     Id: 191888,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Blacksmith\u0027s Hammer",
+    Name: 'Khaz\u0027gorite Blacksmith\u0027s Hammer',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -843,7 +843,7 @@ export const resources = [
   {
     Id: 191224,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Sickle",
+    Name: 'Khaz\u0027gorite Sickle',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -855,7 +855,7 @@ export const resources = [
   {
     Id: 191241,
     ListOfReagents: null,
-    Name: "Draconium Sickle",
+    Name: 'Draconium Sickle',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -867,7 +867,7 @@ export const resources = [
   {
     Id: 191227,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Leatherworker\u0027s Knife",
+    Name: 'Khaz\u0027gorite Leatherworker\u0027s Knife',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -879,7 +879,7 @@ export const resources = [
   {
     Id: 191238,
     ListOfReagents: null,
-    Name: "Draconium Leatherworker\u0027s Knife",
+    Name: 'Draconium Leatherworker\u0027s Knife',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -891,7 +891,7 @@ export const resources = [
   {
     Id: 191223,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Pickaxe",
+    Name: 'Khaz\u0027gorite Pickaxe',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -903,7 +903,7 @@ export const resources = [
   {
     Id: 191242,
     ListOfReagents: null,
-    Name: "Draconium Pickaxe",
+    Name: 'Draconium Pickaxe',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -915,7 +915,7 @@ export const resources = [
   {
     Id: 191225,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Skinning Knife",
+    Name: 'Khaz\u0027gorite Skinning Knife',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -927,7 +927,7 @@ export const resources = [
   {
     Id: 191240,
     ListOfReagents: null,
-    Name: "Draconium Skinning Knife",
+    Name: 'Draconium Skinning Knife',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -939,7 +939,7 @@ export const resources = [
   {
     Id: 191226,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Needle Set",
+    Name: 'Khaz\u0027gorite Needle Set',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -951,7 +951,7 @@ export const resources = [
   {
     Id: 191239,
     ListOfReagents: null,
-    Name: "Draconium Needle Set",
+    Name: 'Draconium Needle Set',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -963,7 +963,7 @@ export const resources = [
   {
     Id: 191235,
     ListOfReagents: null,
-    Name: "Draconium Blacksmith\u0027s Toolbox",
+    Name: 'Draconium Blacksmith\u0027s Toolbox',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -975,7 +975,7 @@ export const resources = [
   {
     Id: 191230,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Blacksmith\u0027s Toolbox",
+    Name: 'Khaz\u0027gorite Blacksmith\u0027s Toolbox',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -987,7 +987,7 @@ export const resources = [
   {
     Id: 191229,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Leatherworker\u0027s Toolset",
+    Name: 'Khaz\u0027gorite Leatherworker\u0027s Toolset',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -999,7 +999,7 @@ export const resources = [
   {
     Id: 191236,
     ListOfReagents: null,
-    Name: "Draconium Leatherworker\u0027s Toolset",
+    Name: 'Draconium Leatherworker\u0027s Toolset',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1012,7 +1012,7 @@ export const resources = [
     Id: 191529,
     ListOfReagents: null,
     // eslint-disable-next-line sonarjs/no-duplicate-string
-    Name: "Illustrious Insight",
+    Name: 'Illustrious Insight',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1024,7 +1024,7 @@ export const resources = [
   {
     Id: 191886,
     ListOfReagents: null,
-    Name: "Alvin the Anvil",
+    Name: 'Alvin the Anvil',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1036,7 +1036,7 @@ export const resources = [
   {
     Id: 191933,
     ListOfReagents: null,
-    Name: "Primal Whetstone",
+    Name: 'Primal Whetstone',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1048,7 +1048,7 @@ export const resources = [
   {
     Id: 191943,
     ListOfReagents: null,
-    Name: "Primal Weightstone",
+    Name: 'Primal Weightstone',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1060,7 +1060,7 @@ export const resources = [
   {
     Id: 191948,
     ListOfReagents: null,
-    Name: "Primal Razorstone",
+    Name: 'Primal Razorstone',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1072,7 +1072,7 @@ export const resources = [
   {
     Id: 194541,
     ListOfReagents: null,
-    Name: "Prototype Regal Barding Framework",
+    Name: 'Prototype Regal Barding Framework',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1084,7 +1084,7 @@ export const resources = [
   {
     Id: 194542,
     ListOfReagents: null,
-    Name: "Prototype Explorer\u0027s Barding Framework",
+    Name: 'Prototype Explorer\u0027s Barding Framework',
     ProfessionId: 164,
     SkillTierId: 2822,
     Category: null,
@@ -1096,7 +1096,7 @@ export const resources = [
   {
     Id: 198173,
     ListOfReagents: null,
-    Name: "Atomic Recalibrator",
+    Name: 'Atomic Recalibrator',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1108,7 +1108,7 @@ export const resources = [
   {
     Id: 198247,
     ListOfReagents: null,
-    Name: "Neural Silencer Mk3",
+    Name: 'Neural Silencer Mk3',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1120,7 +1120,7 @@ export const resources = [
   {
     Id: 192443,
     ListOfReagents: null,
-    Name: "Element-Infused Rocket Helmet",
+    Name: 'Element-Infused Rocket Helmet',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1132,7 +1132,7 @@ export const resources = [
   {
     Id: 198227,
     ListOfReagents: null,
-    Name: "Giggle Goggles",
+    Name: 'Giggle Goggles',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1144,7 +1144,7 @@ export const resources = [
   {
     Id: 198206,
     ListOfReagents: null,
-    Name: "Environmental Emulator",
+    Name: 'Environmental Emulator',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1156,7 +1156,7 @@ export const resources = [
   {
     Id: 198264,
     ListOfReagents: null,
-    Name: "Centralized Precipitation Emitter",
+    Name: 'Centralized Precipitation Emitter',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1168,7 +1168,7 @@ export const resources = [
   {
     Id: 198156,
     ListOfReagents: null,
-    Name: "Wyrmhole Generator",
+    Name: 'Wyrmhole Generator',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1180,7 +1180,7 @@ export const resources = [
   {
     Id: 198265,
     ListOfReagents: null,
-    Name: "Portable Alchemist\u0027s Lab Bench",
+    Name: 'Portable Alchemist\u0027s Lab Bench',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1192,7 +1192,7 @@ export const resources = [
   {
     Id: 198268,
     ListOfReagents: null,
-    Name: "Portable Tinker\u0027s Workbench",
+    Name: 'Portable Tinker\u0027s Workbench',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1204,7 +1204,7 @@ export const resources = [
   {
     Id: 198271,
     ListOfReagents: null,
-    Name: "H.E.L.P.",
+    Name: 'H.E.L.P.',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1216,7 +1216,7 @@ export const resources = [
   {
     Id: 198275,
     ListOfReagents: null,
-    Name: "S.A.V.I.O.R.",
+    Name: 'S.A.V.I.O.R.',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1228,7 +1228,7 @@ export const resources = [
   {
     Id: 199414,
     ListOfReagents: null,
-    Name: "Zapthrottle Soul Inhaler",
+    Name: 'Zapthrottle Soul Inhaler',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1240,7 +1240,7 @@ export const resources = [
   {
     Id: 202087,
     ListOfReagents: null,
-    Name: "Tinker Removal Kit",
+    Name: 'Tinker Removal Kit',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1252,7 +1252,7 @@ export const resources = [
   {
     Id: 198223,
     ListOfReagents: null,
-    Name: "Red Fireflight",
+    Name: 'Red Fireflight',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1264,7 +1264,7 @@ export const resources = [
   {
     Id: 198222,
     ListOfReagents: null,
-    Name: "Blue Fireflight",
+    Name: 'Blue Fireflight',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1276,7 +1276,7 @@ export const resources = [
   {
     Id: 198224,
     ListOfReagents: null,
-    Name: "Green Fireflight",
+    Name: 'Green Fireflight',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1288,7 +1288,7 @@ export const resources = [
   {
     Id: 198172,
     ListOfReagents: null,
-    Name: "Bundle of Fireworks",
+    Name: 'Bundle of Fireworks',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1300,7 +1300,7 @@ export const resources = [
   {
     Id: 198549,
     ListOfReagents: null,
-    Name: "Black Fireflight",
+    Name: 'Black Fireflight',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1312,7 +1312,7 @@ export const resources = [
   {
     Id: 198550,
     ListOfReagents: null,
-    Name: "Bronze Fireflight",
+    Name: 'Bronze Fireflight',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1324,7 +1324,7 @@ export const resources = [
   {
     Id: 198310,
     ListOfReagents: null,
-    Name: "Gyroscopic Kaleidoscope",
+    Name: 'Gyroscopic Kaleidoscope',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1336,7 +1336,7 @@ export const resources = [
   {
     Id: 198163,
     ListOfReagents: null,
-    Name: "Endless Stack of Needles",
+    Name: 'Endless Stack of Needles',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1348,7 +1348,7 @@ export const resources = [
   {
     Id: 198160,
     ListOfReagents: null,
-    Name: "Completely Safe Rockets",
+    Name: 'Completely Safe Rockets',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1360,7 +1360,7 @@ export const resources = [
   {
     Id: 198316,
     ListOfReagents: null,
-    Name: "High Intensity Thermal Scanner",
+    Name: 'High Intensity Thermal Scanner',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1372,7 +1372,7 @@ export const resources = [
   {
     Id: 198313,
     ListOfReagents: null,
-    Name: "Projectile Propulsion Pinion",
+    Name: 'Projectile Propulsion Pinion',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1384,7 +1384,7 @@ export const resources = [
   {
     Id: 198298,
     ListOfReagents: null,
-    Name: "Tinker: Plane Displacer",
+    Name: 'Tinker: Plane Displacer',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1396,7 +1396,7 @@ export const resources = [
   {
     Id: 198301,
     ListOfReagents: null,
-    Name: "Tinker: Supercollide-O-Tron",
+    Name: 'Tinker: Supercollide-O-Tron',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1408,7 +1408,7 @@ export const resources = [
   {
     Id: 198304,
     ListOfReagents: null,
-    Name: "Tinker: Grounded Circuitry",
+    Name: 'Tinker: Grounded Circuitry',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1420,7 +1420,7 @@ export const resources = [
   {
     Id: 198289,
     ListOfReagents: null,
-    Name: "Tinker: Alarm-O-Turret",
+    Name: 'Tinker: Alarm-O-Turret',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1432,7 +1432,7 @@ export const resources = [
   {
     Id: 198295,
     ListOfReagents: null,
-    Name: "Tinker: Breath of Neltharion",
+    Name: 'Tinker: Breath of Neltharion',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1444,7 +1444,7 @@ export const resources = [
   {
     Id: 199188,
     ListOfReagents: null,
-    Name: "Tinker: Polarity Amplifier",
+    Name: 'Tinker: Polarity Amplifier',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1456,7 +1456,7 @@ export const resources = [
   {
     Id: 201407,
     ListOfReagents: null,
-    Name: "Tinker: Arclight Vital Correctors",
+    Name: 'Tinker: Arclight Vital Correctors',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1468,7 +1468,7 @@ export const resources = [
   {
     Id: 198205,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Brainwave Amplifier",
+    Name: 'Khaz\u0027gorite Brainwave Amplifier',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1480,7 +1480,7 @@ export const resources = [
   {
     Id: 198246,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Encased Samophlange",
+    Name: 'Khaz\u0027gorite Encased Samophlange',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1492,7 +1492,7 @@ export const resources = [
   {
     Id: 198204,
     ListOfReagents: null,
-    Name: "Draconium Brainwave Amplifier",
+    Name: 'Draconium Brainwave Amplifier',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1504,7 +1504,7 @@ export const resources = [
   {
     Id: 198245,
     ListOfReagents: null,
-    Name: "Draconium Encased Samophlange",
+    Name: 'Draconium Encased Samophlange',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1516,7 +1516,7 @@ export const resources = [
   {
     Id: 194125,
     ListOfReagents: null,
-    Name: "Spring-Loaded Draconium Fabric Cutters",
+    Name: 'Spring-Loaded Draconium Fabric Cutters',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1528,7 +1528,7 @@ export const resources = [
   {
     Id: 198234,
     ListOfReagents: null,
-    Name: "Lapidary\u0027s Draconium Clamps",
+    Name: 'Lapidary\u0027s Draconium Clamps',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1540,7 +1540,7 @@ export const resources = [
   {
     Id: 198225,
     ListOfReagents: null,
-    Name: "Draconium Fisherfriend",
+    Name: 'Draconium Fisherfriend',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1552,7 +1552,7 @@ export const resources = [
   {
     Id: 198262,
     ListOfReagents: null,
-    Name: "Bottomless Stonecrust Ore Satchel",
+    Name: 'Bottomless Stonecrust Ore Satchel',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1564,7 +1564,7 @@ export const resources = [
   {
     Id: 198243,
     ListOfReagents: null,
-    Name: "Draconium Delver\u0027s Helmet",
+    Name: 'Draconium Delver\u0027s Helmet',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1576,7 +1576,7 @@ export const resources = [
   {
     Id: 198235,
     ListOfReagents: null,
-    Name: "Lapidary\u0027s Khaz\u0027gorite Clamps",
+    Name: 'Lapidary\u0027s Khaz\u0027gorite Clamps',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1588,7 +1588,7 @@ export const resources = [
   {
     Id: 198244,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Delver\u0027s Helmet",
+    Name: 'Khaz\u0027gorite Delver\u0027s Helmet',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1600,7 +1600,7 @@ export const resources = [
   {
     Id: 194126,
     ListOfReagents: null,
-    Name: "Spring-Loaded Khaz\u0027gorite Fabric Cutters",
+    Name: 'Spring-Loaded Khaz\u0027gorite Fabric Cutters',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1612,7 +1612,7 @@ export const resources = [
   {
     Id: 198263,
     ListOfReagents: null,
-    Name: "Bottomless Mireslush Ore Satchel",
+    Name: 'Bottomless Mireslush Ore Satchel',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1624,7 +1624,7 @@ export const resources = [
   {
     Id: 198226,
     ListOfReagents: null,
-    Name: "Khaz\u0027gorite Fisherfriend",
+    Name: 'Khaz\u0027gorite Fisherfriend',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1636,7 +1636,7 @@ export const resources = [
   {
     Id: 198326,
     ListOfReagents: null,
-    Name: "Battle-Ready Binoculars",
+    Name: 'Battle-Ready Binoculars',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1648,7 +1648,7 @@ export const resources = [
   {
     Id: 198325,
     ListOfReagents: null,
-    Name: "Oscillating Wilderness Opticals",
+    Name: 'Oscillating Wilderness Opticals',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1660,7 +1660,7 @@ export const resources = [
   {
     Id: 198324,
     ListOfReagents: null,
-    Name: "Peripheral Vision Projectors",
+    Name: 'Peripheral Vision Projectors',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1672,7 +1672,7 @@ export const resources = [
   {
     Id: 198323,
     ListOfReagents: null,
-    Name: "Lightweight Ocular Lenses",
+    Name: 'Lightweight Ocular Lenses',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1684,7 +1684,7 @@ export const resources = [
   {
     Id: 198331,
     ListOfReagents: null,
-    Name: "Sentry\u0027s Stabilized Specs",
+    Name: 'Sentry\u0027s Stabilized Specs',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1696,7 +1696,7 @@ export const resources = [
   {
     Id: 198330,
     ListOfReagents: null,
-    Name: "Deadline Deadeyes",
+    Name: 'Deadline Deadeyes',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1708,7 +1708,7 @@ export const resources = [
   {
     Id: 198329,
     ListOfReagents: null,
-    Name: "Milestone Magnifiers",
+    Name: 'Milestone Magnifiers',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1720,7 +1720,7 @@ export const resources = [
   {
     Id: 198328,
     ListOfReagents: null,
-    Name: "Quality-Assured Optics",
+    Name: 'Quality-Assured Optics',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1732,7 +1732,7 @@ export const resources = [
   {
     Id: 198334,
     ListOfReagents: null,
-    Name: "P.E.W. x2",
+    Name: 'P.E.W. x2',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1744,7 +1744,7 @@ export const resources = [
   {
     Id: 198335,
     ListOfReagents: null,
-    Name: "Ol\u0027 Smoky",
+    Name: 'Ol\u0027 Smoky',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1756,7 +1756,7 @@ export const resources = [
   {
     Id: 191529,
     ListOfReagents: null,
-    Name: "Illustrious Insight",
+    Name: 'Illustrious Insight',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1768,7 +1768,7 @@ export const resources = [
   {
     Id: 198219,
     ListOfReagents: null,
-    Name: "Overcharged Overclocker",
+    Name: 'Overcharged Overclocker',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1780,7 +1780,7 @@ export const resources = [
   {
     Id: 198216,
     ListOfReagents: null,
-    Name: "Haphazardly Tethered Wires",
+    Name: 'Haphazardly Tethered Wires',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1792,7 +1792,7 @@ export const resources = [
   {
     Id: 198198,
     ListOfReagents: null,
-    Name: "Reinforced Machine Chassis",
+    Name: 'Reinforced Machine Chassis',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1804,7 +1804,7 @@ export const resources = [
   {
     Id: 198195,
     ListOfReagents: null,
-    Name: "Arclight Capacitor",
+    Name: 'Arclight Capacitor',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1816,7 +1816,7 @@ export const resources = [
   {
     Id: 198192,
     ListOfReagents: null,
-    Name: "Greased-Up Gears",
+    Name: 'Greased-Up Gears',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1828,7 +1828,7 @@ export const resources = [
   {
     Id: 198189,
     ListOfReagents: null,
-    Name: "Everburning Blasting Powder",
+    Name: 'Everburning Blasting Powder',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1840,7 +1840,7 @@ export const resources = [
   {
     Id: 198186,
     ListOfReagents: null,
-    Name: "Shock-Spring Coil",
+    Name: 'Shock-Spring Coil',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1852,7 +1852,7 @@ export const resources = [
   {
     Id: 198183,
     ListOfReagents: null,
-    Name: "Handful of Serevite Bolts",
+    Name: 'Handful of Serevite Bolts',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1864,7 +1864,7 @@ export const resources = [
   {
     Id: 198201,
     ListOfReagents: null,
-    Name: "Assorted Safety Fuses",
+    Name: 'Assorted Safety Fuses',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1876,7 +1876,7 @@ export const resources = [
   {
     Id: 198650,
     ListOfReagents: null,
-    Name: "Rummage Through Scrap",
+    Name: 'Rummage Through Scrap',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1888,7 +1888,7 @@ export const resources = [
   {
     Id: 198307,
     ListOfReagents: null,
-    Name: "One-Size-Fits-All Gear",
+    Name: 'One-Size-Fits-All Gear',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1900,7 +1900,7 @@ export const resources = [
   {
     Id: 198236,
     ListOfReagents: null,
-    Name: "Meticulously-Tuned Gear",
+    Name: 'Meticulously-Tuned Gear',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1912,7 +1912,7 @@ export const resources = [
   {
     Id: 198231,
     ListOfReagents: null,
-    Name: "Rapidly Ticking Gear",
+    Name: 'Rapidly Ticking Gear',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1924,7 +1924,7 @@ export const resources = [
   {
     Id: 198174,
     ListOfReagents: null,
-    Name: "Razor-Sharp Gear",
+    Name: 'Razor-Sharp Gear',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1936,7 +1936,7 @@ export const resources = [
   {
     Id: 198169,
     ListOfReagents: null,
-    Name: "Suspiciously Silent Crate",
+    Name: 'Suspiciously Silent Crate',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1948,7 +1948,7 @@ export const resources = [
   {
     Id: 198210,
     ListOfReagents: null,
-    Name: "EZ-Thro Primal Deconstruction Charge",
+    Name: 'EZ-Thro Primal Deconstruction Charge',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1960,7 +1960,7 @@ export const resources = [
   {
     Id: 198213,
     ListOfReagents: null,
-    Name: "EZ-Thro Gravitational Displacer",
+    Name: 'EZ-Thro Gravitational Displacer',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1972,7 +1972,7 @@ export const resources = [
   {
     Id: 198207,
     ListOfReagents: null,
-    Name: "EZ-Thro Creature Combustion Canister",
+    Name: 'EZ-Thro Creature Combustion Canister',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1984,7 +1984,7 @@ export const resources = [
   {
     Id: 198166,
     ListOfReagents: null,
-    Name: "Suspiciously Ticking Crate",
+    Name: 'Suspiciously Ticking Crate',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -1996,7 +1996,7 @@ export const resources = [
   {
     Id: 198157,
     ListOfReagents: null,
-    Name: "I.W.I.N. Button Mk10",
+    Name: 'I.W.I.N. Button Mk10',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2008,7 +2008,7 @@ export const resources = [
   {
     Id: 198228,
     ListOfReagents: null,
-    Name: "Gravitational Displacer",
+    Name: 'Gravitational Displacer',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2020,7 +2020,7 @@ export const resources = [
   {
     Id: 198281,
     ListOfReagents: null,
-    Name: "Sticky Warp Grenade",
+    Name: 'Sticky Warp Grenade',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2032,7 +2032,7 @@ export const resources = [
   {
     Id: 198239,
     ListOfReagents: null,
-    Name: "Creature Combustion Canister",
+    Name: 'Creature Combustion Canister',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2044,7 +2044,7 @@ export const resources = [
   {
     Id: 198292,
     ListOfReagents: null,
-    Name: "Grease Grenade",
+    Name: 'Grease Grenade',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2056,7 +2056,7 @@ export const resources = [
   {
     Id: 198278,
     ListOfReagents: null,
-    Name: "Primal Deconstruction Charge",
+    Name: 'Primal Deconstruction Charge',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2068,7 +2068,7 @@ export const resources = [
   {
     Id: 199193,
     ListOfReagents: null,
-    Name: "EZ-Thro Grease Grenade",
+    Name: 'EZ-Thro Grease Grenade',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2080,7 +2080,7 @@ export const resources = [
   {
     Id: 198256,
     ListOfReagents: null,
-    Name: "Magazine of Healing Darts",
+    Name: 'Magazine of Healing Darts',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2092,7 +2092,7 @@ export const resources = [
   {
     Id: 198253,
     ListOfReagents: null,
-    Name: "Calibrated Safety Switch",
+    Name: 'Calibrated Safety Switch',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2104,7 +2104,7 @@ export const resources = [
   {
     Id: 198259,
     ListOfReagents: null,
-    Name: "Critical Failure Prevention Unit",
+    Name: 'Critical Failure Prevention Unit',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2116,7 +2116,7 @@ export const resources = [
   {
     Id: 198619,
     ListOfReagents: null,
-    Name: "Spring-Loaded Capacitor Casing",
+    Name: 'Spring-Loaded Capacitor Casing',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2128,7 +2128,7 @@ export const resources = [
   {
     Id: 193572,
     ListOfReagents: null,
-    Name: "Quack-E",
+    Name: 'Quack-E',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2140,7 +2140,7 @@ export const resources = [
   {
     Id: 198180,
     ListOfReagents: null,
-    Name: "D.U.C.K.O.Y.",
+    Name: 'D.U.C.K.O.Y.',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2152,7 +2152,7 @@ export const resources = [
   {
     Id: 198333,
     ListOfReagents: null,
-    Name: "Difficult Wrist Protectors",
+    Name: 'Difficult Wrist Protectors',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2164,7 +2164,7 @@ export const resources = [
   {
     Id: 198332,
     ListOfReagents: null,
-    Name: "Complicated Cuffs",
+    Name: 'Complicated Cuffs',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2176,7 +2176,7 @@ export const resources = [
   {
     Id: 198327,
     ListOfReagents: null,
-    Name: "Needlessly Complex Wristguards",
+    Name: 'Needlessly Complex Wristguards',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2188,7 +2188,7 @@ export const resources = [
   {
     Id: 198322,
     ListOfReagents: null,
-    Name: "Overengineered Sleeve Extenders",
+    Name: 'Overengineered Sleeve Extenders',
     ProfessionId: 202,
     SkillTierId: 2827,
     Category: null,
@@ -2200,7 +2200,7 @@ export const resources = [
   {
     Id: 198715,
     ListOfReagents: null,
-    Name: "Runed Draconium Rod",
+    Name: 'Runed Draconium Rod',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2212,7 +2212,7 @@ export const resources = [
   {
     Id: 198716,
     ListOfReagents: null,
-    Name: "Runed Khaz\u0027gorite Rod",
+    Name: 'Runed Khaz\u0027gorite Rod',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2224,7 +2224,7 @@ export const resources = [
   {
     Id: 200641,
     ListOfReagents: null,
-    Name: "Enchanted Writhebark Wand",
+    Name: 'Enchanted Writhebark Wand',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2236,7 +2236,7 @@ export const resources = [
   {
     Id: 200642,
     ListOfReagents: null,
-    Name: "Torch of Primal Awakening",
+    Name: 'Torch of Primal Awakening',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2248,7 +2248,7 @@ export const resources = [
   {
     Id: 201601,
     ListOfReagents: null,
-    Name: "Runed Serevite Rod",
+    Name: 'Runed Serevite Rod',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2260,7 +2260,7 @@ export const resources = [
   {
     Id: 200479,
     ListOfReagents: null,
-    Name: "Sophic Amalgamation",
+    Name: 'Sophic Amalgamation',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2272,7 +2272,7 @@ export const resources = [
   {
     Id: 200470,
     ListOfReagents: null,
-    Name: "Illusion: Primal Mastery",
+    Name: 'Illusion: Primal Mastery',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2284,7 +2284,7 @@ export const resources = [
   {
     Id: 200469,
     ListOfReagents: null,
-    Name: "Khadgar\u0027s Disenchanting Rod",
+    Name: 'Khadgar\u0027s Disenchanting Rod',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2296,7 +2296,7 @@ export const resources = [
   {
     Id: 200614,
     ListOfReagents: null,
-    Name: "Illusory Adornment: Fire",
+    Name: 'Illusory Adornment: Fire',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2308,7 +2308,7 @@ export const resources = [
   {
     Id: 200618,
     ListOfReagents: null,
-    Name: "Primal Invocation Extract",
+    Name: 'Primal Invocation Extract',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2320,7 +2320,7 @@ export const resources = [
   {
     Id: 200472,
     ListOfReagents: null,
-    Name: "Scepter of Spectacle: Fire",
+    Name: 'Scepter of Spectacle: Fire',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2332,7 +2332,7 @@ export const resources = [
   {
     Id: 200535,
     ListOfReagents: null,
-    Name: "Scepter of Spectacle: Frost",
+    Name: 'Scepter of Spectacle: Frost',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2344,7 +2344,7 @@ export const resources = [
   {
     Id: 200883,
     ListOfReagents: null,
-    Name: "Illusion: Primal Air",
+    Name: 'Illusion: Primal Air',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2356,7 +2356,7 @@ export const resources = [
   {
     Id: 200905,
     ListOfReagents: null,
-    Name: "Illusion: Primal Earth",
+    Name: 'Illusion: Primal Earth',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2368,7 +2368,7 @@ export const resources = [
   {
     Id: 200906,
     ListOfReagents: null,
-    Name: "Illusion: Primal Fire",
+    Name: 'Illusion: Primal Fire',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2380,7 +2380,7 @@ export const resources = [
   {
     Id: 200907,
     ListOfReagents: null,
-    Name: "Illusion: Primal Frost",
+    Name: 'Illusion: Primal Frost',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2392,7 +2392,7 @@ export const resources = [
   {
     Id: 201160,
     ListOfReagents: null,
-    Name: "Scepter of Spectacle: Earth",
+    Name: 'Scepter of Spectacle: Earth',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2404,7 +2404,7 @@ export const resources = [
   {
     Id: 201161,
     ListOfReagents: null,
-    Name: "Scepter of Spectacle: Air",
+    Name: 'Scepter of Spectacle: Air',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2416,7 +2416,7 @@ export const resources = [
   {
     Id: 201158,
     ListOfReagents: null,
-    Name: "Scepter of Spectacle: Order",
+    Name: 'Scepter of Spectacle: Order',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2428,7 +2428,7 @@ export const resources = [
   {
     Id: 201310,
     ListOfReagents: null,
-    Name: "Illusory Adornment: Frost",
+    Name: 'Illusory Adornment: Frost',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2440,7 +2440,7 @@ export const resources = [
   {
     Id: 201316,
     ListOfReagents: null,
-    Name: "Illusory Adornment: Air",
+    Name: 'Illusory Adornment: Air',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2452,7 +2452,7 @@ export const resources = [
   {
     Id: 201313,
     ListOfReagents: null,
-    Name: "Illusory Adornment: Earth",
+    Name: 'Illusory Adornment: Earth',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2464,7 +2464,7 @@ export const resources = [
   {
     Id: 201319,
     ListOfReagents: null,
-    Name: "Illusory Adornment: Order",
+    Name: 'Illusory Adornment: Order',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2476,7 +2476,7 @@ export const resources = [
   {
     Id: 191529,
     ListOfReagents: null,
-    Name: "Illustrious Insight",
+    Name: 'Illustrious Insight',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2488,7 +2488,7 @@ export const resources = [
   {
     Id: 200647,
     ListOfReagents: null,
-    Name: "Crystalline Shatter",
+    Name: 'Crystalline Shatter',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2500,7 +2500,7 @@ export const resources = [
   {
     Id: 200648,
     ListOfReagents: null,
-    Name: "Elemental Shatter",
+    Name: 'Elemental Shatter',
     ProfessionId: 333,
     SkillTierId: 2825,
     Category: null,
@@ -2512,7 +2512,7 @@ export const resources = [
   {
     Id: 193521,
     ListOfReagents: null,
-    Name: "Hood of Surging Time",
+    Name: 'Hood of Surging Time',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2524,7 +2524,7 @@ export const resources = [
   {
     Id: 193524,
     ListOfReagents: null,
-    Name: "Infurious Legwraps of Possibility",
+    Name: 'Infurious Legwraps of Possibility',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2536,7 +2536,7 @@ export const resources = [
   {
     Id: 193530,
     ListOfReagents: null,
-    Name: "Allied Wristguards of Time Dilation",
+    Name: 'Allied Wristguards of Time Dilation',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2548,7 +2548,7 @@ export const resources = [
   {
     Id: 193527,
     ListOfReagents: null,
-    Name: "Chronocloth Gloves",
+    Name: 'Chronocloth Gloves',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2560,7 +2560,7 @@ export const resources = [
   {
     Id: 193537,
     ListOfReagents: null,
-    Name: "Chronocloth Leggings",
+    Name: 'Chronocloth Leggings',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2572,7 +2572,7 @@ export const resources = [
   {
     Id: 193512,
     ListOfReagents: null,
-    Name: "Chronocloth Sash",
+    Name: 'Chronocloth Sash',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2584,7 +2584,7 @@ export const resources = [
   {
     Id: 193526,
     ListOfReagents: null,
-    Name: "Amice of the Blue",
+    Name: 'Amice of the Blue',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2596,7 +2596,7 @@ export const resources = [
   {
     Id: 193513,
     ListOfReagents: null,
-    Name: "Infurious Binding of Gesticulation",
+    Name: 'Infurious Binding of Gesticulation',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2608,7 +2608,7 @@ export const resources = [
   {
     Id: 193532,
     ListOfReagents: null,
-    Name: "Blue Dragon Soles",
+    Name: 'Blue Dragon Soles',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2620,7 +2620,7 @@ export const resources = [
   {
     Id: 193536,
     ListOfReagents: null,
-    Name: "Azureweave Robe",
+    Name: 'Azureweave Robe',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2632,7 +2632,7 @@ export const resources = [
   {
     Id: 193525,
     ListOfReagents: null,
-    Name: "Azureweave Slippers",
+    Name: 'Azureweave Slippers',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2644,7 +2644,7 @@ export const resources = [
   {
     Id: 193520,
     ListOfReagents: null,
-    Name: "Azureweave Mantle",
+    Name: 'Azureweave Mantle',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2656,7 +2656,7 @@ export const resources = [
   {
     Id: 193500,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Tailored Cloak",
+    Name: 'Surveyor\u0027s Tailored Cloak',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2668,7 +2668,7 @@ export const resources = [
   {
     Id: 193515,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Cloth Robe",
+    Name: 'Surveyor\u0027s Cloth Robe',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2680,7 +2680,7 @@ export const resources = [
   {
     Id: 193498,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Cloth Treads",
+    Name: 'Surveyor\u0027s Cloth Treads',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2692,7 +2692,7 @@ export const resources = [
   {
     Id: 193497,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Cloth Bands",
+    Name: 'Surveyor\u0027s Cloth Bands',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2704,7 +2704,7 @@ export const resources = [
   {
     Id: 193511,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Shawl",
+    Name: 'Vibrant Wildercloth Shawl',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2716,7 +2716,7 @@ export const resources = [
   {
     Id: 193509,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Vestments",
+    Name: 'Vibrant Wildercloth Vestments',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2728,7 +2728,7 @@ export const resources = [
   {
     Id: 193519,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Slippers",
+    Name: 'Vibrant Wildercloth Slippers',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2740,7 +2740,7 @@ export const resources = [
   {
     Id: 193504,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Handwraps",
+    Name: 'Vibrant Wildercloth Handwraps',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2752,7 +2752,7 @@ export const resources = [
   {
     Id: 193523,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Headcover",
+    Name: 'Vibrant Wildercloth Headcover',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2764,7 +2764,7 @@ export const resources = [
   {
     Id: 193518,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Slacks",
+    Name: 'Vibrant Wildercloth Slacks',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2776,7 +2776,7 @@ export const resources = [
   {
     Id: 193508,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Shoulderspikes",
+    Name: 'Vibrant Wildercloth Shoulderspikes',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2788,7 +2788,7 @@ export const resources = [
   {
     Id: 193516,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Girdle",
+    Name: 'Vibrant Wildercloth Girdle',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2800,7 +2800,7 @@ export const resources = [
   {
     Id: 193510,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Wristwraps",
+    Name: 'Vibrant Wildercloth Wristwraps',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2812,7 +2812,7 @@ export const resources = [
   {
     Id: 193522,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Cloak",
+    Name: 'Crimson Combatant\u0027s Wildercloth Cloak',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2824,7 +2824,7 @@ export const resources = [
   {
     Id: 193514,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Tunic",
+    Name: 'Crimson Combatant\u0027s Wildercloth Tunic',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2836,7 +2836,7 @@ export const resources = [
   {
     Id: 193503,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Treads",
+    Name: 'Crimson Combatant\u0027s Wildercloth Treads',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2848,7 +2848,7 @@ export const resources = [
   {
     Id: 193507,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Gloves",
+    Name: 'Crimson Combatant\u0027s Wildercloth Gloves',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2860,7 +2860,7 @@ export const resources = [
   {
     Id: 193506,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Hood",
+    Name: 'Crimson Combatant\u0027s Wildercloth Hood',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2872,7 +2872,7 @@ export const resources = [
   {
     Id: 193501,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Leggings",
+    Name: 'Crimson Combatant\u0027s Wildercloth Leggings',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2884,7 +2884,7 @@ export const resources = [
   {
     Id: 193502,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Shoulderpads",
+    Name: 'Crimson Combatant\u0027s Wildercloth Shoulderpads',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2896,7 +2896,7 @@ export const resources = [
   {
     Id: 193517,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Sash",
+    Name: 'Crimson Combatant\u0027s Wildercloth Sash',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2908,7 +2908,7 @@ export const resources = [
   {
     Id: 193505,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Wildercloth Bands",
+    Name: 'Crimson Combatant\u0027s Wildercloth Bands',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2920,7 +2920,7 @@ export const resources = [
   {
     Id: 201940,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Seasoned Cord",
+    Name: 'Surveyor\u0027s Seasoned Cord',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2932,7 +2932,7 @@ export const resources = [
   {
     Id: 201938,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Seasoned Gloves",
+    Name: 'Surveyor\u0027s Seasoned Gloves',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2944,7 +2944,7 @@ export const resources = [
   {
     Id: 201936,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Seasoned Hood",
+    Name: 'Surveyor\u0027s Seasoned Hood',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2956,7 +2956,7 @@ export const resources = [
   {
     Id: 201939,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Seasoned Pants",
+    Name: 'Surveyor\u0027s Seasoned Pants',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2968,7 +2968,7 @@ export const resources = [
   {
     Id: 201937,
     ListOfReagents: null,
-    Name: "Surveyor\u0027s Seasoned Shoulders",
+    Name: 'Surveyor\u0027s Seasoned Shoulders',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2980,7 +2980,7 @@ export const resources = [
   {
     Id: 194017,
     ListOfReagents: null,
-    Name: "Wildercloth Bag",
+    Name: 'Wildercloth Bag',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -2992,7 +2992,7 @@ export const resources = [
   {
     Id: 194018,
     ListOfReagents: null,
-    Name: "Azureweave Expedition Pack",
+    Name: 'Azureweave Expedition Pack',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3004,7 +3004,7 @@ export const resources = [
   {
     Id: 194019,
     ListOfReagents: null,
-    Name: "Simply Stitched Reagent Bag",
+    Name: 'Simply Stitched Reagent Bag',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3016,7 +3016,7 @@ export const resources = [
   {
     Id: 194020,
     ListOfReagents: null,
-    Name: "Chronocloth Reagent Bag",
+    Name: 'Chronocloth Reagent Bag',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3028,7 +3028,7 @@ export const resources = [
   {
     Id: 194048,
     ListOfReagents: null,
-    Name: "Wildercloth Bandage",
+    Name: 'Wildercloth Bandage',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3040,7 +3040,7 @@ export const resources = [
   {
     Id: 194042,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Banner of Herbology",
+    Name: 'Explorer\u0027s Banner of Herbology',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3052,7 +3052,7 @@ export const resources = [
   {
     Id: 194045,
     ListOfReagents: null,
-    Name: "Explorer\u0027s Banner of Geology",
+    Name: 'Explorer\u0027s Banner of Geology',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3064,7 +3064,7 @@ export const resources = [
   {
     Id: 194056,
     ListOfReagents: null,
-    Name: "Duck-Stuffed Duck Lovie",
+    Name: 'Duck-Stuffed Duck Lovie',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3076,7 +3076,7 @@ export const resources = [
   {
     Id: 194052,
     ListOfReagents: null,
-    Name: "Forlorn Funeral Pall",
+    Name: 'Forlorn Funeral Pall',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3088,7 +3088,7 @@ export const resources = [
   {
     Id: 194057,
     ListOfReagents: null,
-    Name: "Cushion of Time Travel",
+    Name: 'Cushion of Time Travel',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3100,7 +3100,7 @@ export const resources = [
   {
     Id: 194058,
     ListOfReagents: null,
-    Name: "Cold Cushion",
+    Name: 'Cold Cushion',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3112,7 +3112,7 @@ export const resources = [
   {
     Id: 194059,
     ListOfReagents: null,
-    Name: "Market Tent",
+    Name: 'Market Tent',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3124,7 +3124,7 @@ export const resources = [
   {
     Id: 194060,
     ListOfReagents: null,
-    Name: "Dragonscale Expedition\u0027s Expedition Tent",
+    Name: 'Dragonscale Expedition\u0027s Expedition Tent',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3136,7 +3136,7 @@ export const resources = [
   {
     Id: 193950,
     ListOfReagents: null,
-    Name: "Abrasive Polishing Cloth",
+    Name: 'Abrasive Polishing Cloth',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3148,7 +3148,7 @@ export const resources = [
   {
     Id: 193953,
     ListOfReagents: null,
-    Name: "Vibrant Polishing Cloth",
+    Name: 'Vibrant Polishing Cloth',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3160,7 +3160,7 @@ export const resources = [
   {
     Id: 193956,
     ListOfReagents: null,
-    Name: "Blazing Embroidery Thread",
+    Name: 'Blazing Embroidery Thread',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3172,7 +3172,7 @@ export const resources = [
   {
     Id: 193959,
     ListOfReagents: null,
-    Name: "Chromatic Embroidery Thread",
+    Name: 'Chromatic Embroidery Thread',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3184,7 +3184,7 @@ export const resources = [
   {
     Id: 193962,
     ListOfReagents: null,
-    Name: "Shimmering Embroidery Thread",
+    Name: 'Shimmering Embroidery Thread',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3196,7 +3196,7 @@ export const resources = [
   {
     Id: 191529,
     ListOfReagents: null,
-    Name: "Illustrious Insight",
+    Name: 'Illustrious Insight',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3208,7 +3208,7 @@ export const resources = [
   {
     Id: 194008,
     ListOfReagents: null,
-    Name: "Vibrant Spellthread",
+    Name: 'Vibrant Spellthread',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3220,7 +3220,7 @@ export const resources = [
   {
     Id: 194011,
     ListOfReagents: null,
-    Name: "Frozen Spellthread",
+    Name: 'Frozen Spellthread',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3232,7 +3232,7 @@ export const resources = [
   {
     Id: 194014,
     ListOfReagents: null,
-    Name: "Temporal Spellthread",
+    Name: 'Temporal Spellthread',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3244,7 +3244,7 @@ export const resources = [
   {
     Id: 193944,
     ListOfReagents: null,
-    Name: "Blue Silken Lining",
+    Name: 'Blue Silken Lining',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3256,7 +3256,7 @@ export const resources = [
   {
     Id: 193941,
     ListOfReagents: null,
-    Name: "Bronzed Grip Wrappings",
+    Name: 'Bronzed Grip Wrappings',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3268,7 +3268,7 @@ export const resources = [
   {
     Id: 193528,
     ListOfReagents: null,
-    Name: "Wildercloth Alchemist\u0027s Robe",
+    Name: 'Wildercloth Alchemist\u0027s Robe',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3280,7 +3280,7 @@ export const resources = [
   {
     Id: 193544,
     ListOfReagents: null,
-    Name: "Master\u0027s Wildercloth Alchemist\u0027s Robe",
+    Name: 'Master\u0027s Wildercloth Alchemist\u0027s Robe',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3292,7 +3292,7 @@ export const resources = [
   {
     Id: 193541,
     ListOfReagents: null,
-    Name: "Wildercloth Tailor\u0027s Coat",
+    Name: 'Wildercloth Tailor\u0027s Coat',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3304,7 +3304,7 @@ export const resources = [
   {
     Id: 193540,
     ListOfReagents: null,
-    Name: "Dragoncloth Tailoring Vestments",
+    Name: 'Dragoncloth Tailoring Vestments',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3316,7 +3316,7 @@ export const resources = [
   {
     Id: 193534,
     ListOfReagents: null,
-    Name: "Wildercloth Chef\u0027s Hat",
+    Name: 'Wildercloth Chef\u0027s Hat',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3328,7 +3328,7 @@ export const resources = [
   {
     Id: 193545,
     ListOfReagents: null,
-    Name: "Master\u0027s Wildercloth Chef\u0027s Hat",
+    Name: 'Master\u0027s Wildercloth Chef\u0027s Hat',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3340,7 +3340,7 @@ export const resources = [
   {
     Id: 193539,
     ListOfReagents: null,
-    Name: "Wildercloth Enchanter\u0027s Hat",
+    Name: 'Wildercloth Enchanter\u0027s Hat',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3352,7 +3352,7 @@ export const resources = [
   {
     Id: 193533,
     ListOfReagents: null,
-    Name: "Master\u0027s Wildercloth Enchanter\u0027s Hat",
+    Name: 'Master\u0027s Wildercloth Enchanter\u0027s Hat',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3364,7 +3364,7 @@ export const resources = [
   {
     Id: 193529,
     ListOfReagents: null,
-    Name: "Wildercloth Fishing Cap",
+    Name: 'Wildercloth Fishing Cap',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3376,7 +3376,7 @@ export const resources = [
   {
     Id: 193543,
     ListOfReagents: null,
-    Name: "Master\u0027s Wildercloth Fishing Cap",
+    Name: 'Master\u0027s Wildercloth Fishing Cap',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3388,7 +3388,7 @@ export const resources = [
   {
     Id: 193538,
     ListOfReagents: null,
-    Name: "Wildercloth Gardening Hat",
+    Name: 'Wildercloth Gardening Hat',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3400,7 +3400,7 @@ export const resources = [
   {
     Id: 193542,
     ListOfReagents: null,
-    Name: "Master\u0027s Wildercloth Gardening Hat",
+    Name: 'Master\u0027s Wildercloth Gardening Hat',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3412,7 +3412,7 @@ export const resources = [
   {
     Id: 193926,
     ListOfReagents: null,
-    Name: "Wildercloth Bolt",
+    Name: 'Wildercloth Bolt',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3424,7 +3424,7 @@ export const resources = [
   {
     Id: 193938,
     ListOfReagents: null,
-    Name: "Azureweave Bolt",
+    Name: 'Azureweave Bolt',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3436,7 +3436,7 @@ export const resources = [
   {
     Id: 193935,
     ListOfReagents: null,
-    Name: "Chronocloth Bolt",
+    Name: 'Chronocloth Bolt',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3448,7 +3448,7 @@ export const resources = [
   {
     Id: 193929,
     ListOfReagents: null,
-    Name: "Vibrant Wildercloth Bolt",
+    Name: 'Vibrant Wildercloth Bolt',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3460,7 +3460,7 @@ export const resources = [
   {
     Id: 193932,
     ListOfReagents: null,
-    Name: "Infurious Wildercloth Bolt",
+    Name: 'Infurious Wildercloth Bolt',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3472,7 +3472,7 @@ export const resources = [
   {
     Id: 194127,
     ListOfReagents: null,
-    Name: "Dragon Isles Unravelling",
+    Name: 'Dragon Isles Unravelling',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3484,7 +3484,7 @@ export const resources = [
   {
     Id: 194537,
     ListOfReagents: null,
-    Name: "Fiddle with Draconium Fabric Cutters",
+    Name: 'Fiddle with Draconium Fabric Cutters',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3496,7 +3496,7 @@ export const resources = [
   {
     Id: 194538,
     ListOfReagents: null,
-    Name: "Fiddle with Khaz\u0027gorite Fabric Cutters",
+    Name: 'Fiddle with Khaz\u0027gorite Fabric Cutters',
     ProfessionId: 197,
     SkillTierId: 2831,
     Category: null,
@@ -3508,7 +3508,7 @@ export const resources = [
   {
     Id: 194870,
     ListOfReagents: null,
-    Name: "Bronzescale Sigil",
+    Name: 'Bronzescale Sigil',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3520,7 +3520,7 @@ export const resources = [
   {
     Id: 198491,
     ListOfReagents: null,
-    Name: "Vantus Rune: Vault of the Incarnates",
+    Name: 'Vantus Rune: Vault of the Incarnates',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3532,7 +3532,7 @@ export const resources = [
   {
     Id: 194869,
     ListOfReagents: null,
-    Name: "Sagescale Sigil",
+    Name: 'Sagescale Sigil',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3544,7 +3544,7 @@ export const resources = [
   {
     Id: 194871,
     ListOfReagents: null,
-    Name: "Azurescale Sigil",
+    Name: 'Azurescale Sigil',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3556,7 +3556,7 @@ export const resources = [
   {
     Id: 194817,
     ListOfReagents: null,
-    Name: "Howling Rune",
+    Name: 'Howling Rune',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3568,7 +3568,7 @@ export const resources = [
   {
     Id: 198431,
     ListOfReagents: null,
-    Name: "Jetscale Sigil",
+    Name: 'Jetscale Sigil',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3580,7 +3580,7 @@ export const resources = [
   {
     Id: 194868,
     ListOfReagents: null,
-    Name: "Emberscale Sigil",
+    Name: 'Emberscale Sigil',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3592,7 +3592,7 @@ export const resources = [
   {
     Id: 194821,
     ListOfReagents: null,
-    Name: "Buzzing Rune",
+    Name: 'Buzzing Rune',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3604,7 +3604,7 @@ export const resources = [
   {
     Id: 194824,
     ListOfReagents: null,
-    Name: "Chirping Rune",
+    Name: 'Chirping Rune',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3616,7 +3616,7 @@ export const resources = [
   {
     Id: 197718,
     ListOfReagents: null,
-    Name: "Scroll of Sales",
+    Name: 'Scroll of Sales',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3628,7 +3628,7 @@ export const resources = [
   {
     Id: 194734,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Whirling Breeze",
+    Name: 'Illusion Parchment: Whirling Breeze',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3640,7 +3640,7 @@ export const resources = [
   {
     Id: 194737,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Spell Shield",
+    Name: 'Illusion Parchment: Spell Shield',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3652,7 +3652,7 @@ export const resources = [
   {
     Id: 194738,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Shadow Orb",
+    Name: 'Illusion Parchment: Shadow Orb',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3664,7 +3664,7 @@ export const resources = [
   {
     Id: 194731,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Magma Missile",
+    Name: 'Illusion Parchment: Magma Missile',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3676,7 +3676,7 @@ export const resources = [
   {
     Id: 194735,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Arcane Burst",
+    Name: 'Illusion Parchment: Arcane Burst',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3688,7 +3688,7 @@ export const resources = [
   {
     Id: 194736,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Chilling Wind",
+    Name: 'Illusion Parchment: Chilling Wind',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3700,7 +3700,7 @@ export const resources = [
   {
     Id: 194733,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Aqua Torrent",
+    Name: 'Illusion Parchment: Aqua Torrent',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3712,7 +3712,7 @@ export const resources = [
   {
     Id: 194732,
     ListOfReagents: null,
-    Name: "Illusion Parchment: Love Charm",
+    Name: 'Illusion Parchment: Love Charm',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3724,7 +3724,7 @@ export const resources = [
   {
     Id: 194850,
     ListOfReagents: null,
-    Name: "Flourishing Ink",
+    Name: 'Flourishing Ink',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3736,7 +3736,7 @@ export const resources = [
   {
     Id: 194856,
     ListOfReagents: null,
-    Name: "Serene Ink",
+    Name: 'Serene Ink',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3748,7 +3748,7 @@ export const resources = [
   {
     Id: 194855,
     ListOfReagents: null,
-    Name: "Burnished Ink",
+    Name: 'Burnished Ink',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3760,7 +3760,7 @@ export const resources = [
   {
     Id: 194846,
     ListOfReagents: null,
-    Name: "Blazing Ink",
+    Name: 'Blazing Ink',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3772,7 +3772,7 @@ export const resources = [
   {
     Id: 194754,
     ListOfReagents: null,
-    Name: "Cosmic Ink",
+    Name: 'Cosmic Ink',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3784,7 +3784,7 @@ export const resources = [
   {
     Id: 197634,
     ListOfReagents: null,
-    Name: "Windborne Velocidrake: Windswept Pattern",
+    Name: 'Windborne Velocidrake: Windswept Pattern',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3796,7 +3796,7 @@ export const resources = [
   {
     Id: 197592,
     ListOfReagents: null,
-    Name: "Windborne Velocidrake: Spined Head",
+    Name: 'Windborne Velocidrake: Spined Head',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3808,7 +3808,7 @@ export const resources = [
   {
     Id: 197597,
     ListOfReagents: null,
-    Name: "Windborne Velocidrake: Black Fur",
+    Name: 'Windborne Velocidrake: Black Fur',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3820,7 +3820,7 @@ export const resources = [
   {
     Id: 197579,
     ListOfReagents: null,
-    Name: "Windborne Velocidrake: Steel and Orange Armor",
+    Name: 'Windborne Velocidrake: Steel and Orange Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3832,7 +3832,7 @@ export const resources = [
   {
     Id: 197578,
     ListOfReagents: null,
-    Name: "Windborne Velocidrake: Silver and Blue Armor",
+    Name: 'Windborne Velocidrake: Silver and Blue Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3844,7 +3844,7 @@ export const resources = [
   {
     Id: 197362,
     ListOfReagents: null,
-    Name: "Renewed Proto-Drake: Spined Crest",
+    Name: 'Renewed Proto-Drake: Spined Crest',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3856,7 +3856,7 @@ export const resources = [
   {
     Id: 197394,
     ListOfReagents: null,
-    Name: "Renewed Proto-Drake: Predator Pattern",
+    Name: 'Renewed Proto-Drake: Predator Pattern',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3868,7 +3868,7 @@ export const resources = [
   {
     Id: 197347,
     ListOfReagents: null,
-    Name: "Renewed Proto-Drake: Silver and Blue Armor",
+    Name: 'Renewed Proto-Drake: Silver and Blue Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3880,7 +3880,7 @@ export const resources = [
   {
     Id: 197352,
     ListOfReagents: null,
-    Name: "Renewed Proto-Drake: Steel and Yellow Armor",
+    Name: 'Renewed Proto-Drake: Steel and Yellow Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3892,7 +3892,7 @@ export const resources = [
   {
     Id: 197117,
     ListOfReagents: null,
-    Name: "Highland Drake: Black Hair",
+    Name: 'Highland Drake: Black Hair',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3904,7 +3904,7 @@ export const resources = [
   {
     Id: 197096,
     ListOfReagents: null,
-    Name: "Highland Drake: Steel and Yellow Armor",
+    Name: 'Highland Drake: Steel and Yellow Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3916,7 +3916,7 @@ export const resources = [
   {
     Id: 197091,
     ListOfReagents: null,
-    Name: "Highland Drake: Silver and Blue Armor",
+    Name: 'Highland Drake: Silver and Blue Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3928,7 +3928,7 @@ export const resources = [
   {
     Id: 194894,
     ListOfReagents: null,
-    Name: "Weathered Explorer\u0027s Stave",
+    Name: 'Weathered Explorer\u0027s Stave',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3940,7 +3940,7 @@ export const resources = [
   {
     Id: 194892,
     ListOfReagents: null,
-    Name: "Pioneer\u0027s Writhebark Stave",
+    Name: 'Pioneer\u0027s Writhebark Stave',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3952,7 +3952,7 @@ export const resources = [
   {
     Id: 194893,
     ListOfReagents: null,
-    Name: "Overseer\u0027s Writhebark Stave",
+    Name: 'Overseer\u0027s Writhebark Stave',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3964,7 +3964,7 @@ export const resources = [
   {
     Id: 194897,
     ListOfReagents: null,
-    Name: "Kinetic Pillar of the Isles",
+    Name: 'Kinetic Pillar of the Isles',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3976,7 +3976,7 @@ export const resources = [
   {
     Id: 194877,
     ListOfReagents: null,
-    Name: "Core Explorer\u0027s Compendium",
+    Name: 'Core Explorer\u0027s Compendium',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -3988,7 +3988,7 @@ export const resources = [
   {
     Id: 194898,
     ListOfReagents: null,
-    Name: "Illuminating Pillar of the Isles",
+    Name: 'Illuminating Pillar of the Isles',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4000,7 +4000,7 @@ export const resources = [
   {
     Id: 196988,
     ListOfReagents: null,
-    Name: "Cliffside Wylderdrake: Red Hair",
+    Name: 'Cliffside Wylderdrake: Red Hair',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4012,7 +4012,7 @@ export const resources = [
   {
     Id: 196981,
     ListOfReagents: null,
-    Name: "Cliffside Wylderdrake: Conical Head",
+    Name: 'Cliffside Wylderdrake: Conical Head',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4024,7 +4024,7 @@ export const resources = [
   {
     Id: 196980,
     ListOfReagents: null,
-    Name: "Cliffside Wylderdrake: Triple Head Horns",
+    Name: 'Cliffside Wylderdrake: Triple Head Horns',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4036,7 +4036,7 @@ export const resources = [
   {
     Id: 196968,
     ListOfReagents: null,
-    Name: "Cliffside Wylderdrake: Steel and Yellow Armor",
+    Name: 'Cliffside Wylderdrake: Steel and Yellow Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4048,7 +4048,7 @@ export const resources = [
   {
     Id: 196963,
     ListOfReagents: null,
-    Name: "Cliffside Wylderdrake: Silver and Blue Armor",
+    Name: 'Cliffside Wylderdrake: Silver and Blue Armor',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4060,7 +4060,7 @@ export const resources = [
   {
     Id: 194859,
     ListOfReagents: null,
-    Name: "Chilled Rune",
+    Name: 'Chilled Rune',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4072,7 +4072,7 @@ export const resources = [
   {
     Id: 194862,
     ListOfReagents: null,
-    Name: "Runed Writhebark",
+    Name: 'Runed Writhebark',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4084,7 +4084,7 @@ export const resources = [
   {
     Id: 191529,
     ListOfReagents: null,
-    Name: "Illustrious Insight",
+    Name: 'Illustrious Insight',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4096,7 +4096,7 @@ export const resources = [
   {
     Id: 194875,
     ListOfReagents: null,
-    Name: "Scribe\u0027s Resplendent Quill",
+    Name: 'Scribe\u0027s Resplendent Quill',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4108,7 +4108,7 @@ export const resources = [
   {
     Id: 194874,
     ListOfReagents: null,
-    Name: "Scribe\u0027s Fastened Quill",
+    Name: 'Scribe\u0027s Fastened Quill',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4120,7 +4120,7 @@ export const resources = [
   {
     Id: 191231,
     ListOfReagents: null,
-    Name: "Alchemist\u0027s Brilliant Mixing Rod",
+    Name: 'Alchemist\u0027s Brilliant Mixing Rod',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4132,7 +4132,7 @@ export const resources = [
   {
     Id: 191234,
     ListOfReagents: null,
-    Name: "Alchemist\u0027s Sturdy Mixing Rod",
+    Name: 'Alchemist\u0027s Sturdy Mixing Rod',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4144,7 +4144,7 @@ export const resources = [
   {
     Id: 191232,
     ListOfReagents: null,
-    Name: "Chef\u0027s Splendid Rolling Pin",
+    Name: 'Chef\u0027s Splendid Rolling Pin',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4156,7 +4156,7 @@ export const resources = [
   {
     Id: 191233,
     ListOfReagents: null,
-    Name: "Chef\u0027s Smooth Rolling Pin",
+    Name: 'Chef\u0027s Smooth Rolling Pin',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4168,7 +4168,7 @@ export const resources = [
   {
     Id: 194698,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Tailoring",
+    Name: 'Draconic Treatise on Tailoring',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4180,7 +4180,7 @@ export const resources = [
   {
     Id: 194708,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Mining",
+    Name: 'Draconic Treatise on Mining',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4192,7 +4192,7 @@ export const resources = [
   {
     Id: 194700,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Leatherworking",
+    Name: 'Draconic Treatise on Leatherworking',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4204,7 +4204,7 @@ export const resources = [
   {
     Id: 194703,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Jewelcrafting",
+    Name: 'Draconic Treatise on Jewelcrafting',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4216,7 +4216,7 @@ export const resources = [
   {
     Id: 194699,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Inscription",
+    Name: 'Draconic Treatise on Inscription',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4228,7 +4228,7 @@ export const resources = [
   {
     Id: 194704,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Herbalism",
+    Name: 'Draconic Treatise on Herbalism',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4240,7 +4240,7 @@ export const resources = [
   {
     Id: 194702,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Enchanting",
+    Name: 'Draconic Treatise on Enchanting',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4252,7 +4252,7 @@ export const resources = [
   {
     Id: 198454,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Blacksmithing",
+    Name: 'Draconic Treatise on Blacksmithing',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4264,7 +4264,7 @@ export const resources = [
   {
     Id: 194697,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Alchemy",
+    Name: 'Draconic Treatise on Alchemy',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4276,7 +4276,7 @@ export const resources = [
   {
     Id: 198510,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Engineering",
+    Name: 'Draconic Treatise on Engineering',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4288,7 +4288,7 @@ export const resources = [
   {
     Id: 201023,
     ListOfReagents: null,
-    Name: "Draconic Treatise on Skinning",
+    Name: 'Draconic Treatise on Skinning',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4300,7 +4300,7 @@ export const resources = [
   {
     Id: 194572,
     ListOfReagents: null,
-    Name: "Draconic Missive of the Quickblade",
+    Name: 'Draconic Missive of the Quickblade',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4312,7 +4312,7 @@ export const resources = [
   {
     Id: 194578,
     ListOfReagents: null,
-    Name: "Draconic Missive of the Peerless",
+    Name: 'Draconic Missive of the Peerless',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4324,7 +4324,7 @@ export const resources = [
   {
     Id: 194575,
     ListOfReagents: null,
-    Name: "Draconic Missive of the Harmonious",
+    Name: 'Draconic Missive of the Harmonious',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4336,7 +4336,7 @@ export const resources = [
   {
     Id: 192552,
     ListOfReagents: null,
-    Name: "Draconic Missive of the Fireflash",
+    Name: 'Draconic Missive of the Fireflash',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4348,7 +4348,7 @@ export const resources = [
   {
     Id: 194566,
     ListOfReagents: null,
-    Name: "Draconic Missive of the Feverflare",
+    Name: 'Draconic Missive of the Feverflare',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4360,7 +4360,7 @@ export const resources = [
   {
     Id: 194569,
     ListOfReagents: null,
-    Name: "Draconic Missive of the Aurora",
+    Name: 'Draconic Missive of the Aurora',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4372,7 +4372,7 @@ export const resources = [
   {
     Id: 194827,
     ListOfReagents: null,
-    Name: "Bundle O\u0027 Cards: Dragon Isles",
+    Name: 'Bundle O\u0027 Cards: Dragon Isles',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4384,7 +4384,7 @@ export const resources = [
   {
     Id: 199901,
     ListOfReagents: null,
-    Name: "Extraction: Awakened Fire",
+    Name: 'Extraction: Awakened Fire',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4396,7 +4396,7 @@ export const resources = [
   {
     Id: 199903,
     ListOfReagents: null,
-    Name: "Extraction: Awakened Frost",
+    Name: 'Extraction: Awakened Frost',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4408,7 +4408,7 @@ export const resources = [
   {
     Id: 199904,
     ListOfReagents: null,
-    Name: "Extraction: Awakened Air",
+    Name: 'Extraction: Awakened Air',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4420,7 +4420,7 @@ export const resources = [
   {
     Id: 199905,
     ListOfReagents: null,
-    Name: "Extraction: Awakened Earth",
+    Name: 'Extraction: Awakened Earth',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4432,7 +4432,7 @@ export const resources = [
   {
     Id: 198497,
     ListOfReagents: null,
-    Name: "Contract: Valdrakken Accord",
+    Name: 'Contract: Valdrakken Accord',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4444,7 +4444,7 @@ export const resources = [
   {
     Id: 198494,
     ListOfReagents: null,
-    Name: "Contract: Iskaara Tuskarr",
+    Name: 'Contract: Iskaara Tuskarr',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4456,7 +4456,7 @@ export const resources = [
   {
     Id: 198506,
     ListOfReagents: null,
-    Name: "Contract: Dragonscale Expedition",
+    Name: 'Contract: Dragonscale Expedition',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4468,7 +4468,7 @@ export const resources = [
   {
     Id: 198503,
     ListOfReagents: null,
-    Name: "Contract: Artisan\u0027s Consortium",
+    Name: 'Contract: Artisan\u0027s Consortium',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4480,7 +4480,7 @@ export const resources = [
   {
     Id: 198500,
     ListOfReagents: null,
-    Name: "Contract: Maruuk Centaur",
+    Name: 'Contract: Maruuk Centaur',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4492,7 +4492,7 @@ export const resources = [
   {
     Id: 198477,
     ListOfReagents: null,
-    Name: "Darkmoon Deck Box: Rime",
+    Name: 'Darkmoon Deck Box: Rime',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4504,7 +4504,7 @@ export const resources = [
   {
     Id: 194872,
     ListOfReagents: null,
-    Name: "Darkmoon Deck Box: Inferno",
+    Name: 'Darkmoon Deck Box: Inferno',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4516,7 +4516,7 @@ export const resources = [
   {
     Id: 198478,
     ListOfReagents: null,
-    Name: "Darkmoon Deck Box: Dance",
+    Name: 'Darkmoon Deck Box: Dance',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4528,7 +4528,7 @@ export const resources = [
   {
     Id: 198481,
     ListOfReagents: null,
-    Name: "Darkmoon Deck Box: Watcher",
+    Name: 'Darkmoon Deck Box: Watcher',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4540,7 +4540,7 @@ export const resources = [
   {
     Id: 203375,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Medallion",
+    Name: 'Crimson Combatant\u0027s Medallion',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4552,7 +4552,7 @@ export const resources = [
   {
     Id: 203376,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Insignia of Alacrity",
+    Name: 'Crimson Combatant\u0027s Insignia of Alacrity',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4564,7 +4564,7 @@ export const resources = [
   {
     Id: 203377,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Emblem",
+    Name: 'Crimson Combatant\u0027s Emblem',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4576,7 +4576,7 @@ export const resources = [
   {
     Id: 198534,
     ListOfReagents: null,
-    Name: "Draconic Missive of Inspiration",
+    Name: 'Draconic Missive of Inspiration',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4588,7 +4588,7 @@ export const resources = [
   {
     Id: 200565,
     ListOfReagents: null,
-    Name: "Draconic Missive of Resourcefulness",
+    Name: 'Draconic Missive of Resourcefulness',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4600,7 +4600,7 @@ export const resources = [
   {
     Id: 200568,
     ListOfReagents: null,
-    Name: "Draconic Missive of Multicraft",
+    Name: 'Draconic Missive of Multicraft',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4612,7 +4612,7 @@ export const resources = [
   {
     Id: 200571,
     ListOfReagents: null,
-    Name: "Draconic Missive of Crafting Speed",
+    Name: 'Draconic Missive of Crafting Speed',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4624,7 +4624,7 @@ export const resources = [
   {
     Id: 200574,
     ListOfReagents: null,
-    Name: "Draconic Missive of Finesse",
+    Name: 'Draconic Missive of Finesse',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4636,7 +4636,7 @@ export const resources = [
   {
     Id: 200577,
     ListOfReagents: null,
-    Name: "Draconic Missive of Perception",
+    Name: 'Draconic Missive of Perception',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4648,7 +4648,7 @@ export const resources = [
   {
     Id: 200580,
     ListOfReagents: null,
-    Name: "Draconic Missive of Deftness",
+    Name: 'Draconic Missive of Deftness',
     ProfessionId: 773,
     SkillTierId: 2828,
     Category: null,
@@ -4660,7 +4660,7 @@ export const resources = [
   {
     Id: 194902,
     ListOfReagents: null,
-    Name: "Ooey-Gooey Chocolate",
+    Name: 'Ooey-Gooey Chocolate',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4672,7 +4672,7 @@ export const resources = [
   {
     Id: 197756,
     ListOfReagents: null,
-    Name: "Pebbled Rock Salts",
+    Name: 'Pebbled Rock Salts',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4684,7 +4684,7 @@ export const resources = [
   {
     Id: 197757,
     ListOfReagents: null,
-    Name: "Assorted Exotic Spices",
+    Name: 'Assorted Exotic Spices',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4696,7 +4696,7 @@ export const resources = [
   {
     Id: 197764,
     ListOfReagents: null,
-    Name: "Salad on the Side",
+    Name: 'Salad on the Side',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4708,7 +4708,7 @@ export const resources = [
   {
     Id: 197765,
     ListOfReagents: null,
-    Name: "Impossibly Sharp Cutting Knife",
+    Name: 'Impossibly Sharp Cutting Knife',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4720,7 +4720,7 @@ export const resources = [
   {
     Id: 197759,
     ListOfReagents: null,
-    Name: "Cheese and Quackers",
+    Name: 'Cheese and Quackers',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4732,7 +4732,7 @@ export const resources = [
   {
     Id: 197760,
     ListOfReagents: null,
-    Name: "Mackerel Snackerel",
+    Name: 'Mackerel Snackerel',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4744,7 +4744,7 @@ export const resources = [
   {
     Id: 197758,
     ListOfReagents: null,
-    Name: "Twice-Baked Potato",
+    Name: 'Twice-Baked Potato',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4756,7 +4756,7 @@ export const resources = [
   {
     Id: 197761,
     ListOfReagents: null,
-    Name: "Probably Protein",
+    Name: 'Probably Protein',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4768,7 +4768,7 @@ export const resources = [
   {
     Id: 197762,
     ListOfReagents: null,
-    Name: "Sweet and Sour Clam Chowder",
+    Name: 'Sweet and Sour Clam Chowder',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4780,7 +4780,7 @@ export const resources = [
   {
     Id: 197763,
     ListOfReagents: null,
-    Name: "Breakfast of Draconic Champions",
+    Name: 'Breakfast of Draconic Champions',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4792,7 +4792,7 @@ export const resources = [
   {
     Id: 197766,
     ListOfReagents: null,
-    Name: "Snow in a Cone",
+    Name: 'Snow in a Cone',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4804,7 +4804,7 @@ export const resources = [
   {
     Id: 197767,
     ListOfReagents: null,
-    Name: "Blubbery Muffin",
+    Name: 'Blubbery Muffin',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4816,7 +4816,7 @@ export const resources = [
   {
     Id: 197768,
     ListOfReagents: null,
-    Name: "Celebratory Cake",
+    Name: 'Celebratory Cake',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4828,7 +4828,7 @@ export const resources = [
   {
     Id: 197769,
     ListOfReagents: null,
-    Name: "Tasty Hatchling\u0027s Treat",
+    Name: 'Tasty Hatchling\u0027s Treat',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4840,7 +4840,7 @@ export const resources = [
   {
     Id: 197792,
     ListOfReagents: null,
-    Name: "Fated Fortune Cookie",
+    Name: 'Fated Fortune Cookie',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4852,7 +4852,7 @@ export const resources = [
   {
     Id: 197770,
     ListOfReagents: null,
-    Name: "Zesty Water",
+    Name: 'Zesty Water',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4864,7 +4864,7 @@ export const resources = [
   {
     Id: 197771,
     ListOfReagents: null,
-    Name: "Delicious Dragon Spittle",
+    Name: 'Delicious Dragon Spittle',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4876,7 +4876,7 @@ export const resources = [
   {
     Id: 197772,
     ListOfReagents: null,
-    Name: "Churnbelly Tea",
+    Name: 'Churnbelly Tea',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4888,7 +4888,7 @@ export const resources = [
   {
     Id: 197774,
     ListOfReagents: null,
-    Name: "Charred Hornswog Steaks",
+    Name: 'Charred Hornswog Steaks',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4900,7 +4900,7 @@ export const resources = [
   {
     Id: 197775,
     ListOfReagents: null,
-    Name: "Scrambled Basilisk Eggs",
+    Name: 'Scrambled Basilisk Eggs',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4912,7 +4912,7 @@ export const resources = [
   {
     Id: 197776,
     ListOfReagents: null,
-    Name: "Thrice-Spiced Mammoth Kabob",
+    Name: 'Thrice-Spiced Mammoth Kabob',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4924,7 +4924,7 @@ export const resources = [
   {
     Id: 197777,
     ListOfReagents: null,
-    Name: "Hopefully Healthy",
+    Name: 'Hopefully Healthy',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4936,7 +4936,7 @@ export const resources = [
   {
     Id: 197788,
     ListOfReagents: null,
-    Name: "Braised Bruffalon Brisket",
+    Name: 'Braised Bruffalon Brisket',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4948,7 +4948,7 @@ export const resources = [
   {
     Id: 197789,
     ListOfReagents: null,
-    Name: "Riverside Picnic",
+    Name: 'Riverside Picnic',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4960,7 +4960,7 @@ export const resources = [
   {
     Id: 197790,
     ListOfReagents: null,
-    Name: "Roast Duck Delight",
+    Name: 'Roast Duck Delight',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4972,7 +4972,7 @@ export const resources = [
   {
     Id: 197791,
     ListOfReagents: null,
-    Name: "Salted Meat Mash",
+    Name: 'Salted Meat Mash',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4984,7 +4984,7 @@ export const resources = [
   {
     Id: 197778,
     ListOfReagents: null,
-    Name: "Timely Demise",
+    Name: 'Timely Demise',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -4996,7 +4996,7 @@ export const resources = [
   {
     Id: 197779,
     ListOfReagents: null,
-    Name: "Filet of Fangs",
+    Name: 'Filet of Fangs',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5008,7 +5008,7 @@ export const resources = [
   {
     Id: 197780,
     ListOfReagents: null,
-    Name: "Seamoth Surprise",
+    Name: 'Seamoth Surprise',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5020,7 +5020,7 @@ export const resources = [
   {
     Id: 197781,
     ListOfReagents: null,
-    Name: "Salt-Baked Fishcake",
+    Name: 'Salt-Baked Fishcake',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5032,7 +5032,7 @@ export const resources = [
   {
     Id: 197782,
     ListOfReagents: null,
-    Name: "Feisty Fish Sticks",
+    Name: 'Feisty Fish Sticks',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5044,7 +5044,7 @@ export const resources = [
   {
     Id: 197783,
     ListOfReagents: null,
-    Name: "Aromatic Seafood Platter",
+    Name: 'Aromatic Seafood Platter',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5056,7 +5056,7 @@ export const resources = [
   {
     Id: 197784,
     ListOfReagents: null,
-    Name: "Sizzling Seafood Medley",
+    Name: 'Sizzling Seafood Medley',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5068,7 +5068,7 @@ export const resources = [
   {
     Id: 197785,
     ListOfReagents: null,
-    Name: "Revenge, Served Cold",
+    Name: 'Revenge, Served Cold',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5080,7 +5080,7 @@ export const resources = [
   {
     Id: 197786,
     ListOfReagents: null,
-    Name: "Thousandbone Tongueslicer",
+    Name: 'Thousandbone Tongueslicer',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5092,7 +5092,7 @@ export const resources = [
   {
     Id: 197787,
     ListOfReagents: null,
-    Name: "Great Cerulean Sea",
+    Name: 'Great Cerulean Sea',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5104,7 +5104,7 @@ export const resources = [
   {
     Id: 197793,
     ListOfReagents: null,
-    Name: "Yusa\u0027s Hearty Stew",
+    Name: 'Yusa\u0027s Hearty Stew',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5116,7 +5116,7 @@ export const resources = [
   {
     Id: 197795,
     ListOfReagents: null,
-    Name: "Hoard of Draconic Delicacies",
+    Name: 'Hoard of Draconic Delicacies',
     ProfessionId: 185,
     SkillTierId: 2824,
     Category: null,
@@ -5128,7 +5128,7 @@ export const resources = [
   {
     Id: 191318,
     ListOfReagents: null,
-    Name: "Phial of the Eye in the Storm",
+    Name: 'Phial of the Eye in the Storm',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5140,7 +5140,7 @@ export const resources = [
   {
     Id: 191321,
     ListOfReagents: null,
-    Name: "Phial of Still Air",
+    Name: 'Phial of Still Air',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5152,7 +5152,7 @@ export const resources = [
   {
     Id: 191330,
     ListOfReagents: null,
-    Name: "Phial of Charged Isolation",
+    Name: 'Phial of Charged Isolation',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5164,7 +5164,7 @@ export const resources = [
   {
     Id: 191336,
     ListOfReagents: null,
-    Name: "Phial of Static Empowerment",
+    Name: 'Phial of Static Empowerment',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5176,7 +5176,7 @@ export const resources = [
   {
     Id: 191342,
     ListOfReagents: null,
-    Name: "Aerated Phial of Deftness",
+    Name: 'Aerated Phial of Deftness',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5188,7 +5188,7 @@ export const resources = [
   {
     Id: 191348,
     ListOfReagents: null,
-    Name: "Charged Phial of Alacrity",
+    Name: 'Charged Phial of Alacrity',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5200,7 +5200,7 @@ export const resources = [
   {
     Id: 197720,
     ListOfReagents: null,
-    Name: "Aerated Phial of Quick Hands",
+    Name: 'Aerated Phial of Quick Hands',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5212,7 +5212,7 @@ export const resources = [
   {
     Id: 191324,
     ListOfReagents: null,
-    Name: "Phial of Icy Preservation",
+    Name: 'Phial of Icy Preservation',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5224,7 +5224,7 @@ export const resources = [
   {
     Id: 191327,
     ListOfReagents: null,
-    Name: "Iced Phial of Corrupting Rage",
+    Name: 'Iced Phial of Corrupting Rage',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5236,7 +5236,7 @@ export const resources = [
   {
     Id: 191333,
     ListOfReagents: null,
-    Name: "Phial of Glacial Fury",
+    Name: 'Phial of Glacial Fury',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5248,7 +5248,7 @@ export const resources = [
   {
     Id: 191339,
     ListOfReagents: null,
-    Name: "Phial of Tepid Versatility",
+    Name: 'Phial of Tepid Versatility',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5260,7 +5260,7 @@ export const resources = [
   {
     Id: 191345,
     ListOfReagents: null,
-    Name: "Steaming Phial of Finesse",
+    Name: 'Steaming Phial of Finesse',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5272,7 +5272,7 @@ export const resources = [
   {
     Id: 191354,
     ListOfReagents: null,
-    Name: "Crystalline Phial of Perception",
+    Name: 'Crystalline Phial of Perception',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5284,7 +5284,7 @@ export const resources = [
   {
     Id: 191351,
     ListOfReagents: null,
-    Name: "Potion of Frozen Fatality",
+    Name: 'Potion of Frozen Fatality',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5296,7 +5296,7 @@ export const resources = [
   {
     Id: 191363,
     ListOfReagents: null,
-    Name: "Potion of Frozen Focus",
+    Name: 'Potion of Frozen Focus',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5308,7 +5308,7 @@ export const resources = [
   {
     Id: 191366,
     ListOfReagents: null,
-    Name: "Potion of Chilled Clarity",
+    Name: 'Potion of Chilled Clarity',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5320,7 +5320,7 @@ export const resources = [
   {
     Id: 191369,
     ListOfReagents: null,
-    Name: "Potion of Withering Vitality",
+    Name: 'Potion of Withering Vitality',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5332,7 +5332,7 @@ export const resources = [
   {
     Id: 191375,
     ListOfReagents: null,
-    Name: "Delicate Suspension of Spores",
+    Name: 'Delicate Suspension of Spores',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5344,7 +5344,7 @@ export const resources = [
   {
     Id: 191378,
     ListOfReagents: null,
-    Name: "Refreshing Healing Potion",
+    Name: 'Refreshing Healing Potion',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5356,7 +5356,7 @@ export const resources = [
   {
     Id: 191357,
     ListOfReagents: null,
-    Name: "Phial of Elemental Chaos",
+    Name: 'Phial of Elemental Chaos',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5368,7 +5368,7 @@ export const resources = [
   {
     Id: 191381,
     ListOfReagents: null,
-    Name: "Elemental Potion of Ultimate Power",
+    Name: 'Elemental Potion of Ultimate Power',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5380,7 +5380,7 @@ export const resources = [
   {
     Id: 191387,
     ListOfReagents: null,
-    Name: "Elemental Potion of Power",
+    Name: 'Elemental Potion of Power',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5392,7 +5392,7 @@ export const resources = [
   {
     Id: 191360,
     ListOfReagents: null,
-    Name: "Bottled Putrescence",
+    Name: 'Bottled Putrescence',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5404,7 +5404,7 @@ export const resources = [
   {
     Id: 191372,
     ListOfReagents: null,
-    Name: "Residual Neural Channeling Agent",
+    Name: 'Residual Neural Channeling Agent',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5416,7 +5416,7 @@ export const resources = [
   {
     Id: 191384,
     ListOfReagents: null,
-    Name: "Aerated Mana Potion",
+    Name: 'Aerated Mana Potion',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5428,7 +5428,7 @@ export const resources = [
   {
     Id: 191393,
     ListOfReagents: null,
-    Name: "Potion of the Hushed Zephyr",
+    Name: 'Potion of the Hushed Zephyr',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5440,7 +5440,7 @@ export const resources = [
   {
     Id: 191396,
     ListOfReagents: null,
-    Name: "Potion of Gusts",
+    Name: 'Potion of Gusts',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5452,7 +5452,7 @@ export const resources = [
   {
     Id: 191399,
     ListOfReagents: null,
-    Name: "Potion of Shocking Disclosure",
+    Name: 'Potion of Shocking Disclosure',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5464,7 +5464,7 @@ export const resources = [
   {
     Id: 191482,
     ListOfReagents: null,
-    Name: "Potion Cauldron of Power",
+    Name: 'Potion Cauldron of Power',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5476,7 +5476,7 @@ export const resources = [
   {
     Id: 191485,
     ListOfReagents: null,
-    Name: "Potion Cauldron of Ultimate Power",
+    Name: 'Potion Cauldron of Ultimate Power',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5488,7 +5488,7 @@ export const resources = [
   {
     Id: 191488,
     ListOfReagents: null,
-    Name: "Cauldron of the Pooka",
+    Name: 'Cauldron of the Pooka',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5500,7 +5500,7 @@ export const resources = [
   {
     Id: 191491,
     ListOfReagents: null,
-    Name: "Sustaining Alchemist Stone",
+    Name: 'Sustaining Alchemist Stone',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5512,7 +5512,7 @@ export const resources = [
   {
     Id: 191492,
     ListOfReagents: null,
-    Name: "Alacritous Alchemist Stone",
+    Name: 'Alacritous Alchemist Stone',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5524,7 +5524,7 @@ export const resources = [
   {
     Id: 191493,
     ListOfReagents: null,
-    Name: "Primal Convergent",
+    Name: 'Primal Convergent',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5536,7 +5536,7 @@ export const resources = [
   {
     Id: 191496,
     ListOfReagents: null,
-    Name: "Omnium Draconis",
+    Name: 'Omnium Draconis',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5548,7 +5548,7 @@ export const resources = [
   {
     Id: 191499,
     ListOfReagents: null,
-    Name: "Sagacious Incense",
+    Name: 'Sagacious Incense',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5560,7 +5560,7 @@ export const resources = [
   {
     Id: 191502,
     ListOfReagents: null,
-    Name: "Somniferous Incense",
+    Name: 'Somniferous Incense',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5572,7 +5572,7 @@ export const resources = [
   {
     Id: 191505,
     ListOfReagents: null,
-    Name: "Exultant Incense",
+    Name: 'Exultant Incense',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5584,7 +5584,7 @@ export const resources = [
   {
     Id: 191508,
     ListOfReagents: null,
-    Name: "Fervid Incense",
+    Name: 'Fervid Incense',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5596,7 +5596,7 @@ export const resources = [
   {
     Id: 191511,
     ListOfReagents: null,
-    Name: "Stable Fluidic Draconium",
+    Name: 'Stable Fluidic Draconium',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5608,7 +5608,7 @@ export const resources = [
   {
     Id: 191514,
     ListOfReagents: null,
-    Name: "Brood Salt",
+    Name: 'Brood Salt',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5620,7 +5620,7 @@ export const resources = [
   {
     Id: 191517,
     ListOfReagents: null,
-    Name: "Writhefire Oil",
+    Name: 'Writhefire Oil',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5632,7 +5632,7 @@ export const resources = [
   {
     Id: 191520,
     ListOfReagents: null,
-    Name: "Agitating Potion Augmentation",
+    Name: 'Agitating Potion Augmentation',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5644,7 +5644,7 @@ export const resources = [
   {
     Id: 191523,
     ListOfReagents: null,
-    Name: "Reactive Phial Embellishment",
+    Name: 'Reactive Phial Embellishment',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5656,7 +5656,7 @@ export const resources = [
   {
     Id: 191529,
     ListOfReagents: null,
-    Name: "Illustrious Insight",
+    Name: 'Illustrious Insight',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5668,7 +5668,7 @@ export const resources = [
   {
     Id: 191532,
     ListOfReagents: null,
-    Name: "Potion Absorption Inhibitor",
+    Name: 'Potion Absorption Inhibitor',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5680,7 +5680,7 @@ export const resources = [
   {
     Id: 194973,
     ListOfReagents: null,
-    Name: "Reclaim Concoctions",
+    Name: 'Reclaim Concoctions',
     ProfessionId: 171,
     SkillTierId: 2823,
     Category: null,
@@ -5692,7 +5692,7 @@ export const resources = [
   {
     Id: 192900,
     ListOfReagents: null,
-    Name: "Crafty Queen\u0027s Ruby",
+    Name: 'Crafty Queen\u0027s Ruby',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5704,7 +5704,7 @@ export const resources = [
   {
     Id: 192903,
     ListOfReagents: null,
-    Name: "Zen Mystic Sapphire",
+    Name: 'Zen Mystic Sapphire',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5716,7 +5716,7 @@ export const resources = [
   {
     Id: 192906,
     ListOfReagents: null,
-    Name: "Energized Vibrant Emerald",
+    Name: 'Energized Vibrant Emerald',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5728,7 +5728,7 @@ export const resources = [
   {
     Id: 192910,
     ListOfReagents: null,
-    Name: "Sensei\u0027s Sundered Onyx",
+    Name: 'Sensei\u0027s Sundered Onyx',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5740,7 +5740,7 @@ export const resources = [
   {
     Id: 192913,
     ListOfReagents: null,
-    Name: "Solid Eternity Amber",
+    Name: 'Solid Eternity Amber',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5752,7 +5752,7 @@ export const resources = [
   {
     Id: 192917,
     ListOfReagents: null,
-    Name: "Crafty Alexstraszite",
+    Name: 'Crafty Alexstraszite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5764,7 +5764,7 @@ export const resources = [
   {
     Id: 192933,
     ListOfReagents: null,
-    Name: "Energized Malygite",
+    Name: 'Energized Malygite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5776,7 +5776,7 @@ export const resources = [
   {
     Id: 192953,
     ListOfReagents: null,
-    Name: "Quick Ysemerald",
+    Name: 'Quick Ysemerald',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5788,7 +5788,7 @@ export const resources = [
   {
     Id: 192959,
     ListOfReagents: null,
-    Name: "Keen Neltharite",
+    Name: 'Keen Neltharite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5800,7 +5800,7 @@ export const resources = [
   {
     Id: 192971,
     ListOfReagents: null,
-    Name: "Forceful Nozdorite",
+    Name: 'Forceful Nozdorite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5812,7 +5812,7 @@ export const resources = [
   {
     Id: 192920,
     ListOfReagents: null,
-    Name: "Sensei\u0027s Alexstraszite",
+    Name: 'Sensei\u0027s Alexstraszite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5824,7 +5824,7 @@ export const resources = [
   {
     Id: 192936,
     ListOfReagents: null,
-    Name: "Zen Malygite",
+    Name: 'Zen Malygite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5836,7 +5836,7 @@ export const resources = [
   {
     Id: 192946,
     ListOfReagents: null,
-    Name: "Keen Ysemerald",
+    Name: 'Keen Ysemerald',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5848,7 +5848,7 @@ export const resources = [
   {
     Id: 192965,
     ListOfReagents: null,
-    Name: "Fractured Neltharite",
+    Name: 'Fractured Neltharite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5860,7 +5860,7 @@ export const resources = [
   {
     Id: 192974,
     ListOfReagents: null,
-    Name: "Puissant Nozdorite",
+    Name: 'Puissant Nozdorite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5872,7 +5872,7 @@ export const resources = [
   {
     Id: 192923,
     ListOfReagents: null,
-    Name: "Radiant Alexstraszite",
+    Name: 'Radiant Alexstraszite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5884,7 +5884,7 @@ export const resources = [
   {
     Id: 192940,
     ListOfReagents: null,
-    Name: "Stormy Malygite",
+    Name: 'Stormy Malygite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5896,7 +5896,7 @@ export const resources = [
   {
     Id: 192950,
     ListOfReagents: null,
-    Name: "Energized Ysemerald",
+    Name: 'Energized Ysemerald',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5908,7 +5908,7 @@ export const resources = [
   {
     Id: 192962,
     ListOfReagents: null,
-    Name: "Zen Neltharite",
+    Name: 'Zen Neltharite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5920,7 +5920,7 @@ export const resources = [
   {
     Id: 192977,
     ListOfReagents: null,
-    Name: "Steady Nozdorite",
+    Name: 'Steady Nozdorite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5932,7 +5932,7 @@ export const resources = [
   {
     Id: 192926,
     ListOfReagents: null,
-    Name: "Deadly Alexstraszite",
+    Name: 'Deadly Alexstraszite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5944,7 +5944,7 @@ export const resources = [
   {
     Id: 192929,
     ListOfReagents: null,
-    Name: "Radiant Malygite",
+    Name: 'Radiant Malygite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5956,7 +5956,7 @@ export const resources = [
   {
     Id: 192943,
     ListOfReagents: null,
-    Name: "Crafty Ysemerald",
+    Name: 'Crafty Ysemerald',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5968,7 +5968,7 @@ export const resources = [
   {
     Id: 192956,
     ListOfReagents: null,
-    Name: "Sensei\u0027s Neltharite",
+    Name: 'Sensei\u0027s Neltharite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5980,7 +5980,7 @@ export const resources = [
   {
     Id: 192968,
     ListOfReagents: null,
-    Name: "Jagged Nozdorite",
+    Name: 'Jagged Nozdorite',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -5992,7 +5992,7 @@ export const resources = [
   {
     Id: 192980,
     ListOfReagents: null,
-    Name: "Inscribed Illimited Diamond",
+    Name: 'Inscribed Illimited Diamond',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6004,7 +6004,7 @@ export const resources = [
   {
     Id: 192983,
     ListOfReagents: null,
-    Name: "Fierce Illimited Diamond",
+    Name: 'Fierce Illimited Diamond',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6016,7 +6016,7 @@ export const resources = [
   {
     Id: 192986,
     ListOfReagents: null,
-    Name: "Skillful Illimited Diamond",
+    Name: 'Skillful Illimited Diamond',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6028,7 +6028,7 @@ export const resources = [
   {
     Id: 192989,
     ListOfReagents: null,
-    Name: "Resplendent Illimited Diamond",
+    Name: 'Resplendent Illimited Diamond',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6040,7 +6040,7 @@ export const resources = [
   {
     Id: 192992,
     ListOfReagents: null,
-    Name: "Tiered Medallion Setting",
+    Name: 'Tiered Medallion Setting',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6052,7 +6052,7 @@ export const resources = [
   {
     Id: 191474,
     ListOfReagents: null,
-    Name: "Draconic Vial",
+    Name: 'Draconic Vial',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6064,7 +6064,7 @@ export const resources = [
   {
     Id: 192876,
     ListOfReagents: null,
-    Name: "Frameless Lens",
+    Name: 'Frameless Lens',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6076,7 +6076,7 @@ export const resources = [
   {
     Id: 192883,
     ListOfReagents: null,
-    Name: "Glossy Stone",
+    Name: 'Glossy Stone',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6088,7 +6088,7 @@ export const resources = [
   {
     Id: 192834,
     ListOfReagents: null,
-    Name: "Shimmering Clasp",
+    Name: 'Shimmering Clasp',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6100,7 +6100,7 @@ export const resources = [
   {
     Id: 192894,
     ListOfReagents: null,
-    Name: "Blotting Sand",
+    Name: 'Blotting Sand',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6112,7 +6112,7 @@ export const resources = [
   {
     Id: 192897,
     ListOfReagents: null,
-    Name: "Pounce",
+    Name: 'Pounce',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6124,7 +6124,7 @@ export const resources = [
   {
     Id: 193378,
     ListOfReagents: null,
-    Name: "Elemental Harmony",
+    Name: 'Elemental Harmony',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6136,7 +6136,7 @@ export const resources = [
   {
     Id: 191529,
     ListOfReagents: null,
-    Name: "Illustrious Insight",
+    Name: 'Illustrious Insight',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6148,7 +6148,7 @@ export const resources = [
   {
     Id: 200938,
     ListOfReagents: null,
-    Name: "Empty Soul Cage",
+    Name: 'Empty Soul Cage',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6160,7 +6160,7 @@ export const resources = [
   {
     Id: 193003,
     ListOfReagents: null,
-    Name: "Idol of the Lifebinder",
+    Name: 'Idol of the Lifebinder',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6172,7 +6172,7 @@ export const resources = [
   {
     Id: 193004,
     ListOfReagents: null,
-    Name: "Idol of the Spell-Weaver",
+    Name: 'Idol of the Spell-Weaver',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6184,7 +6184,7 @@ export const resources = [
   {
     Id: 193005,
     ListOfReagents: null,
-    Name: "Idol of the Dreamer",
+    Name: 'Idol of the Dreamer',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6196,7 +6196,7 @@ export const resources = [
   {
     Id: 193006,
     ListOfReagents: null,
-    Name: "Idol of the Earth Warder",
+    Name: 'Idol of the Earth Warder',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6208,7 +6208,7 @@ export const resources = [
   {
     Id: 192996,
     ListOfReagents: null,
-    Name: "Pendant of Impending Perils",
+    Name: 'Pendant of Impending Perils',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6220,7 +6220,7 @@ export const resources = [
   {
     Id: 192998,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Jeweled Amulet",
+    Name: 'Crimson Combatant\u0027s Jeweled Amulet',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6232,7 +6232,7 @@ export const resources = [
   {
     Id: 192997,
     ListOfReagents: null,
-    Name: "Crimson Combatant\u0027s Jeweled Signet",
+    Name: 'Crimson Combatant\u0027s Jeweled Signet',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6244,7 +6244,7 @@ export const resources = [
   {
     Id: 192999,
     ListOfReagents: null,
-    Name: "Signet of Titanic Insight",
+    Name: 'Signet of Titanic Insight',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6256,7 +6256,7 @@ export const resources = [
   {
     Id: 193000,
     ListOfReagents: null,
-    Name: "Ring-Bound Hourglass",
+    Name: 'Ring-Bound Hourglass',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6268,7 +6268,7 @@ export const resources = [
   {
     Id: 193001,
     ListOfReagents: null,
-    Name: "Elemental Lariat",
+    Name: 'Elemental Lariat',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6280,7 +6280,7 @@ export const resources = [
   {
     Id: 193002,
     ListOfReagents: null,
-    Name: "Choker of Shielding",
+    Name: 'Choker of Shielding',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6292,7 +6292,7 @@ export const resources = [
   {
     Id: 194082,
     ListOfReagents: null,
-    Name: "Band of New Beginnings",
+    Name: 'Band of New Beginnings',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6304,7 +6304,7 @@ export const resources = [
   {
     Id: 201759,
     ListOfReagents: null,
-    Name: "Torc of Passed Time",
+    Name: 'Torc of Passed Time',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6316,7 +6316,7 @@ export const resources = [
   {
     Id: 193007,
     ListOfReagents: null,
-    Name: "Narcissist\u0027s Sculpture",
+    Name: 'Narcissist\u0027s Sculpture',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6328,7 +6328,7 @@ export const resources = [
   {
     Id: 193011,
     ListOfReagents: null,
-    Name: "Revitalizing Red Carving",
+    Name: 'Revitalizing Red Carving',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6340,7 +6340,7 @@ export const resources = [
   {
     Id: 193015,
     ListOfReagents: null,
-    Name: "Statue of Tyr\u0027s Herald",
+    Name: 'Statue of Tyr\u0027s Herald',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6352,7 +6352,7 @@ export const resources = [
   {
     Id: 194723,
     ListOfReagents: null,
-    Name: "Kalu\u0027ak Figurine",
+    Name: 'Kalu\u0027ak Figurine',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6364,7 +6364,7 @@ export const resources = [
   {
     Id: 193887,
     ListOfReagents: null,
-    Name: "Jeweled Ruby Whelpling",
+    Name: 'Jeweled Ruby Whelpling',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6376,7 +6376,7 @@ export const resources = [
   {
     Id: 193888,
     ListOfReagents: null,
-    Name: "Jeweled Emerald Whelpling",
+    Name: 'Jeweled Emerald Whelpling',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6388,7 +6388,7 @@ export const resources = [
   {
     Id: 193886,
     ListOfReagents: null,
-    Name: "Jeweled Sapphire Whelpling",
+    Name: 'Jeweled Sapphire Whelpling',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6400,7 +6400,7 @@ export const resources = [
   {
     Id: 193889,
     ListOfReagents: null,
-    Name: "Jeweled Onyx Whelpling",
+    Name: 'Jeweled Onyx Whelpling',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6412,7 +6412,7 @@ export const resources = [
   {
     Id: 193885,
     ListOfReagents: null,
-    Name: "Jeweled Amber Whelpling",
+    Name: 'Jeweled Amber Whelpling',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6424,7 +6424,7 @@ export const resources = [
   {
     Id: 193029,
     ListOfReagents: null,
-    Name: "Projection Prism",
+    Name: 'Projection Prism',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6436,7 +6436,7 @@ export const resources = [
   {
     Id: 193032,
     ListOfReagents: null,
-    Name: "Jeweled Offering",
+    Name: 'Jeweled Offering',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6448,7 +6448,7 @@ export const resources = [
   {
     Id: 193033,
     ListOfReagents: null,
-    Name: "Convergent Prism",
+    Name: 'Convergent Prism',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6460,7 +6460,7 @@ export const resources = [
   {
     Id: 194748,
     ListOfReagents: null,
-    Name: "Split-Lens Specs",
+    Name: 'Split-Lens Specs',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6472,7 +6472,7 @@ export const resources = [
   {
     Id: 193036,
     ListOfReagents: null,
-    Name: "Left-Handed Magnifying Glass",
+    Name: 'Left-Handed Magnifying Glass',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6484,7 +6484,7 @@ export const resources = [
   {
     Id: 193038,
     ListOfReagents: null,
-    Name: "Chromatic Focus",
+    Name: 'Chromatic Focus',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6496,7 +6496,7 @@ export const resources = [
   {
     Id: 193039,
     ListOfReagents: null,
-    Name: "Fine-Print Trifocals",
+    Name: 'Fine-Print Trifocals',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6508,7 +6508,7 @@ export const resources = [
   {
     Id: 193040,
     ListOfReagents: null,
-    Name: "Magnificent Margin Magnifier",
+    Name: 'Magnificent Margin Magnifier',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6520,7 +6520,7 @@ export const resources = [
   {
     Id: 193041,
     ListOfReagents: null,
-    Name: "Alexstraszite Loupes",
+    Name: 'Alexstraszite Loupes',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6532,7 +6532,7 @@ export const resources = [
   {
     Id: 193042,
     ListOfReagents: null,
-    Name: "Resonant Focus",
+    Name: 'Resonant Focus',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6544,7 +6544,7 @@ export const resources = [
   {
     Id: 193035,
     ListOfReagents: null,
-    Name: "Bold-Print Bifocals",
+    Name: 'Bold-Print Bifocals',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6556,7 +6556,7 @@ export const resources = [
   {
     Id: 202048,
     ListOfReagents: null,
-    Name: "Queen\u0027s Gift",
+    Name: 'Queen\u0027s Gift',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6568,7 +6568,7 @@ export const resources = [
   {
     Id: 202049,
     ListOfReagents: null,
-    Name: "Dreamer\u0027s Vision",
+    Name: 'Dreamer\u0027s Vision',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6580,7 +6580,7 @@ export const resources = [
   {
     Id: 202050,
     ListOfReagents: null,
-    Name: "Keeper\u0027s Glory",
+    Name: 'Keeper\u0027s Glory',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6592,7 +6592,7 @@ export const resources = [
   {
     Id: 202051,
     ListOfReagents: null,
-    Name: "Earthwarden\u0027s Prize",
+    Name: 'Earthwarden\u0027s Prize',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6604,7 +6604,7 @@ export const resources = [
   {
     Id: 202052,
     ListOfReagents: null,
-    Name: "Timewatcher\u0027s Patience",
+    Name: 'Timewatcher\u0027s Patience',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,
@@ -6616,7 +6616,7 @@ export const resources = [
   {
     Id: 192893,
     ListOfReagents: null,
-    Name: "Jeweled Dragon\u0027s Heart",
+    Name: 'Jeweled Dragon\u0027s Heart',
     ProfessionId: 755,
     SkillTierId: 2829,
     Category: null,

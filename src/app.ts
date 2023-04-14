@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 require("dotenv").config();
 import { initializeDatabase } from "./services/database";
-import { ExpectingListingData, ListingData } from "./services/types";
 import {
   findLastFiveCreatedListings,
   findByCreatorAccountId,
@@ -9,9 +8,11 @@ import {
   saveListing,
   deleteListingOfUser,
   findByItemID,
-} from "./services/ListingService";
+} from "./order/ListingService";
 import bodyParser from "body-parser";
 import { createOrderMapper } from "./helper/order/createOrderMapper";
+
+import {ExpectingListingData, ListingData} from "./order/types";
 const BlueBirdPromise = require("bluebird");
 const express = require("express");
 const cookieParser = require("cookie-parser");
@@ -22,8 +23,8 @@ const morgan = require("morgan");
 const authenticatedGuard = require("./middleware/authenticated-guard");
 const passport = require("./oauth/passport");
 const OauthClient = require("./oauth/client");
-const CharacterService = require("./services/CharacterService");
-const { getAllProfessionSkillTrees } = require("./services/ProfessionService");
+const CharacterService = require("./character/CharacterService");
+const { getAllProfessionSkillTrees } = require("./profession/ProfessionService");
 
 const cors = require("cors");
 

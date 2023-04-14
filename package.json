@@ -2,7 +2,7 @@
   "name": "node-wow-oauth-example",
   "version": "0.0.1",
   "description": "A sample app using APIs from develop.battle.net",
-  "main": "app.ts",
+  "main": "src/app.ts",
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -31,9 +31,13 @@
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "start": "ts-node app.ts",
+    "start": "ts-node src/app.ts",
     "docker": "docker-compose -f docker-compose.yml up",
-    "dev": "nodemon -L app.ts | pino-pretty"
+    "dev": "nodemon -L src/app.ts | pino-pretty",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lint:js": "yarn eslint ./src/ --ext \".ts,.tsx\" --ignore-path .gitignore",
+    "lint:prettier": "yarn prettier --check --ignore-path .gitignore ./src/ ./test/",
+    "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore ./src/ ./test/ && yarn lint:js --fix"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
@@ -44,7 +48,21 @@
     "@types/passport-bnet": "^2.0.2",
     "@types/request-promise": "4.1.48",
     "@types/simple-oauth2": "^5.0.3",
+    "@typescript-eslint/eslint-plugin": "5.13.0",
+    "@typescript-eslint/parser": "5.0.0",
+    "eslint": "8.35.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-ava": "14.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-sonarjs": "0.18.0",
+    "eslint-plugin-testing-library": "5.10.2",
     "concurrently": "^7.6.0",
+    "prettier": "2.8.4",
     "nodemon": "^2.0.22",
     "typescript": "^5.0.2"
   }

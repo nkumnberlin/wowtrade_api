@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 ARG NODE_ENV=production
 
-ADD . .
+ADD ./src/* .
 
 RUN npm install --quiet
 

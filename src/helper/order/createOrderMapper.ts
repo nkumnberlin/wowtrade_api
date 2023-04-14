@@ -1,9 +1,9 @@
-import { ExpectingListingData, ListingDuration } from "../../services/types";
+import { ExpectingListingData, ListingDuration } from '../../order/types';
 
 function listingDuration(duration: string) {
-  if (duration === "6") return ListingDuration.SIX_HOURS;
-  if (duration === "12") return ListingDuration.TWELVE_HOURS;
-  if (duration === "24") return ListingDuration.ONE_DAY;
+  if (duration === '6') return ListingDuration.SIX_HOURS;
+  if (duration === '12') return ListingDuration.TWELVE_HOURS;
+  if (duration === '24') return ListingDuration.ONE_DAY;
   return ListingDuration.ONE_DAY;
 }
 export function createOrderMapper(data: ExpectingListingData) {

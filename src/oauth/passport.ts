@@ -1,14 +1,14 @@
-import { DeserializeUserFunction, DoneCallback, Profile } from "passport";
-import { IUser } from "./types";
+import { DeserializeUserFunction, DoneCallback, Profile } from 'passport';
+import { IUser } from './types';
 
-const passport = require("passport");
-const BnetStrategy = require("passport-bnet").Strategy;
+const passport = require('passport');
+const BnetStrategy = require('passport-bnet').Strategy;
 
 const passportOptions = {
   clientID: process.env.OAUTH_CLIENT_ID,
   clientSecret: process.env.OAUTH_CLIENT_SECRET,
   callbackURL: process.env.OAUTH_CALLBACK_URL,
-  scope: "wow.profile",
+  scope: 'wow.profile',
 };
 
 const passportCallback = (
@@ -18,12 +18,7 @@ const passportCallback = (
   done: DoneCallback
 ) => {
   process.nextTick(() => {
-    console.log(
-      "felix fuer unsere augen, pipikaka ",
-      accessToken,
-      refreshToken,
-      profile
-    );
+    console.log('felix fuer unsere augen, pipikaka ', accessToken, refreshToken, profile);
     return done(null, profile);
   });
 };

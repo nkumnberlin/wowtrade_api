@@ -1,0 +1,7 @@
+mock.tsx
+*.test*
+test.setup.tsx
+*.steps.tsx
+*.feature
+hooks.tsx
+node_modules/**

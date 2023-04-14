@@ -1,21 +1,18 @@
+import { REGIONS } from "./types";
+import { fetchProfessionsForRecipes, transformRecipeNameLower } from '../profession/RecipeService';
 import {
   DragonFlightProfessions,
   IProfession,
   KnownRecipe,
   KnownRecipeWithItemId,
-  REGIONS,
-  ICraftingData,
-} from "./types";
-import {
-  fetchProfessionsForRecipes,
-  transformRecipeNameLower,
-} from "./RecipeService";
+  ICraftingData
+} from '../profession/types';
 
-const rp = require("request-promise");
+const rp = require('request-promise');
 
 class CharacterService {
   async getUsersCharactersList(usersAccessToken: string) {
-    console.log("RETCH", usersAccessToken);
+    console.log('RETCH', usersAccessToken);
     const response = await rp.get({
       uri: `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu`,
       json: true,
@@ -24,7 +21,7 @@ class CharacterService {
       },
     });
     const { wow_accounts } = response;
-    console.log("TODO TO MAP", wow_accounts);
+    console.log('TODO TO MAP', wow_accounts);
     // todo
     return wow_accounts
       .map((account: any) => this._mapWowAccount(account))
@@ -32,10 +29,7 @@ class CharacterService {
       .filter((character: { level: number }) => character.level > 60);
   }
 
-  mapKnownRecipesWithItemId(
-    craftingData: ICraftingData[],
-    knownRecipes: KnownRecipe[]
-  ) {
+  mapKnownRecipesWithItemId(craftingData: ICraftingData[], knownRecipes: KnownRecipe[]) {
     const keyedCraftingData = craftingData.reduce(
       (acc, current) => ({
         ...acc,
@@ -50,9 +44,7 @@ class CharacterService {
         }
         return {
           ...knownRecipe,
-          itemId:
-            keyedCraftingData[transformRecipeNameLower(knownRecipe)]
-              .id_crafted_item,
+          itemId: keyedCraftingData[transformRecipeNameLower(knownRecipe)].id_crafted_item,
         };
       })
       .filter((recipe) => recipe) as KnownRecipeWithItemId[];
@@ -63,7 +55,7 @@ class CharacterService {
     realmSlug: string
   ) {
     const decodedCharacterName = decodeURIComponent(characterName);
-    const region: REGIONS = "eu";
+    const region: REGIONS = 'eu';
     try {
       //https://eu.api.blizzard.com/profile/wow/character/tichondrius/charactername/professions?namespace=profile-us&locale=en_US&access_token=EUUOWPuWDHb7toaa0972sLtvjzxwvwfMCT
       // if there are primaries, there are also secondaries. need to keep that in mind
@@ -74,32 +66,29 @@ class CharacterService {
           Authorization: `Bearer ${usersAccessToken}`,
         },
       });
-      const dragonFlightProfessions: DragonFlightProfessions[] =
-        primaries.reduce(
-          (prev: DragonFlightProfessions[], curr: IProfession) => {
-            const tiers = curr.tiers.find(({ tier }) =>
-              tier.name.toLowerCase().includes("dragon")
-            );
-            if (!tiers) return prev;
-            // todo: felix nico mal wieder zu dumm dumm
-            if (!Object.keys(prev).length) {
-              return [
-                {
-                  profession: curr.profession,
-                  tiers: tiers,
-                },
-              ];
-            }
+      const dragonFlightProfessions: DragonFlightProfessions[] = primaries.reduce(
+        (prev: DragonFlightProfessions[], curr: IProfession) => {
+          const tiers = curr.tiers.find(({ tier }) => tier.name.toLowerCase().includes('dragon'));
+          if (!tiers) return prev;
+          // todo: felix nico mal wieder zu dumm dumm
+          if (!Object.keys(prev).length) {
             return [
               {
                 profession: curr.profession,
                 tiers: tiers,
               },
-              ...((prev && prev) || {}),
             ];
-          },
-          {} as DragonFlightProfessions[]
-        );
+          }
+          return [
+            {
+              profession: curr.profession,
+              tiers: tiers,
+            },
+            ...((prev && prev) || {}),
+          ];
+        },
+        {} as DragonFlightProfessions[]
+      );
       // hier will ich mongo db results alle? und dann mappen auf die professions vom nutzer.
       // query: mongodb.item.name === dragonFlightProfessions.tiers.known_recipes[].name
       // result:
@@ -107,8 +96,7 @@ class CharacterService {
       const professionsForRecipes = await fetchProfessionsForRecipes(
         dragonFlightProfessions
           .map(
-            (dragonflightProfession) =>
-              dragonflightProfession.tiers.known_recipes as KnownRecipe[]
+            (dragonflightProfession) => dragonflightProfession.tiers.known_recipes as KnownRecipe[]
           )
           .reduce((acc, current) => [...acc, ...current])
       );
@@ -127,15 +115,13 @@ class CharacterService {
       console.log(mappedDragonflightProfessions);
       return mappedDragonflightProfessions;
     } catch (e) {
-      console.log("while profession", e);
+      console.log('while profession', e);
     }
   }
   // todo
   _mapWowAccount(account: any) {
     const { characters } = account;
-    return characters.map((character: any) =>
-      this._mapCharacter(account, character)
-    );
+    return characters.map((character: any) => this._mapCharacter(account, character));
   }
   // todo
 

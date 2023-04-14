@@ -1,4 +1,4 @@
-import oauth2, { AccessToken } from "simple-oauth2";
+import oauth2, { AccessToken } from 'simple-oauth2';
 
 const credentials = {
   client: {
@@ -6,7 +6,7 @@ const credentials = {
     secret: process.env.OAUTH_CLIENT_SECRET,
   },
   auth: {
-    tokenHost: "https://eu.battle.net",
+    tokenHost: 'https://eu.battle.net',
   },
 };
 
@@ -31,6 +31,4 @@ class OAuthClient {
 }
 
 module.exports = OAuthClient;
-export {
-  OAuthClient
-}
+export { OAuthClient };

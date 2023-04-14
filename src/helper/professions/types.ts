@@ -12,7 +12,7 @@ export interface WowBody {
 }
 
 export interface ProfessionlessSkillesRecipes
-  extends Omit<WowBody, "ProfessionId" | "SkillTierId" | "RecipeId"> {}
+  extends Omit<WowBody, 'ProfessionId' | 'SkillTierId' | 'RecipeId'> {}
 
 export interface ProfessionalStructure {
   [professionId: number]: {
