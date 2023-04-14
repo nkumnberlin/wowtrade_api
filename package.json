@@ -36,7 +36,6 @@
   },
   "scripts": {
     "start": "ts-node src/app.ts",
-    "docker": "docker-compose -f docker-compose.yml up",
     "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node src/app.ts'",
     "lint": "yarn lint:js && yarn lint:prettier",
     "lint:js": "yarn eslint ./src/ --ext \".ts,.tsx\" --ignore-path .gitignore",

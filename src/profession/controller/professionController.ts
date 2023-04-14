@@ -1,5 +1,5 @@
 import { FastifyPluginCallback, FastifyRequest } from 'fastify';
-import {getAllProfessionSkillTrees} from "../ProfessionService";
+import { getAllProfessionSkillTrees } from '../ProfessionService';
 
 export const professionController: FastifyPluginCallback = (app, opts, done) => {
   app.get('/professions', async (req: FastifyRequest, res) => {

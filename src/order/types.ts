@@ -1,5 +1,5 @@
 import { ObjectId } from 'mongodb';
-import {FastifyRequest} from "fastify";
+import { FastifyRequest } from 'fastify';
 
 const DAY_IN_SECONDS = 86_400;
 

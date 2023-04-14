@@ -7,10 +7,11 @@ import { authenticator, BnetUser } from './oauth/bnetPassport';
 import { initializeDatabase, url } from './services/database';
 import { env } from './utils/env';
 import { authenticationController } from './authentication/controller/authenticationController';
-import {characterController} from "./character/controller/characterController";
-import {professionController} from "./profession/controller/professionController";
-import {orderController} from "./order/controller/orderController";
-import {MongoSessionStore} from './authentication/session/mongoSessionStore';
+import { characterController } from './character/controller/characterController';
+import { professionController } from './profession/controller/professionController';
+import { orderController } from './order/controller/orderController';
+import MongoStore from 'connect-mongo';
+import SessionStore = session.SessionStore;
 
 declare module 'fastify' {
   export interface FastifyRequest {
@@ -25,14 +26,19 @@ declare module 'fastify' {
 }
 
 const app = fastify();
-const store = new MongoSessionStore();
+const store = new MongoStore({ mongoUrl: url });
 
 app.register(fastifyCookie);
 
 app.register(session, {
   cookieName: 'wow-trade-session',
   secret: 'wow-trade-secret-wow-trade-secret-wow-trade-secret-wow-trade-secret-wow-trade-secret-',
-  store: store,
+  store: store as unknown as SessionStore,
+  saveUninitialized: true,
+  cookie: {
+    // THIS IS FUCKING IMPORTANT NEVER DELETE THIS !!!
+    secure: 'auto',
+  },
 });
 
 app.register(authenticator.initialize());
@@ -64,8 +70,8 @@ const port = env.PORT;
 
 initializeDatabase().then(() =>
   app.listen({ port, host: '::' }, (err) => {
-    if(err){
-      console.error(err)
+    if (err) {
+      console.error(err);
     }
     console.log(`Worker  listening on port ${port}`);
   })

@@ -1,44 +1,44 @@
 import { FastifyPluginCallback, FastifyRequest } from 'fastify';
-import {ExpectingListingData, OrderFetchRequest} from "../types";
-import {createOrderMapper} from "../../helper/order/createOrderMapper";
+import { ExpectingListingData, OrderFetchRequest } from '../types';
+import { createOrderMapper } from '../../helper/order/createOrderMapper';
 import {
   deleteListingOfUser,
   findByCreatorAccountId,
   findByItemID,
   findLastFiveCreatedListings,
-  saveListing
-} from "../ListingService";
+  saveListing,
+} from '../ListingService';
 
 export const orderController: FastifyPluginCallback = (app, opts, done) => {
   app.post(
-      '/authenticated/order',
-      async (
-          req: FastifyRequest<{
-            Body: ExpectingListingData;
-          }>,
-          res
-      ) => {
-        if (!req?.user?.id) {
-          return res.status(500).send({
-            status: 500,
-            message: `UserId doesn't exist.`,
-          });
-        }
-        try {
-          const listingData = req.body;
-          listingData.creatorAccountId = req?.user?.id;
-          const orderDTO = createOrderMapper(listingData);
-          console.log('0der', orderDTO);
-          const createdOrder = await saveListing(orderDTO);
-          return await res.send(createdOrder).status(201);
-        } catch (e) {
-          console.log('error while created', e);
-          return res.status(500).send({
-            status: 500,
-            message: `Failed while creating order. ${e}`,
-          });
-        }
+    '/authenticated/order',
+    async (
+      req: FastifyRequest<{
+        Body: ExpectingListingData;
+      }>,
+      res
+    ) => {
+      if (!req?.user?.id) {
+        return res.status(500).send({
+          status: 500,
+          message: `UserId doesn't exist.`,
+        });
       }
+      try {
+        const listingData = req.body;
+        listingData.creatorAccountId = req?.user?.id;
+        const orderDTO = createOrderMapper(listingData);
+        console.log('0der', orderDTO);
+        const createdOrder = await saveListing(orderDTO);
+        return await res.send(createdOrder).status(201);
+      } catch (e) {
+        console.log('error while created', e);
+        return res.status(500).send({
+          status: 500,
+          message: `Failed while creating order. ${e}`,
+        });
+      }
+    }
   );
 
   app.delete('/authenticated/order', async (req: OrderFetchRequest, res) => {
@@ -84,11 +84,11 @@ export const orderController: FastifyPluginCallback = (app, opts, done) => {
     const allItems = await findByItemID(craftedItemId);
     console.log('aall items', allItems);
     return res
-        .send({
-          data: allItems,
-          status: 200,
-        })
-        .status(200);
+      .send({
+        data: allItems,
+        status: 200,
+      })
+      .status(200);
   });
 
   app.get('/authenticated/order', async (req: OrderFetchRequest, res) => {

@@ -17,7 +17,7 @@ const passportOptions: StrategyOptions = {
 };
 
 export interface BnetUser {
-  sub: string,
+  sub: string;
   id: number;
   battletag: string;
   provider: string;
@@ -26,12 +26,12 @@ export interface BnetUser {
 
 const authenticator = new Authenticator();
 authenticator.registerUserSerializer(async (user: BnetUser, request) => {
-  console.log("SESERIALIZE", request)
+  console.log('SESERIALIZE', request);
   return user;
 });
 
 authenticator.registerUserDeserializer(async (user: BnetUser, request) => {
-  console.log("DESERIALIZE", request)
+  console.log('DESERIALIZE', request);
   return user;
 });
 

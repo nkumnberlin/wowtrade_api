@@ -1,5 +1,5 @@
 import { MongoClient, Db } from 'mongodb';
-import {Session} from 'fastify';
+import { Session } from 'fastify';
 import {
   getAllProfessionSkillTrees,
   saveAllProfessionsIfNotExist,
@@ -11,13 +11,11 @@ import {
 import { ProfessionSkillTree, ICraftingData } from '../profession/types';
 
 import { ListingData } from '../order/types';
-import {MongoSession} from "../authentication/session/types";
 
 export const url = `mongodb+srv://${process.env.ACC}:${process.env.PW}@crafteditemsdb.kp6faxe.mongodb.net/craftedItemsDB?retryWrites=true&w=majority`;
 const craftedItemsCollectionName = 'craftedItems';
 const listingsCollectionName = 'orders';
 const listingsProfessionsName = 'professions';
-const sessionCollectionName = 'sessions';
 
 let client: MongoClient;
 let db: Db;
@@ -28,8 +26,6 @@ export const getCraftedItemsCollection = () =>
 export const getListingsCollection = () => db.collection<ListingData>(listingsCollectionName);
 export const getProfessionsCollection = () =>
   db.collection<ProfessionSkillTree>(listingsProfessionsName);
-export const getSessionsCollection = () =>
-  db.collection<MongoSession>(sessionCollectionName);
 export const initializeDatabase = async () => {
   client = await MongoClient.connect(url);
   db = client.db();
