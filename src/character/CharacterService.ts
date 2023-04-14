@@ -136,4 +136,4 @@ class CharacterService {
   }
 }
 
-module.exports = CharacterService;
+export default CharacterService;

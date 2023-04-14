@@ -1,4 +1,5 @@
 import { ObjectId } from 'mongodb';
+import {FastifyRequest} from "fastify";
 
 const DAY_IN_SECONDS = 86_400;
 
@@ -48,3 +49,11 @@ export interface ExpectingListingData {
 }
 
 export interface FrontendListingData extends Omit<ListingData, 'creatorAccountId'> {}
+
+export type OrderFetchRequest = FastifyRequest<{
+  Querystring: {
+    itemName?: string;
+    id_crafted_item?: string;
+    accountId?: string;
+  };
+}>;
