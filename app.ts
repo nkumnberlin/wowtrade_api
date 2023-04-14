@@ -132,7 +132,7 @@ app.get(
   "/redirect",
   passport.authenticate("bnet", { failureRedirect: "/" }),
   function (req: SessionRequest, res: Response) {
-    const redirectURL: URL = new URL("http://localhost:3005/callback");
+    const redirectURL: URL = new URL("/callback");
     res.status(301).redirect(redirectURL.href);
   }
 );
@@ -287,7 +287,7 @@ app.get("/", (req: SessionRequest, res: Response) => {
   //   return res.redirect("/logout");
   // }
   console.log("ist nicht authentifizifert > redirect to /login-");
-  const redirectURL: URL = new URL("http://localhost:3005/ungracefully-logout");
+  const redirectURL: URL = new URL("/ungracefully-logout");
   res.status(301).redirect(redirectURL.href);
 });
 const port = process.env.PORT || 3000;
