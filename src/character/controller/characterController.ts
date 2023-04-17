@@ -29,7 +29,7 @@ export const characterController: FastifyPluginCallback = (app, opts, done) => {
         name,
         slug
       );
-      return await res.send(professions);
+      return await res.status(200).send(professions);
     } catch (e) {
       return res.status(500).send({ message: 'Failed while fetching Characters' });
     }
