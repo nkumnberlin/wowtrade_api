@@ -17,7 +17,6 @@ declare module 'fastify' {
   export interface FastifyRequest {
     isAuthenticated: () => boolean;
   }
-
   export interface FastifyReply {
     user?: PassportUser;
   }
