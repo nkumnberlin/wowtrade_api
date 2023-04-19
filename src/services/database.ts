@@ -17,19 +17,29 @@ const craftedItemsCollectionName = 'craftedItems';
 const listingsCollectionName = 'orders';
 const listingsProfessionsName = 'professions';
 
-let client: MongoClient;
-let db: Db;
-// const
-
-export const getCraftedItemsCollection = () =>
-  db.collection<ICraftingData>(craftedItemsCollectionName);
-export const getListingsCollection = () => db.collection<ListingData>(listingsCollectionName);
-export const getProfessionsCollection = () =>
-  db.collection<ProfessionSkillTree>(listingsProfessionsName);
+export const getCraftedItemsCollection = async () => {
+  const client = await MongoClient.connect(url);
+  const db = client.db();
+  const craftedItems = await db.collection<ICraftingData>(craftedItemsCollectionName);
+  await client.close();
+  return craftedItems;
+};
+export const getListingsCollection = async () => {
+  const client = await MongoClient.connect(url);
+  const db = client.db();
+  const listingData = db.collection<ListingData>(listingsCollectionName);
+  await client.close();
+  return listingData;
+};
+export const getProfessionsCollection = async () => {
+  const client = await MongoClient.connect(url);
+  const db = client.db();
+  const skillTree = db.collection<ProfessionSkillTree>(listingsProfessionsName);
+  await client.close();
+  return skillTree;
+};
 export const initializeDatabase = async () => {
-  client = await MongoClient.connect(url);
-  db = client.db();
-  const listingsCollection = getListingsCollection();
+  const listingsCollection = await getListingsCollection();
   await listingsCollection.createIndex({ expiredAt: 1 }, { expireAfterSeconds: 0 });
   await saveAllProfessionsIfNotExist();
   const allProfessionSkillTrees = await getAllProfessionSkillTrees();

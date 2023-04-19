@@ -62,12 +62,12 @@ const saveAllProfessions = async () => {
       categories: mappedProfessionSkillTreeCategories.filter((category) => category.recipes.length),
     } as ProfessionSkillTree;
   });
-  const professionCollection = getProfessionsCollection();
+  const professionCollection = await getProfessionsCollection();
   return professionCollection.insertMany(allProfessionsWithMappedRecipes);
 };
 
 export const saveAllProfessionsIfNotExist = async () => {
-  const professionCollection = getProfessionsCollection();
+  const professionCollection = await getProfessionsCollection();
   const professions = await professionCollection.find().toArray();
   if (!professions.length) {
     return saveAllProfessions();
@@ -75,5 +75,6 @@ export const saveAllProfessionsIfNotExist = async () => {
 };
 
 export const getAllProfessionSkillTrees = async () => {
-  return getProfessionsCollection().find().toArray();
+  const professionCollection = await getProfessionsCollection();
+  return professionCollection.find().toArray();
 };
