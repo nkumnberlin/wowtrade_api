@@ -1,8 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/serverless.js"
-    }
+  "builds": [
+    { "src": "build/src/app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "build/src/app.js" }
   ]
 }

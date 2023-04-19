@@ -1,7 +1,7 @@
 {
-  "name": "node-wow-oauth-example",
+  "name": "wow-trade-api",
   "version": "0.0.1",
-  "description": "A sample app using APIs from develop.battle.net",
+  "description": "wow-trade-api",
   "main": "src/app.js",
   "author": "",
   "license": "MIT",
