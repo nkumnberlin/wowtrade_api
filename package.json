@@ -2,7 +2,7 @@
   "name": "wow-trade-api",
   "version": "0.0.1",
   "description": "wow-trade-api",
-  "main": "src/app.js",
+  "main": "api/app.js",
   "author": "",
   "engines": {
     "node": "14.x"
@@ -38,12 +38,12 @@
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node src/app.ts'",
+    "start": "ts-node api/app.ts",
+    "dev": "nodemon --watch 'api/**' --ext 'ts,json' --ignore 'api/**/*.spec.ts' --exec 'ts-node api/app.ts'",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lint:js": "yarn eslint ./src/ --ext \".ts,.tsx\" --ignore-path .gitignore",
-    "lint:prettier": "yarn prettier --check --ignore-path .gitignore ./src/ ./test/",
-    "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore ./src/ ./test/ && yarn lint:js --fix"
+    "lint:js": "yarn eslint api/ --ext \\\".ts,.tsx\\\" --ignore-path .gitignore",
+    "lint:prettier": "yarn prettier --check --ignore-path .gitignore api/ ./test/",
+    "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore api/ ./test/ && yarn lint:js --fix"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
