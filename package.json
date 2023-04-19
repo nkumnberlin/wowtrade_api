@@ -41,7 +41,7 @@
     "lint:js": "yarn eslint ./src/ --ext \".ts,.tsx\" --ignore-path .gitignore",
     "lint:prettier": "yarn prettier --check --ignore-path .gitignore ./src/ ./test/",
     "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore ./src/ ./test/ && yarn lint:js --fix",
-    "build": "tsc"
+    "buildapp": "tsc"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
