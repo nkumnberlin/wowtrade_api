@@ -4,6 +4,9 @@
   "description": "wow-trade-api",
   "main": "src/app.js",
   "author": "",
+  "engines": {
+    "node": "14.x"
+  },
   "license": "MIT",
   "dependencies": {
     "@fastify/auth": "3.0.2",
@@ -40,8 +43,7 @@
     "lint": "yarn lint:js && yarn lint:prettier",
     "lint:js": "yarn eslint ./src/ --ext \".ts,.tsx\" --ignore-path .gitignore",
     "lint:prettier": "yarn prettier --check --ignore-path .gitignore ./src/ ./test/",
-    "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore ./src/ ./test/ && yarn lint:js --fix",
-    "build": "tsc"
+    "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore ./src/ ./test/ && yarn lint:js --fix"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
