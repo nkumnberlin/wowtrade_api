@@ -1,8 +1,0 @@
-mock.tsx
-*.test*
-test.setup.tsx
-*.steps.tsx
-*.feature
-hooks.tsx
-node_modules/**
-/src/authentication/controller/authenticationController.ts

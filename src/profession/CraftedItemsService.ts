@@ -1,12 +1,11 @@
 import { getCraftedItemsCollection } from '../services/database';
-import { ICraftingData } from './types';
+import { ICraftingData, ProfessionSkillTree } from './types';
 import { transformRecipeNameLower } from './RecipeService';
 import { AnyBulkWriteOperation } from 'mongodb';
-import { ProfessionSkillTree } from './types';
 
 export const fetchProfessionsByRecipeNames = async (recipeNames: string[]) => {
-  const mongoCollection = getCraftedItemsCollection();
-  const result = await mongoCollection
+  const mongoCollection = await getCraftedItemsCollection();
+  return await mongoCollection
     .find(
       {
         item_name: {
@@ -22,10 +21,12 @@ export const fetchProfessionsByRecipeNames = async (recipeNames: string[]) => {
       }
     )
     .toArray();
-  return result;
 };
 
-export const getAllCraftedItems = () => getCraftedItemsCollection().find().toArray();
+export const getAllCraftedItems = async () => {
+  const craftedItems = await getCraftedItemsCollection();
+  return craftedItems.find().toArray();
+};
 
 export const updateCraftedItemsWithRecipeId = async (
   professionSkillTrees: ProfessionSkillTree[]

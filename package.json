@@ -1,7 +1,7 @@
 {
-  "name": "node-wow-oauth-example",
+  "name": "wow-trade-api",
   "version": "0.0.1",
-  "description": "A sample app using APIs from develop.battle.net",
+  "description": "wow-trade-api",
   "main": "src/app.js",
   "author": "",
   "license": "MIT",
@@ -10,8 +10,8 @@
     "@fastify/cookie": "7.4.0",
     "@fastify/cors": "8.2.0",
     "@fastify/passport": "2.2.0",
-    "@fastify/session": "9.0.0",
     "@fastify/secure-session": "6.1.0",
+    "@fastify/session": "9.0.0",
     "body-parser": "^1.20.2",
     "connect-mongo": "5.0.0",
     "connect-redis": "^4.0.4",
@@ -38,14 +38,14 @@
     "start": "ts-node src/app.ts",
     "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node src/app.ts'",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lint:js": "yarn eslint ./src/ --ext \".ts,.tsx\" --ignore-path .gitignore",
-    "lint:prettier": "yarn prettier --check --ignore-path .gitignore ./src/ ./test/",
-    "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore ./src/ ./test/ && yarn lint:js --fix",
-    "build": "tsc"
+    "lint:js": "yarn eslint src/ --ext \\\\\\\".ts,.tsx\\\\\\\" --ignore-path .gitignore",
+    "lint:prettier": "yarn prettier --check --ignore-path .gitignore src/ ./test/",
+    "lintfix": "yarn prettier --write --list-different --ignore-path .gitignore src/ ./test/ && yarn lint:js --fix"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
     "@types/cookie-parser": "1.4.3",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.17",
     "@types/express-session": "^1.17.7",
     "@types/mongodb": "^4.0.7",
