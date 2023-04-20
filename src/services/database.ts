@@ -1,5 +1,3 @@
-import { MongoClient, Db } from 'mongodb';
-import { Session } from 'fastify';
 import {
   getAllProfessionSkillTrees,
   saveAllProfessionsIfNotExist,
@@ -8,38 +6,31 @@ import {
   removeAllCraftedItemsWithEmptyId,
   updateCraftedItemsWithRecipeId,
 } from '../profession/CraftedItemsService';
-import { ProfessionSkillTree, ICraftingData } from '../profession/types';
+import { ICraftingData, ProfessionSkillTree } from '../profession/types';
 
 import { ListingData } from '../order/types';
+import { Db, MongoClient } from 'mongodb';
 
 export const url = `mongodb+srv://${process.env.ACC}:${process.env.PW}@crafteditemsdb.kp6faxe.mongodb.net/craftedItemsDB?retryWrites=true&w=majority`;
 const craftedItemsCollectionName = 'craftedItems';
 const listingsCollectionName = 'orders';
 const listingsProfessionsName = 'professions';
 
-export const getCraftedItemsCollection = async () => {
-  const client = await MongoClient.connect(url);
-  const db = client.db();
-  const craftedItems = await db.collection<ICraftingData>(craftedItemsCollectionName);
-  await client.close();
-  return craftedItems;
-};
-export const getListingsCollection = async () => {
-  const client = await MongoClient.connect(url);
-  const db = client.db();
-  const listingData = db.collection<ListingData>(listingsCollectionName);
-  await client.close();
-  return listingData;
-};
-export const getProfessionsCollection = async () => {
-  const client = await MongoClient.connect(url);
-  const db = client.db();
-  const skillTree = db.collection<ProfessionSkillTree>(listingsProfessionsName);
-  await client.close();
-  return skillTree;
-};
+let client: MongoClient;
+let db: Db;
+
+export const getCraftedItemsCollection = () =>
+  db.collection<ICraftingData>(craftedItemsCollectionName);
+export const getListingsCollection = () => db.collection<ListingData>(listingsCollectionName);
+export const getProfessionsCollection = () =>
+  db.collection<ProfessionSkillTree>(listingsProfessionsName);
+
+export const killConnection = async () => client.close();
+
 export const initializeDatabase = async () => {
-  const listingsCollection = await getListingsCollection();
+  client = await MongoClient.connect(url);
+  db = client.db();
+  const listingsCollection = getListingsCollection();
   await listingsCollection.createIndex({ expiredAt: 1 }, { expireAfterSeconds: 0 });
   await saveAllProfessionsIfNotExist();
   const allProfessionSkillTrees = await getAllProfessionSkillTrees();
