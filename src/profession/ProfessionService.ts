@@ -1,4 +1,4 @@
-import rp from 'request-promise';
+import rp =  require('request-promise');
 import { getProfessionsCollection } from '../services/database';
 import { getAllCraftedItems } from './CraftedItemsService';
 import { transformRecipeNameLower } from './RecipeService';

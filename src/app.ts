@@ -10,7 +10,7 @@ import { authenticationController } from './authentication/controller/authentica
 import { characterController } from './character/controller/characterController';
 import { professionController } from './profession/controller/professionController';
 import { orderController } from './order/controller/orderController';
-import MongoStore from 'connect-mongo';
+import MongoStore =  require('connect-mongo');
 import SessionStore = session.SessionStore;
 
 declare module 'fastify' {
@@ -69,15 +69,15 @@ app.register(characterController);
 app.register(professionController);
 app.register(orderController);
 
-const port = env.PORT;
+// const port = env.PORT;
 
 // initializeDatabase().then(() =>
-app.listen({ port, host: '::' }, (err) => {
-  if (err) {
-    console.error(err);
-  }
-  console.log(`Worker  listening on port ${port}`);
-});
+// app.listen({ port, host: '::' }, (err) => {
+//   if (err) {
+//     console.error(err);
+//   }
+//   console.log(`Worker  listening on port ${port}`);
+// });
 // );
 
-export default app;
+export { app };
