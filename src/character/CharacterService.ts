@@ -85,7 +85,7 @@ class CharacterService {
               profession: curr.profession,
               tiers,
             },
-            ...(prev || {}),
+            ...(prev || [{}]),
           ];
         },
         {} as DragonFlightProfessions[]

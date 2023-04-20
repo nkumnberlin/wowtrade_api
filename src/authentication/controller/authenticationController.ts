@@ -30,7 +30,7 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
     (req, res) => {
       console.log('landet der boy hier?');
       let redirectURL: URL;
-      if (env.NODE_ENV === 'development') {
+      if (env.NODE_ENV !== 'development') {
         return res.status(301).redirect('https://wowtrade.vercel.app/');
       }
       redirectURL = new URL(`${req.headers.referer}callback`);
