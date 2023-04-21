@@ -4,22 +4,27 @@ import CharacterService from '../CharacterService';
 const characterService = new CharacterService();
 
 export const characterController: FastifyPluginCallback = (app, opts, done) => {
-  app.get('/authenticated/characters', async (req: FastifyRequest, res) => {
-    console.log('USER', req.user);
+  app.get('/authenticated/characters', async (req: any, res) => {
+    console.log('USER', req?.user);
     if (!req?.user?.token) {
-      return res.status(500).send({ message: 'Failed while fetching Characters' });
+      res.status(500).send({ message: 'Failed while fetching Characters' });
+      done();
     }
     try {
+      console.log('___ ', req?.user?.token);
       const characters = await characterService.getUsersCharactersList(req?.user?.token);
       return await res.status(200).send(characters);
     } catch (e) {
-      return res.status(500).send({ message: 'Failed while fetching Characters' });
+      res.status(500).send({ message: 'Failed while fetching Characters' });
+      done();
     }
   });
+
   /// authenticated/character/professions?name=Cdb&slug=Thrall&region=eu
-  app.get('/authenticated/character/professions', async (req: CharacterQueryRequest, res) => {
+  app.get('/authenticated/character/professions', async (req: any, res) => {
     if (!req?.user?.token) {
-      return res.status(500).send({ message: 'Failed while fetching Characters' });
+      res.status(500).send({ message: 'Failed while fetching Characters' });
+      done();
     }
     try {
       console.log('is in professions');
@@ -29,9 +34,11 @@ export const characterController: FastifyPluginCallback = (app, opts, done) => {
         name,
         slug
       );
-      return await res.status(200).send(professions);
+      await res.status(200).send(professions);
+      done();
     } catch (e) {
-      return res.status(500).send({ message: 'Failed while fetching Characters' });
+      res.status(500).send({ message: 'Failed while fetching Characters' });
+      done();
     }
   });
   done();

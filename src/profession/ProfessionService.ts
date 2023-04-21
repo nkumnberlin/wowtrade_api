@@ -1,4 +1,4 @@
-import rp =  require('request-promise');
+import rp = require('request-promise');
 import { getProfessionsCollection } from '../services/database';
 import { getAllCraftedItems } from './CraftedItemsService';
 import { transformRecipeNameLower } from './RecipeService';
@@ -62,12 +62,12 @@ const saveAllProfessions = async () => {
       categories: mappedProfessionSkillTreeCategories.filter((category) => category.recipes.length),
     } as ProfessionSkillTree;
   });
-  const professionCollection = await getProfessionsCollection();
+  const professionCollection = getProfessionsCollection();
   return professionCollection.insertMany(allProfessionsWithMappedRecipes);
 };
 
 export const saveAllProfessionsIfNotExist = async () => {
-  const professionCollection = await getProfessionsCollection();
+  const professionCollection = getProfessionsCollection();
   const professions = await professionCollection.find().toArray();
   if (!professions.length) {
     return saveAllProfessions();
@@ -75,6 +75,5 @@ export const saveAllProfessionsIfNotExist = async () => {
 };
 
 export const getAllProfessionSkillTrees = async () => {
-  const professionCollection = await getProfessionsCollection();
-  return professionCollection.find().toArray();
+  return getProfessionsCollection().find().toArray();
 };

@@ -4,7 +4,7 @@ import fastifyCookie from '@fastify/cookie';
 import session from '@fastify/session';
 import fastifyCors from '@fastify/cors';
 import { authenticator, BnetUser } from './oauth/bnetPassport';
-import { initializeDatabase, url } from './services/database';
+import { initializeDatabase, killConnection, url } from './services/database';
 import { env } from './utils/env';
 import { authenticationController } from './authentication/controller/authenticationController';
 import { characterController } from './character/controller/characterController';
@@ -71,16 +71,16 @@ app.register(orderController);
 
 const port = env.PORT;
 
-if (env.NODE_ENV === 'development') {
-  initializeDatabase().then(() =>
-    app.listen({ port, host: '::' }, (err) => {
-      if (err) {
-        console.error(err);
-      }
-      console.log(`Worker  listening on port ${port}`);
-    })
-  );
-}
+// if (env.NODE_ENV === 'development') {
+initializeDatabase().then(() =>
+  app.listen({ port, host: '::' }, (err) => {
+    if (err) {
+      console.error(err);
+    }
+    console.log(`Worker  listening on port ${port}`);
+  })
+);
+// }
 
 if (env.NODE_ENV !== 'development') {
   app.addHook('preHandler', async () => await initializeDatabase());

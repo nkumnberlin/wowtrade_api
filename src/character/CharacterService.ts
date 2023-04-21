@@ -21,12 +21,14 @@ class CharacterService {
       },
     });
     const { wow_accounts } = response;
-    console.log('TODO TO MAP', wow_accounts);
-    // todo
-    return wow_accounts
+    console.log('hier brickt doch was!');
+    const x = wow_accounts
       .map((account: any) => this._mapWowAccount(account))
       .flat()
       .filter((character: { level: number }) => character.level > 60);
+    // todo
+    console.log('____ ', x);
+    return x;
   }
 
   mapKnownRecipesWithItemId(craftingData: ICraftingData[], knownRecipes: KnownRecipe[]) {

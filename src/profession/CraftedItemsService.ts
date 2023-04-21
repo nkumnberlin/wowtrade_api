@@ -4,7 +4,7 @@ import { transformRecipeNameLower } from './RecipeService';
 import { AnyBulkWriteOperation } from 'mongodb';
 
 export const fetchProfessionsByRecipeNames = async (recipeNames: string[]) => {
-  const mongoCollection = await getCraftedItemsCollection();
+  const mongoCollection = getCraftedItemsCollection();
   return await mongoCollection
     .find(
       {
@@ -23,10 +23,7 @@ export const fetchProfessionsByRecipeNames = async (recipeNames: string[]) => {
     .toArray();
 };
 
-export const getAllCraftedItems = async () => {
-  const craftedItems = await getCraftedItemsCollection();
-  return craftedItems.find().toArray();
-};
+export const getAllCraftedItems = () => getCraftedItemsCollection().find().toArray();
 
 export const updateCraftedItemsWithRecipeId = async (
   professionSkillTrees: ProfessionSkillTree[]
