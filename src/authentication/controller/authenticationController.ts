@@ -1,4 +1,4 @@
-import { FastifyPluginCallback, FastifyReply, FastifyRequest } from 'fastify';
+import { FastifyPluginCallback, FastifyReply } from 'fastify';
 import { authenticator } from '../../oauth/bnetPassport';
 import { env } from '../../utils/env';
 
@@ -37,7 +37,7 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
       res.status(301).redirect(redirectURL.href);
     }
   );
-  app.get('/', (req: FastifyRequest, res: FastifyReply) => {
+  app.get('/', (req, res: FastifyReply) => {
     console.log('nice cookies!', req.cookies);
     if (req.isAuthenticated()) {
       return res.redirect('/authenticated');
