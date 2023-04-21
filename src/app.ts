@@ -48,7 +48,9 @@ app.register(authenticator.initialize());
 
 app.register(authenticator.secureSession());
 
-app.register(fastifyCors);
+app.register(fastifyCors, {
+  exposedHeaders: ['set-cookie'],
+});
 
 app.addHook('preValidation', (req: FastifyRequest, res, next) => {
   if (!req.url.includes('authenticated')) {
