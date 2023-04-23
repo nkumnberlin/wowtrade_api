@@ -26,7 +26,10 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
 
   app.get(
     '/redirect',
-    { preValidation: authenticator.authenticate('bnet', { failureRedirect: '/' }) },
+    {
+      preValidation: authenticator.authenticate('bnet', { failureRedirect: '/' }),
+      attachValidation: true,
+    },
     (req, res) => {
       console.log('landet der boy hier?');
       let redirectURL: URL;
