@@ -8,6 +8,10 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
     res.redirect('/login/oauth/battlenet');
   });
 
+  app.get('/alive', (req, res) => {
+    res.send({ status: 200, message: 'alive' });
+  });
+
   app.get('/logout', async (req, res) => {
     console.log('session id ', req.session.sessionId);
     await req.session.destroy();
