@@ -15,7 +15,7 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
     invalidationDate.setMilliseconds(invalidationDate.getMilliseconds() + 3000);
     return res
       .status(301)
-      .cookie(COOKIE_Name, '', { maxAge: 0 })
+      .setCookie(COOKIE_Name, '', { maxAge: 0 })
       .send({
         status: 301,
         message: 'Logged out',
@@ -37,6 +37,7 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
         console.log('____ in to vercel');
         return res
           .cookie(COOKIE_Name, req.cookies[COOKIE_Name])
+          .setCookie(COOKIE_Name, req.cookies[COOKIE_Name])
           .redirect(301, 'https://wowtrade.vercel.app/callback');
       }
       redirectURL = new URL(`http://localhost:3005/callback`);
