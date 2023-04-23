@@ -41,7 +41,6 @@ app.register(session, {
     secure: 'auto',
     maxAge,
     sameSite: 'none',
-    domain: 'wowtrade.vercel.app',
   },
 });
 

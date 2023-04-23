@@ -40,7 +40,10 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
       if (env.NODE_ENV !== 'development') {
         console.log('____ in to vercel');
         return res
-          .setCookie(COOKIE_Name, req.cookies[COOKIE_Name])
+          .setCookie(COOKIE_Name, req.cookies[COOKIE_Name], {
+            domain: 'microlancing.eu',
+            sameSite: 'none',
+          })
           .redirect(301, 'https://www.microlancing.eu/callback');
       }
       redirectURL = new URL(`http://localhost:3005/callback`);
