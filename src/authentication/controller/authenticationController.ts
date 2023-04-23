@@ -31,11 +31,11 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
       attachValidation: true,
     },
     (req, res) => {
-      console.log('landet der boy hier?');
+      console.log('landet der boy hier?', req.cookies, '____ res ', res.headers);
       let redirectURL: URL;
       if (env.NODE_ENV !== 'development') {
-        console.log(res);
-        return res.status(301).redirect('https://wowtrade.vercel.app/callback');
+        console.log('____ in to vercel');
+        return res.redirect(200, 'https://www.wowtrade.vercel.app/callback');
       }
       redirectURL = new URL(`http://localhost:3005/callback`);
       res.status(301).redirect(redirectURL.href);
