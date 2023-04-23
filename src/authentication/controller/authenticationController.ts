@@ -2,6 +2,7 @@ import { FastifyPluginCallback, FastifyReply } from 'fastify';
 import { authenticator } from '../../oauth/bnetPassport';
 import { env } from '../../utils/env';
 
+const COOKIE_Name = 'wow-trade-session';
 export const authenticationController: FastifyPluginCallback = (app, opts, done) => {
   app.get('/login', (req, res) => {
     res.redirect('/login/oauth/battlenet');
@@ -13,10 +14,10 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
     const invalidationDate = new Date();
     invalidationDate.setMilliseconds(invalidationDate.getMilliseconds() + 3000);
     return res
-      .status(200)
-      .cookie('wow-trade-session', '', { maxAge: 0 })
+      .status(301)
+      .cookie(COOKIE_Name, '', { maxAge: 0 })
       .send({
-        status: 200,
+        status: 301,
         message: 'Logged out',
       })
       .redirect('/');
@@ -28,14 +29,15 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
     '/redirect',
     {
       preValidation: authenticator.authenticate('bnet', { failureRedirect: '/' }),
-      attachValidation: true,
     },
     (req, res) => {
-      console.log('landet der boy hier?', req.cookies, '____ res ', res.headers);
+      console.log('landet der boy hier?', req.cookies, '____ res ', req.cookies[COOKIE_Name]);
       let redirectURL: URL;
       if (env.NODE_ENV !== 'development') {
         console.log('____ in to vercel');
-        return res.redirect(301, 'https://wowtrade.vercel.app/callback');
+        return res
+          .setCookie(COOKIE_Name, req.cookies[COOKIE_Name])
+          .redirect(301, 'https://wowtrade.vercel.app/callback');
       }
       redirectURL = new URL(`http://localhost:3005/callback`);
       res.status(301).redirect(redirectURL.href);
