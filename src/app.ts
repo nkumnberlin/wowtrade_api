@@ -38,7 +38,8 @@ app.register(session, {
   store: store as unknown as SessionStore,
   cookie: {
     // THIS IS FUCKING IMPORTANT NEVER DELETE THIS !!!
-    secure: 'auto',
+    secure: true,
+    domain: 'microlancing.eu',
     maxAge,
     sameSite: 'none',
   },

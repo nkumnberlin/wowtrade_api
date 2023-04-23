@@ -28,6 +28,7 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
   });
 
   app.get('/login/oauth/battlenet', authenticator.authenticate('bnet'));
+  const maxAge = 1000 * 60 * 30;
 
   app.get(
     '/redirect',
@@ -42,6 +43,8 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
         return res
           .setCookie(COOKIE_Name, req.cookies[COOKIE_Name], {
             domain: 'microlancing.eu',
+            secure: true,
+            maxAge,
             sameSite: 'none',
           })
           .redirect(301, 'https://www.microlancing.eu/callback');
