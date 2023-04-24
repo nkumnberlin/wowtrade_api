@@ -39,7 +39,7 @@ app.register(session, {
   cookie: {
     // THIS IS FUCKING IMPORTANT NEVER DELETE THIS !!!
     secure: true,
-    domain: 'microlancing.eu',
+    domain: 'wowtrade.vercel.app',
     maxAge,
     sameSite: 'none',
   },

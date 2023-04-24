@@ -42,12 +42,12 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
         console.log('____ in to vercel');
         return res
           .setCookie(COOKIE_Name, req.cookies[COOKIE_Name], {
-            domain: 'microlancing.eu',
+            domain: 'wowtrade.vercel.app',
             secure: true,
             maxAge,
             sameSite: 'none',
           })
-          .redirect(301, 'https://www.microlancing.eu/callback');
+          .redirect(301, 'https://wowtrade.vercel.app/callback');
       }
       redirectURL = new URL(`http://localhost:3005/callback`);
       res.status(301).redirect(redirectURL.href);
