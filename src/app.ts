@@ -39,7 +39,7 @@ app.register(session, {
   cookie: {
     // THIS IS FUCKING IMPORTANT NEVER DELETE THIS !!!
     secure: true,
-    domain: 'wowtrade.vercel.app',
+    domain: 'wowtrade-api.vercel.app',
     maxAge,
     sameSite: 'none',
   },

@@ -41,8 +41,8 @@ export const authenticationController: FastifyPluginCallback = (app, opts, done)
       if (env.NODE_ENV !== 'development') {
         console.log('____ in to vercel');
         return res
-          .setCookie(COOKIE_Name, req.cookies[COOKIE_Name], {
-            domain: 'wowtrade.vercel.app',
+          .setCookie(COOKIE_Name, req.cookies[COOKIE_Name || ''], {
+            domain: 'wowtrade-api.vercel.app',
             secure: true,
             maxAge,
             sameSite: 'none',
